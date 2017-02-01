@@ -1,0 +1,1 @@
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo.Tests1\obj\Debug\RepairHist_mmo.Tests1.csprojResolveAssemblyReference.cache
