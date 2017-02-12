@@ -1,0 +1,17 @@
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\TestClientROry.exe.config
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\TestClientROry.exe
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\TestClientROry.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\hist_mmorpg.exe
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\Lidgren.Network.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\MonoGame.Framework.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\OpenTK.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\protobuf-net.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\Tao.Sdl.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\QuickGraph.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\RiakClient.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\QuickGraph.Serialization.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\hist_mmorpg.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\hist_mmorpg.xml
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientRory.csprojResolveAssemblyReference.cache
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.exe
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.pdb
