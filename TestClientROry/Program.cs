@@ -7,47 +7,46 @@ using System.Threading.Tasks;
 using hist_mmorpg;
 using System.Threading;
 
-namespace TestClientROry
+namespace TestClientRory
 {
     class Program
     {
         private static WordRecogniser _wordRecogniser;
         private static Server _server;
+        private static Game _game;
         private static TextTestClient _testClient;
+        private static PlayerCharacter myPlayer;
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Beginning test run. Enter 'e' to run with encryption");
-            bool encrypt = false;
-            string userInput = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(userInput))
-            {
-                char doEncrypt = userInput[0];
-                encrypt = (doEncrypt == 'e');
-            }
-            var encryptString = encrypt ? "_encrypted_" : "_unencrypted_";
+            var encryptString = "_encrypted_";
             string datePatern = "MM_dd_H_mm";
             var logFilePath = "TestRun_NoSessions" + encryptString + DateTime.Now.ToString(datePatern) + ".txt";
+            TextTestClient client = new TextTestClient();
+            Globals_Game.pcMasterList.Add("rory", new PlayerCharacter());
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
+                _game = new Game();
                 _wordRecogniser = new WordRecogniser();
                 _server = new Server();
                 _testClient = new TextTestClient();
+
+                Console.Clear();
+                SetUpForDemo();
+                LogInPrompt();
+                while (_testClient.IsConnectedAndLoggedIn() == false)
+                {
+                    Thread.Sleep(0);
+                }
+                var command = TokenizeConsoleEntry();
+                while (_wordRecogniser.CheckWord(command[0]) != WordRecogniser.Tasks.Exit)
+                {
+                    command = TokenizeConsoleEntry();
+                    ProcessCommand(_wordRecogniser.CheckWord(command[0]), command);
+                }
+
+                Shutdown();
             }
-            Console.Clear();
-            SetUpForDemo();
-            LogInPrompt();
-            while (_testClient.IsConnectedAndLoggedIn() == false)
-            {
-                Thread.Sleep(0);
-            }
-            var command = TokenizeConsoleEntry();
-            while (_wordRecogniser.CheckWord(command[0]) != WordRecogniser.Tasks.Exit)
-            {
-                command = TokenizeConsoleEntry();
-            }
-            
-            Shutdown();
         }
 
         private static void LogInPrompt()
@@ -82,6 +81,32 @@ namespace TestClientROry
                 return null;
             }
             return commands;
+        }
+
+        public static void ProcessCommand(WordRecogniser.Tasks task, List<String> arguments)
+        {
+            WordRecogniser wordRecogniser = new WordRecogniser();
+            PlayerOperations player = new PlayerOperations();
+            switch (task)
+            {
+                case WordRecogniser.Tasks.ArmyStatus:
+                        player.ArmyStatus();
+                    break;
+                case WordRecogniser.Tasks.Check:
+                        player.Check(wordRecogniser.CheckDirections(arguments[1]));
+                    break;
+                case WordRecogniser.Tasks.Invade:
+                    player.Invade(wordRecogniser.CheckDirections(arguments[1]));
+                    break;
+                case WordRecogniser.Tasks.Move:
+                    player.Move(wordRecogniser.CheckDirections(arguments[1]));
+                    break;
+                case WordRecogniser.Tasks.Pillage:
+                    player.Pillage(wordRecogniser.CheckDirections(arguments[1]));
+                    break;
+                case WordRecogniser.Tasks.Exit:
+                    break;
+            }
         }
 
         

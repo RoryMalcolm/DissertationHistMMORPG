@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestClientROry
+namespace TestClientRory
 {
     class PlayerOperations
     {
         public enum MoveDirections
         {
-            North, South, East, West
+            North, South, East, West, SyntaxError
         }
         public void Move(MoveDirections directions)
         {

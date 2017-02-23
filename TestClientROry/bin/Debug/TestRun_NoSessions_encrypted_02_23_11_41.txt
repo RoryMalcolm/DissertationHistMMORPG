@@ -1,0 +1,4 @@
+Server started- host: localhost, port: 8000, appID: test, max connections: 2000
+Accepted connection from helen
+helen logs in from 127.0.0.1:55327
+Server listening thread exits

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestClientROry
+namespace TestClientRory
 {
     class WordRecogniser
     {
@@ -34,6 +34,25 @@ namespace TestClientROry
                 default:
                     return Tasks.SyntaxError;
             }
+        }
+
+        public PlayerOperations.MoveDirections CheckDirections(string InputWord)
+        {
+            InputWord = InputWord.ToUpper();
+            switch (InputWord)
+            {
+                case "NORTH":
+                    return PlayerOperations.MoveDirections.North;
+                case "SOUTH":
+                    return PlayerOperations.MoveDirections.South;
+                case "EAST":
+                    return PlayerOperations.MoveDirections.East;
+                case "WEST":
+                    return PlayerOperations.MoveDirections.West;
+                default:
+                    return PlayerOperations.MoveDirections.SyntaxError;
+            }
+
         }
     }
 
