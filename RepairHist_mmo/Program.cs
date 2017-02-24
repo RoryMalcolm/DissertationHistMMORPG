@@ -125,6 +125,7 @@ namespace hist_mmorpg
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
                 InitialiseGameState();
+                SetUpForDemo();
                 Globals_Server.LogFile.AutoFlush = true;
                 //TestRun(true);                
             }

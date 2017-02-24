@@ -32,7 +32,6 @@ namespace TestClientRory
                 _testClient = new TextTestClient();
 
                 Console.Clear();
-                SetUpForDemo();
                 LogInPrompt();
                 while (_testClient.IsConnectedAndLoggedIn() == false)
                 {
