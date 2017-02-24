@@ -26,9 +26,9 @@ namespace TestClientRory
             Globals_Game.pcMasterList.Add("rory", new PlayerCharacter());
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
-                _game = new Game();
+                //_game = new Game();
                 _wordRecogniser = new WordRecogniser();
-                _server = new Server();
+                //_server = new Server();
                 _testClient = new TextTestClient();
 
                 Console.Clear();

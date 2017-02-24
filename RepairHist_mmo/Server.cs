@@ -90,8 +90,8 @@ namespace hist_mmorpg
             Client client2 = new Client("test", "Char_126");
             Globals_Server.Clients.Add("test", client2);
             String dir = Directory.GetCurrentDirectory();
-            dir = dir.Remove(dir.IndexOf("RepairHist_mmo"));
-            String path = Path.Combine(dir, "RepairHist_mmo", "Certificates");
+            //dir = dir.Remove(dir.IndexOf("RepairHist_mmo"));
+            String path = Path.Combine(dir, "Certificates");
             LogInManager.InitialiseCertificateAndRSA(path);
         }
 

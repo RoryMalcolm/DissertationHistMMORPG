@@ -118,16 +118,7 @@ namespace hist_mmorpg
         /// </summary>
         public static void Main()
         {
-            Console.WriteLine("Beginning test run. Enter 'e' to run with encryption");
-            bool encrypt = false;
-            string userInput = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(userInput))
-            {
-                char doEncrypt = userInput[0];
-                encrypt = (doEncrypt == 'e');
-            }
-            string encryptString;
-            encryptString = encrypt ? "_encrypted_" : "_unencrypted_";
+            var encryptString = "_encrypted_";
             string datePatern = "MM_dd_H_mm";
             logFilePath = "TestRun_NoSessions"+encryptString + DateTime.Now.ToString(datePatern) + ".txt";
             
@@ -135,14 +126,8 @@ namespace hist_mmorpg
             {
                 InitialiseGameState();
                 Globals_Server.LogFile.AutoFlush = true;
-                TestRun(encrypt);
-                FinaliseGameState();
-                
+                //TestRun(true);                
             }
-            Console.Write("Run complete. Press any enter to exit.");
-            Console.Out.Flush();
-            Console.ReadLine();
-            
         }
         
         /// <summary>

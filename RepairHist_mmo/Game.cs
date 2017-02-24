@@ -27,22 +27,19 @@ namespace hist_mmorpg
             Globals_Game.game = this;
             // initialise game objects
             // This path handling should ensure that the correct path will be found in Linux, Windows or debug mode
-			var dir = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName).FullName;
+			var dir = Directory.GetCurrentDirectory();
             // if the program is being run in debug mode, this will obtain the correct directory
-			dir = Directory.GetParent(dir).FullName;
             if (dir.Contains("bin"))
             {
                 dir = Directory.GetParent(dir).FullName;
             }
 
             //var dir = Directory.GetCurrentDirectory();
-			Console.WriteLine ("* PRINTING *");
-			Console.WriteLine (dir);
 			if (dir.Contains ("TestClientROry")) {
 		//		dir = dir.Remove (dir.IndexOf ("TestClientROry"));
 			} else {
 			}
-            var path = Path.Combine(dir, "CSVs");
+            var path = Path.Combine(dir, "RepairHist_mmo", "CSVs");
             var gameObjects = Path.Combine(path, "gameObjects.csv");
             var mapData = Path.Combine(path, "map.csv");
 			if (!File.Exists (gameObjects) && !File.Exists (mapData)) {
