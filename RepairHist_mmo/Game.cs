@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
+using RiakClient.Messages;
 
 namespace hist_mmorpg
 {
@@ -28,18 +29,44 @@ namespace hist_mmorpg
             // initialise game objects
             // This path handling should ensure that the correct path will be found in Linux, Windows or debug mode
 			var dir = Directory.GetCurrentDirectory();
+            string path;
             // if the program is being run in debug mode, this will obtain the correct directory
-            if (dir.Contains("bin"))
+            if (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX)
             {
-                dir = Directory.GetParent(dir).FullName;
-            }
+                if (dir.Contains("bin"))
+                {
+                    dir = Directory.GetParent(dir).FullName;
+                }
 
-            //var dir = Directory.GetCurrentDirectory();
-			if (dir.Contains ("TestClientROry")) {
-		//		dir = dir.Remove (dir.IndexOf ("TestClientROry"));
-			} else {
-			}
-            var path = Path.Combine(dir, "RepairHist_mmo", "CSVs");
+                //var dir = Directory.GetCurrentDirectory();
+                if (dir.Contains("TestClientROry"))
+                {
+                    //		dir = dir.Remove (dir.IndexOf ("TestClientROry"));
+                }
+                else
+                {
+                }
+                path = Path.Combine(dir, "RepairHist_mmo", "CSVs");
+            }
+            else
+            {
+                if (dir.Contains("bin"))
+                {
+                    dir = Directory.GetParent(dir).FullName;
+                    dir = Directory.GetParent(dir).FullName;
+                    dir = Directory.GetParent(dir).FullName;
+                }
+
+                //var dir = Directory.GetCurrentDirectory();
+                if (dir.Contains("TestClientROry"))
+                {
+                    //		dir = dir.Remove (dir.IndexOf ("TestClientROry"));
+                }
+                else
+                {
+                }
+                path = Path.Combine(dir, "RepairHist_mmo", "CSVs");
+            }
             var gameObjects = Path.Combine(path, "gameObjects.csv");
             var mapData = Path.Combine(path, "map.csv");
 			if (!File.Exists (gameObjects) && !File.Exists (mapData)) {

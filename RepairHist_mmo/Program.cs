@@ -121,12 +121,11 @@ namespace hist_mmorpg
             var encryptString = "_encrypted_";
             string datePatern = "MM_dd_H_mm";
             logFilePath = "TestRun_NoSessions"+encryptString + DateTime.Now.ToString(datePatern) + ".txt";
-            
+
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
                 InitialiseGameState();
                 SetUpForDemo();
-                Globals_Server.LogFile.AutoFlush = true;
                 //TestRun(true);                
             }
         }

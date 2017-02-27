@@ -91,7 +91,18 @@ namespace hist_mmorpg
             Globals_Server.Clients.Add("test", client2);
             String dir = Directory.GetCurrentDirectory();
             //dir = dir.Remove(dir.IndexOf("RepairHist_mmo"));
-            String path = Path.Combine(dir, "Certificates");
+            String path;
+            if (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX)
+            {
+                path = Path.Combine(dir, "Certificates");
+            }
+            else
+            {
+                dir = Directory.GetParent(dir).FullName;
+                dir = Directory.GetParent(dir).FullName;
+                dir = Directory.GetParent(dir).FullName;
+                path = Path.Combine(dir, "Certificates");
+            }
             LogInManager.InitialiseCertificateAndRSA(path);
         }
 
