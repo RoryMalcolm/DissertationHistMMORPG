@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using hist_mmorpg;
 
 namespace TestClientRory
 {
@@ -12,29 +13,58 @@ namespace TestClientRory
         {
             North, South, East, West, SyntaxError
         }
-        public void Move(MoveDirections directions)
+        public void Move(MoveDirections directions, TextTestClient client)
         {
-
+            ProtoTravelTo protoTravel = new ProtoTravelTo();
+            protoTravel.travelTo = directions.ToString();
+            protoTravel.characterID = "helen";
+            client.net.Send(protoTravel);
+            var reply = GetActionReply(Actions.TravelTo, client);
+            var travel = reply.Result.ResponseType;
+            Console.WriteLine(travel);
         }
 
-        public void Check(MoveDirections directions)
+        public void Check(TextTestClient client)
         {
-            
+            ProtoMessage checkMessage = new ProtoMessage();
+            checkMessage.ActionType = Actions.ViewMyFiefs;
+            client.net.Send(checkMessage);
+            var reply = GetActionReply(Actions.ViewMyFiefs, client);
+            var fiefs = reply.Result.ResponseType;
+            Console.WriteLine(fiefs);
         }
 
-        public void Pillage(MoveDirections directions)
+        public void Pillage(MoveDirections directions, TextTestClient client)
         {
-            
+            ProtoMessage siegeMessage = new ProtoMessage();
+            siegeMessage.ActionType = Actions.BesiegeFief;
+            client.net.Send(siegeMessage);
+            var reply = GetActionReply(Actions.BesiegeFief, client);
+            var siege = reply.Result.ResponseType;
+            Console.WriteLine(siege);
         }
 
-        public void Invade(MoveDirections directions)
+        public void ArmyStatus(TextTestClient client)
         {
-            
+            ProtoArmyOverview proto = new ProtoArmyOverview();
+            proto.ActionType = Actions.ViewArmy;
+
+            var reply = GetActionReply(Actions.ViewArmy, client);
+            var army = reply.Result.ResponseType;
+            Console.WriteLine(army);
         }
 
-        public void ArmyStatus()
+        public Task<ProtoMessage> GetActionReply(Actions action, TextTestClient client)
         {
-            
+            Task<ProtoMessage> responseTask = client.GetReply();
+            responseTask.Wait();
+            while (responseTask.Result.ActionType != action)
+            {
+                responseTask = client.GetReply();
+                responseTask.Wait();
+            }
+            client.ClearMessageQueues();
+            return responseTask;
         }
     }
 }

@@ -23,8 +23,6 @@ namespace TestClientRory
                     return Tasks.Move;
                 case "PILLAGE":
                     return Tasks.Pillage;
-                case "INVADE":
-                    return Tasks.Invade;
                 case "CHECK":
                     return Tasks.Check;
                 case "ARMY":

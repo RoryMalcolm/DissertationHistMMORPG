@@ -12,8 +12,6 @@ namespace TestClientRory
     class Program
     {
         private static WordRecogniser _wordRecogniser;
-        private static Server _server;
-        private static Game _game;
         private static TextTestClient _testClient;
         private static PlayerCharacter myPlayer;
 
@@ -38,6 +36,7 @@ namespace TestClientRory
                     Thread.Sleep(0);
                 }
                 var command = TokenizeConsoleEntry();
+                ProcessCommand(_wordRecogniser.CheckWord(command[0]), command);
                 while (_wordRecogniser.CheckWord(command[0]) != WordRecogniser.Tasks.Exit)
                 {
                     command = TokenizeConsoleEntry();
@@ -61,7 +60,7 @@ namespace TestClientRory
 
         private static void Shutdown()
         {
-            _server.Shutdown();
+            _testClient.LogOut();
         }
 
         private static List<string> TokenizeConsoleEntry()
@@ -89,23 +88,53 @@ namespace TestClientRory
             switch (task)
             {
                 case WordRecogniser.Tasks.ArmyStatus:
-                        player.ArmyStatus();
+                    player.ArmyStatus(_testClient);
                     break;
                 case WordRecogniser.Tasks.Check:
-                        player.Check(wordRecogniser.CheckDirections(arguments[1]));
-                    break;
-                case WordRecogniser.Tasks.Invade:
-                    player.Invade(wordRecogniser.CheckDirections(arguments[1]));
+                    player.Check(_testClient);
                     break;
                 case WordRecogniser.Tasks.Move:
-                    player.Move(wordRecogniser.CheckDirections(arguments[1]));
+                    if (ValidateArgs(arguments))
+                    {
+                        player.Move(wordRecogniser.CheckDirections(arguments[1]), _testClient);
+                    }
+                    else
+                    {
+                        SyntaxError();
+                    }
                     break;
                 case WordRecogniser.Tasks.Pillage:
-                    player.Pillage(wordRecogniser.CheckDirections(arguments[1]));
+                    if (ValidateArgs(arguments))
+                    {
+                        player.Pillage(wordRecogniser.CheckDirections(arguments[1]), _testClient);
+                    }
+                    else
+                    {
+                        SyntaxError();
+                    }
                     break;
                 case WordRecogniser.Tasks.Exit:
                     break;
             }
+        }
+
+        static bool ValidateArgs(List<String> argumentList)
+        {
+            var counter =0;
+            foreach (var argument in argumentList)
+            {
+                counter++;
+            }
+            if (counter >= 2)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        static void SyntaxError()
+        {
+            Console.WriteLine("Syntax Error: No argument provided");
         }
     }
 }
