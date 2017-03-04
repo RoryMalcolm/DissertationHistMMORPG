@@ -16,7 +16,7 @@ namespace TestClientRory
         public void Move(MoveDirections directions, TextTestClient client)
         {
             ProtoTravelTo protoTravel = new ProtoTravelTo();
-            protoTravel.travelTo = directions.ToString();
+            protoTravel.travelVia = directions.ToString();
             protoTravel.characterID = "helen";
             client.net.Send(protoTravel);
             var reply = GetActionReply(Actions.TravelTo, client);
@@ -30,8 +30,18 @@ namespace TestClientRory
             checkMessage.ActionType = Actions.ViewMyFiefs;
             client.net.Send(checkMessage);
             var reply = GetActionReply(Actions.ViewMyFiefs, client);
-            var fiefs = reply.Result.ResponseType;
-            Console.WriteLine(fiefs);
+            var fiefs = (ProtoGenericArray<ProtoFief>) reply.Result;
+            Console.Write("Fiefs owned by " );
+            bool written = false;
+            foreach (var fief in fiefs.fields)
+            {
+                if (!written)
+                {
+                    Console.Write(fief.owner + ": \n");
+                    written = true;
+                }
+                Console.WriteLine(fief.fiefID);
+            }
         }
 
         public void Pillage(MoveDirections directions, TextTestClient client)
@@ -50,8 +60,8 @@ namespace TestClientRory
             proto.ActionType = Actions.ViewArmy;
 
             var reply = GetActionReply(Actions.ViewArmy, client);
-            var army = reply.Result.ResponseType;
-            Console.WriteLine(army);
+            var army = (ProtoArmyOverview) reply.Result;
+            Console.WriteLine(army.ownerName + army.armySize);
         }
 
         public Task<ProtoMessage> GetActionReply(Actions action, TextTestClient client)
