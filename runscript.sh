@@ -6,5 +6,10 @@ else
     xbuild RepairHist_mmo/RepairHist_mmo.csproj
     xbuild TestClientROry/TestClientRory.csproj
 fi
-./RepairHist_mmo/bin/Debug/hist_mmorpg.exe &
-./TestClientROry/bin/Debug/TestClientROry.exe
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    mono RepairHist_mmo/bin/Debug/hist_mmorpg.exe &
+    mono TestClientROry/bin/Debug/TestClientROry.exe
+else
+    ./RepairHist_mmo/bin/Debug/hist_mmorpg.exe &
+    ./TestClientROry/bin/Debug/TestClientROry.exe
+fi
