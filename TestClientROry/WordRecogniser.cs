@@ -4,6 +4,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace TestClientRory
 {
@@ -11,7 +12,7 @@ namespace TestClientRory
     {
         public enum Tasks
         {
-            Move, Pillage, Invade, Check, ArmyStatus, SyntaxError, Exit
+            Move, Pillage, Invade, Hire, Fief, Check, ArmyStatus, SyntaxError, Exit
         }
 
         public Tasks CheckWord(string InputWord)
@@ -29,6 +30,10 @@ namespace TestClientRory
                     return Tasks.ArmyStatus;
                 case "EXIT":
                     return Tasks.Exit;
+                case "FIEF":
+                    return Tasks.Fief;
+                case "HIRE":
+                    return Tasks.Hire;
                 default:
                     return Tasks.SyntaxError;
             }
@@ -39,14 +44,24 @@ namespace TestClientRory
             InputWord = InputWord.ToUpper();
             switch (InputWord)
             {
-                case "NORTH":
-                    return PlayerOperations.MoveDirections.North;
-                case "SOUTH":
-                    return PlayerOperations.MoveDirections.South;
+                case "NORTHEAST":
+                case "NE":
+                    return PlayerOperations.MoveDirections.NE;
+                case "NORTHWEST":
+                case "NW":
+                    return PlayerOperations.MoveDirections.NW;
                 case "EAST":
-                    return PlayerOperations.MoveDirections.East;
+                case "E":
+                    return PlayerOperations.MoveDirections.E;
                 case "WEST":
-                    return PlayerOperations.MoveDirections.West;
+                case "W":
+                    return PlayerOperations.MoveDirections.W;
+                case "SOUTHWEST":
+                case "SW":
+                    return PlayerOperations.MoveDirections.SW;
+                case "SOUTHEAST":
+                case "SE":
+                    return PlayerOperations.MoveDirections.SE;
                 default:
                     return PlayerOperations.MoveDirections.SyntaxError;
             }

@@ -175,11 +175,9 @@ namespace hist_mmorpg
 #if DEBUG
             if (reply == null)
             {
-                Console.WriteLine("CLIENT: " + id + "got a null reply");
             }
             else
             {
-                Console.WriteLine("CLIENT: " + id + " got reply with response type :" + reply.ResponseType);
             }
 #endif
             return reply;
@@ -191,7 +189,6 @@ namespace hist_mmorpg
         /// <returns>Task containing the reply as a result</returns>
         public async Task<string> GetServerMessage()
         {
-            Console.WriteLine("CLIENT: Awaiting reply");
 
             string reply = await (Task.Run(() => CheckForStringMessage()));
 
@@ -584,7 +581,6 @@ namespace hist_mmorpg
             newExpenses.fields = new double[] { newTax, newOff, newGarr, newInfra, newKeep };
             newExpenses.ActionType = Actions.AdjustExpenditure;
             net.Send(newExpenses);
-            Console.WriteLine("CLIENT: sent adjust expenditure message");
         }
 
         /// <summary>
@@ -765,21 +761,17 @@ namespace hist_mmorpg
                 try
                 {
                     Serializer.SerializeWithLengthPrefix<ProtoMessage>(ms, message, ProtoBuf.PrefixStyle.Fixed32);
-                    Console.Write("Client: Sending");
                     msg.Write(ms.GetBuffer());
                     if (alg != null && encrypt)
                     {
-                        Console.Write(" encrypted");
                         msg.Encrypt(alg);
                     }
                     var result = client.SendMessage(msg, NetDeliveryMethod.ReliableOrdered);
-                    Console.WriteLine(" message of type " + message.GetType() + " with Action: " + message.ActionType + " with result: " + result.ToString());
                     client.FlushSendQueue();
 
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("CLIENT: Failed to serialise message!");
                 }
 
             }
@@ -826,7 +818,6 @@ namespace hist_mmorpg
             {
                 if (login == null || login.certificate == null)
                 {
-                    Console.WriteLine("CLIENT: No certificate");
                     key = null;
                     return false;
                 }
@@ -883,7 +874,6 @@ namespace hist_mmorpg
                             {
                                 for (int i = 0; i < CertificateChain.ChainStatus.Length; i++)
                                 {
-                                    Console.WriteLine(i + ": " + CertificateChain.ChainStatus[i].Status.ToString() + "; " + CertificateChain.ChainStatus[i].StatusInformation);
                                 }
                                 // TODO change to false after testing
                                 return true;
@@ -939,14 +929,12 @@ namespace hist_mmorpg
                                         string s = im.ReadString();
                                         if (!string.IsNullOrWhiteSpace(s))
                                         {
-                                            Console.WriteLine("CLIENT: Got message: " + s);
 
                                             tClient.stringMessageQueue.Enqueue(s);
                                         }
                                     }
                                     if (m != null)
                                     {
-                                        Console.WriteLine("CLIENT: Got ProtoMessage with ActionType: " + m.ActionType + " and response type: " + m.ResponseType);
                                         if (m.ResponseType == DisplayMessages.LogInSuccess)
                                         {
                                             loggedIn = true;
@@ -995,7 +983,6 @@ namespace hist_mmorpg
                             case NetIncomingMessageType.StatusChanged:
 
                                 NetConnectionStatus status = (NetConnectionStatus)im.ReadByte();
-                                Console.WriteLine("CLIENT: Status changed to " + status.ToString());
                                 //MemoryStream ms2 = new MemoryStream(im.SenderConnection.RemoteHailMessage.Data);
                                 if (status == NetConnectionStatus.Connected)
                                 {
@@ -1021,7 +1008,6 @@ namespace hist_mmorpg
                                                     }
                                                     else
                                                     {
-                                                        Console.WriteLine("Certificate validation failed: Server may be untrusted");
                                                         client.Disconnect("Invalid Certificate");
                                                     }
 

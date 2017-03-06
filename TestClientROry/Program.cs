@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using hist_mmorpg;
 using System.Threading;
+using TestClientROry;
 
 namespace TestClientRory
 {
@@ -13,7 +14,6 @@ namespace TestClientRory
     {
         private static WordRecogniser _wordRecogniser;
         private static TextTestClient _testClient;
-        private static PlayerCharacter myPlayer;
 
         private static void Main(string[] args)
         {
@@ -24,9 +24,7 @@ namespace TestClientRory
             Globals_Game.pcMasterList.Add("rory", new PlayerCharacter());
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
-                //_game = new Game();
                 _wordRecogniser = new WordRecogniser();
-                //_server = new Server();
                 _testClient = new TextTestClient();
 
                 Console.Clear();
@@ -93,6 +91,9 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Check:
                     player.Check(_testClient);
                     break;
+                case WordRecogniser.Tasks.Fief:
+                    player.FiefDetails(_testClient);
+                    break;
                 case WordRecogniser.Tasks.Move:
                     if (ValidateArgs(arguments))
                     {
@@ -101,6 +102,12 @@ namespace TestClientRory
                     else
                     {
                         SyntaxError();
+                    }
+                    break;
+                case WordRecogniser.Tasks.Hire:
+                    if (ValidateArgs(arguments))
+                    {
+                        player.HireTroops(Convert.ToInt32(arguments[1]), "army_ID", _testClient);
                     }
                     break;
                 case WordRecogniser.Tasks.Pillage:
