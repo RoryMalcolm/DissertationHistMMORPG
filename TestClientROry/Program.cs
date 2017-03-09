@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using hist_mmorpg;
 using System.Threading;
-using TestClientROry;
 
 namespace TestClientRory
 {
@@ -107,18 +106,34 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Hire:
                     if (ValidateArgs(arguments))
                     {
-                        player.HireTroops(Convert.ToInt32(arguments[1]), "army_ID", _testClient);
+                        player.HireTroops(Convert.ToInt32(arguments[1]), "Army_" + arguments[2], _testClient);
                     }
                     break;
                 case WordRecogniser.Tasks.Pillage:
                     if (ValidateArgs(arguments))
                     {
-                        player.Pillage(wordRecogniser.CheckDirections(arguments[1]), _testClient);
+                        player.Pillage(wordRecogniser.CheckDirections("Army_" + arguments[1]), _testClient);
                     }
                     else
                     {
                         SyntaxError();
                     }
+                    break;
+                case WordRecogniser.Tasks.Siege:
+                    if (ValidateArgs(arguments))
+                    {
+                        player.SiegeCurrentFief(arguments[1], _testClient);
+                    }
+                    else
+                    {
+                        SyntaxError();
+                    }
+                    break;
+                case WordRecogniser.Tasks.Players:
+                    player.Players(_testClient);
+                    break;
+                case WordRecogniser.Tasks.Profile: 
+                    player.Profile(_testClient);
                     break;
                 case WordRecogniser.Tasks.Exit:
                     break;

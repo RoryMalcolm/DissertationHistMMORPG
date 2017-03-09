@@ -52,8 +52,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientConnector.cs" />
-    <Compile Include="LocalPlayerInfo.cs" />
     <Compile Include="PlayerOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

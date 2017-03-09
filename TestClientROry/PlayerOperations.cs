@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using hist_mmorpg;
-using TestClientROry;
 
 namespace TestClientRory
 {
@@ -62,12 +61,25 @@ namespace TestClientRory
         public void ArmyStatus(TextTestClient client)
         {
             ProtoArmy proto = new ProtoArmy();
-            proto.ownerID = "helen";
-            proto.ActionType = Actions.ViewArmy;
+            proto.ownerID = "Char_158";
+            proto.ActionType = Actions.ListArmies;
             client.net.Send(proto);
-            var reply = GetActionReply(Actions.ViewArmy, client);
-            var army = (ProtoArmy) reply.Result;
-            Console.WriteLine(army.ownerID + army.armyID);
+            var reply = GetActionReply(Actions.ListArmies, client);
+            var armies = (ProtoGenericArray<ProtoArmyOverview>) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Army Report");
+            Console.WriteLine("-----------------------------");
+            var counter = 0;
+            foreach (var army in armies.fields)
+            {
+                counter++;
+                Console.WriteLine("Army " + counter);
+                Console.WriteLine("Army ID: " + army.armyID);
+                Console.WriteLine("Owner: " + army.ownerName);
+                Console.WriteLine("Size: " + army.armySize);
+                Console.WriteLine("Location : " + army.locationID);
+                Console.WriteLine("-----------------------------");
+            }
         }
 
         public Task<ProtoMessage> GetActionReply(Actions action, TextTestClient client)
@@ -86,6 +98,7 @@ namespace TestClientRory
         public void HireTroops(int amount, string armyID, TextTestClient client)
         {
             ProtoRecruit protoRecruit = new ProtoRecruit();
+            protoRecruit.ActionType = Actions.RecruitTroops;
             if (amount > 0)
             {
                 protoRecruit.amount = (uint) amount;
@@ -94,7 +107,18 @@ namespace TestClientRory
             protoRecruit.isConfirm = true;
             client.net.Send(protoRecruit);
             var reply = GetActionReply(Actions.RecruitTroops, client);
+            var result = (ProtoMessage) reply.Result;
+        }
+
+        public void SiegeCurrentFief(string armyID, TextTestClient client)
+        {
+            ProtoMessage protoSiegeStart = new ProtoMessage();
+            protoSiegeStart.ActionType = Actions.BesiegeFief;
+            protoSiegeStart.Message = armyID;
+            client.net.Send(protoSiegeStart);
+            var reply = GetActionReply(Actions.BesiegeFief, client);
             var result = reply.Result;
+            Console.WriteLine(result.ResponseType);
         }
 
         public void FiefDetails(TextTestClient client)
@@ -135,9 +159,67 @@ namespace TestClientRory
                 }
                 Console.WriteLine("-----------------------------");
             }
+            var keep = fief.keepLevel;
+            Console.WriteLine("Keep Level: "+ keep);
+            Console.WriteLine("-----------------------------");
             var militia = fief.militia;
             Console.WriteLine("Number of recruits available: " + militia);
             Console.WriteLine("Number of troops in fief:" + fief.troops);
+            Console.WriteLine("-----------------------------");
+        }
+
+        public void Players(TextTestClient client)
+        {
+            ProtoPlayer protoPlayer = new ProtoPlayer();
+            protoPlayer.ActionType = Actions.GetPlayers;
+            client.net.Send(protoPlayer);
+            var reply = GetActionReply(Actions.GetPlayers, client);
+            var result = (ProtoGenericArray<ProtoPlayer>) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Players on Server Report");
+            Console.WriteLine("-----------------------------");
+            var counter = 0;
+            foreach (var player in result.fields)
+            {
+                counter++;
+                Console.WriteLine("Player " + counter);
+                Console.WriteLine("Player ID: " + player.playerID);
+                Console.WriteLine("Player Name: " + player.pcName);
+                Console.WriteLine("-----------------------------");
+            }
+        }
+
+        public void Profile(TextTestClient client)
+        {
+            ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
+            protoMessage.Message = "Char_158";
+            protoMessage.ActionType = Actions.ViewChar;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.ViewChar, client);
+            var result = (ProtoPlayerCharacter) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Player Profile");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Player ID: " + result.playerID);
+            Console.WriteLine("Player Name: " + result.firstName + " " + result.familyName);
+            Console.WriteLine("-----------------------------");
+            Console.Write("Owned Fiefs: ");
+            bool written = false;
+            foreach (var fief in result.ownedFiefs)
+            {
+                if (written == false)
+                {
+                    Console.Write(fief);
+                    written = true;
+                }
+                else
+                    Console.Write(" , " + fief);
+            }
+            Console.Write("\n");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Location: " + result.location);
+            Console.WriteLine("Army: " + result.armyID);
+            Console.WriteLine("Purse: " + result.purse);
             Console.WriteLine("-----------------------------");
         }
     }
