@@ -123,7 +123,14 @@ namespace TestClientRory
 
         public void FiefDetails(TextTestClient client)
         {
+            ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
+            protoMessage.Message = "Char_158";
+            protoMessage.ActionType = Actions.ViewChar;
+            client.net.Send(protoMessage);
+            var locReply = GetActionReply(Actions.ViewChar, client);
+            var locResult = (ProtoPlayerCharacter)locReply.Result;
             ProtoFief protoFief = new ProtoFief();
+            protoFief.Message = locResult.location;
             protoFief.ActionType = Actions.ViewFief;
             client.net.Send(protoFief);
             var reply = GetActionReply(Actions.ViewFief, client);
