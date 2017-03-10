@@ -12,7 +12,7 @@ namespace TestClientRory
     {
         public enum Tasks
         {
-            Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError, Exit, Players, Profile
+            Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError, Exit, Players, Profile, SeasonUpdate
         }
 
         public Tasks CheckWord(string InputWord)
@@ -40,6 +40,8 @@ namespace TestClientRory
                     return Tasks.Players;
                 case "PROFILE":
                     return Tasks.Profile;
+                case "SUPDATE":
+                    return Tasks.SeasonUpdate;
                 default:
                     return Tasks.SyntaxError;
             }

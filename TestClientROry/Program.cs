@@ -135,6 +135,9 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Profile: 
                     player.Profile(_testClient);
                     break;
+                case WordRecogniser.Tasks.SeasonUpdate:
+                    player.SeasonUpdate(_testClient);
+                    break;
                 case WordRecogniser.Tasks.Exit:
                     break;
             }

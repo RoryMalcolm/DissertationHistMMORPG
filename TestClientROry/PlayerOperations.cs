@@ -229,5 +229,14 @@ namespace TestClientRory
             Console.WriteLine("Purse: " + result.purse);
             Console.WriteLine("-----------------------------");
         }
+
+        public void SeasonUpdate(TextTestClient client)
+        {
+            ProtoMessage protoMessage = new ProtoMessage();
+            protoMessage.ActionType = Actions.SeasonUpdate;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.SeasonUpdate, client);
+            var result = reply.Result;
+        }
     }
 }
