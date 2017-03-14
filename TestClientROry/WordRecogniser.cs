@@ -54,10 +54,10 @@ namespace TestClientRory
             {
                 case "NORTHEAST":
                 case "NE":
-                    return PlayerOperations.MoveDirections.NE;
+                    return PlayerOperations.MoveDirections.Ne;
                 case "NORTHWEST":
                 case "NW":
-                    return PlayerOperations.MoveDirections.NW;
+                    return PlayerOperations.MoveDirections.Nw;
                 case "EAST":
                 case "E":
                     return PlayerOperations.MoveDirections.E;
@@ -66,10 +66,10 @@ namespace TestClientRory
                     return PlayerOperations.MoveDirections.W;
                 case "SOUTHWEST":
                 case "SW":
-                    return PlayerOperations.MoveDirections.SW;
+                    return PlayerOperations.MoveDirections.Sw;
                 case "SOUTHEAST":
                 case "SE":
-                    return PlayerOperations.MoveDirections.SE;
+                    return PlayerOperations.MoveDirections.Se;
                 default:
                     return PlayerOperations.MoveDirections.SyntaxError;
             }

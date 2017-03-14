@@ -112,7 +112,7 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Pillage:
                     if (ValidateArgs(arguments))
                     {
-                        player.Pillage(wordRecogniser.CheckDirections("Army_" + arguments[1]), _testClient);
+                        player.Pillage("Army_" + arguments[1], _testClient);
                     }
                     else
                     {

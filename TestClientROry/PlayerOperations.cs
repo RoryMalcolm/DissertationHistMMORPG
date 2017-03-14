@@ -11,7 +11,7 @@ namespace TestClientRory
     {
         public enum MoveDirections
         {
-            E, W, SE, SW, NE, NW, SyntaxError
+            E, W, Se, Sw, Ne, Nw, SyntaxError
         }
         public void Move(MoveDirections directions, TextTestClient client)
         {
@@ -48,7 +48,7 @@ namespace TestClientRory
             Console.WriteLine("-----------------------------");
         }
 
-        public void Pillage(MoveDirections directions, TextTestClient client)
+        public void Pillage(String army, TextTestClient client)
         {
             ProtoMessage siegeMessage = new ProtoMessage();
             siegeMessage.ActionType = Actions.BesiegeFief;
