@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Graphics;
-
-namespace TestClientRory
+﻿namespace TestClientRory
 {
     class WordRecogniser
     {
         public enum Tasks
         {
-            Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError, Exit, Players, Profile, SeasonUpdate
+            Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError,
+            Exit, Players, Sieges, Profile, SeasonUpdate,
+            JournalEntries, Journal
         }
 
         public Tasks CheckWord(string InputWord)
@@ -42,6 +36,12 @@ namespace TestClientRory
                     return Tasks.Profile;
                 case "SUPDATE":
                     return Tasks.SeasonUpdate;
+                case "SIEGES":
+                    return Tasks.Sieges;
+                case "JOURNALS":
+                    return Tasks.JournalEntries;
+                case "JOURNAL":
+                    return Tasks.Journal;
                 default:
                     return Tasks.SyntaxError;
             }

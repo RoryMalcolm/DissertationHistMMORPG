@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using hist_mmorpg;
 using System.Threading;
 
@@ -137,6 +133,22 @@ namespace TestClientRory
                     break;
                 case WordRecogniser.Tasks.SeasonUpdate:
                     player.SeasonUpdate(_testClient);
+                    break;
+                case WordRecogniser.Tasks.Sieges:
+                    player.SiegeList(_testClient);
+                    break;
+                case WordRecogniser.Tasks.JournalEntries:
+                    player.JournalEntries(_testClient);
+                    break;
+                case WordRecogniser.Tasks.Journal:
+                    if (ValidateArgs(arguments))
+                    {
+                        player.Journal(arguments[1], _testClient);
+                    }
+                    else
+                    {
+                        SyntaxError();
+                    }
                     break;
                 case WordRecogniser.Tasks.Exit:
                     break;

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using hist_mmorpg;
 
@@ -237,6 +234,56 @@ namespace TestClientRory
             client.net.Send(protoMessage);
             var reply = GetActionReply(Actions.SeasonUpdate, client);
             var result = reply.Result;
+        }
+
+        public void SiegeList(TextTestClient client)
+        {
+            ProtoMessage protoMessage = new ProtoMessage();
+            protoMessage.ActionType = Actions.SiegeList;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.SiegeList, client);
+            var result = reply.Result;
+            Console.WriteLine(result.Message);
+        }
+
+        public void JournalEntries(TextTestClient client)
+        {
+            ProtoMessage protoMessage = new ProtoMessage();
+            protoMessage.ActionType = Actions.ViewJournalEntries;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.ViewJournalEntries, client);
+            var result = (ProtoGenericArray<ProtoJournalEntry>) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Journal Entries");
+            Console.WriteLine("-----------------------------");
+            foreach(var journal in result.fields)
+            {
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine("Journal Entry ID: " + journal.jEntryID);
+                Console.WriteLine("Journal Event Year: " + journal.year);
+                Console.WriteLine("Journal Event Location: " + journal.location);
+                Console.WriteLine("Journal Personae: " + journal.personae);
+                Console.WriteLine("-----------------------------");
+            }
+        }
+
+        public void Journal(string Journal, TextTestClient client){
+            ProtoMessage protoMessage = new ProtoMessage();
+            protoMessage.ActionType = Actions.ViewJournalEntry;
+            protoMessage.Message = Journal;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.ViewJournalEntry, client);
+            var journal = (ProtoJournalEntry) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Journal Entry " + journal.jEntryID);
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Journal Entry ID: " + journal.jEntryID);
+            Console.WriteLine("Journal Event Year: " + journal.year);
+            Console.WriteLine("Journal Event Location: " + journal.location);
+            Console.WriteLine("Journal Personae: " + journal.personae);
+            Console.WriteLine("-----------------------------");
+
         }
     }
 }
