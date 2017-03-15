@@ -106,16 +106,6 @@ namespace TestClientRory
                         player.HireTroops(Convert.ToInt32(arguments[1]), _testClient);
                     }
                     break;
-                case WordRecogniser.Tasks.Pillage:
-                    if (ValidateArgs(arguments))
-                    {
-                        player.Pillage("Army_" + arguments[1], _testClient);
-                    }
-                    else
-                    {
-                        SyntaxError();
-                    }
-                    break;
                 case WordRecogniser.Tasks.Siege:
                     player.SiegeCurrentFief(_testClient);
                     break;

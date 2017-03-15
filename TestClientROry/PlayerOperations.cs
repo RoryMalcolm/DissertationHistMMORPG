@@ -44,17 +44,6 @@ namespace TestClientRory
             }
             Console.WriteLine("-----------------------------");
         }
-
-        public void Pillage(String army, TextTestClient client)
-        {
-            ProtoMessage siegeMessage = new ProtoMessage();
-            siegeMessage.ActionType = Actions.BesiegeFief;
-            client.net.Send(siegeMessage);
-            var reply = GetActionReply(Actions.BesiegeFief, client);
-            var siege = reply.Result.ResponseType;
-            Console.WriteLine(siege);
-        }
-
         public void ArmyStatus(TextTestClient client)
         {
             ProtoArmy proto = new ProtoArmy();
