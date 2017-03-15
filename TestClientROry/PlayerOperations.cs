@@ -92,30 +92,72 @@ namespace TestClientRory
             return responseTask;
         }
 
-        public void HireTroops(int amount, string armyID, TextTestClient client)
+        public void HireTroops(int amount, TextTestClient client)
         {
+            ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
+            protoMessage.Message = "Char_158";
+            protoMessage.ActionType = Actions.ViewChar;
+            client.net.Send(protoMessage);
+            var armyReply = GetActionReply(Actions.ViewChar, client);
+            var armyResult = (ProtoPlayerCharacter)armyReply.Result;
             ProtoRecruit protoRecruit = new ProtoRecruit();
             protoRecruit.ActionType = Actions.RecruitTroops;
             if (amount > 0)
             {
                 protoRecruit.amount = (uint) amount;
             }
-            protoRecruit.armyID = armyID;
+            protoRecruit.armyID = armyResult.armyID;
             protoRecruit.isConfirm = true;
             client.net.Send(protoRecruit);
             var reply = GetActionReply(Actions.RecruitTroops, client);
-            var result = (ProtoMessage) reply.Result;
+            if (reply.Result.ResponseType == DisplayMessages.CharacterRecruitOwn)
+            {
+                Console.WriteLine("Recruit from a fief you own!");
+            }
+            else if (reply.Result.ResponseType == DisplayMessages.CharacterRecruitAlready)
+            {
+                Console.WriteLine("You have already recruited!");
+            }
+            else if (reply.Result.ResponseType == DisplayMessages.CharacterRecruitInsufficientFunds)
+            {
+                Console.WriteLine("Insufficient recruitment funds!");
+            }
+            else
+            {
+                var result = (ProtoRecruit)reply.Result;
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine("Recruit Report");
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine("Army ID: " + result.armyID);
+                Console.WriteLine("Recruitment Cost: " + result.cost);
+                Console.WriteLine("Amount of Recruits: " + result.amount);
+                Console.WriteLine("-----------------------------");
+            }
         }
 
-        public void SiegeCurrentFief(string armyID, TextTestClient client)
+        public void SiegeCurrentFief(TextTestClient client)
         {
+            ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
+            protoMessage.Message = "Char_158";
+            protoMessage.ActionType = Actions.ViewChar;
+            client.net.Send(protoMessage);
+            var locReply = GetActionReply(Actions.ViewChar, client);
+            var locResult = (ProtoPlayerCharacter)locReply.Result;
             ProtoMessage protoSiegeStart = new ProtoMessage();
             protoSiegeStart.ActionType = Actions.BesiegeFief;
-            protoSiegeStart.Message = armyID;
+            protoSiegeStart.Message = locResult.armyID;
             client.net.Send(protoSiegeStart);
             var reply = GetActionReply(Actions.BesiegeFief, client);
-            var result = reply.Result;
-            Console.WriteLine(result.ResponseType);
+            var result = (ProtoSiegeDisplay) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Siege Report");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Besieged Fief: " + result.besiegedFief);
+            Console.WriteLine("Besieged Army: " + result.besiegerArmy);
+            Console.WriteLine("Siege Successful: " + result.besiegerWon);
+            Console.WriteLine("Siege Length: " + result.days + " days");
+            Console.WriteLine("Loot Lost: " + result.lootLost);
+            Console.WriteLine("-----------------------------");
         }
 
         public void FiefDetails(TextTestClient client)
@@ -234,6 +276,7 @@ namespace TestClientRory
             client.net.Send(protoMessage);
             var reply = GetActionReply(Actions.SeasonUpdate, client);
             var result = reply.Result;
+            Console.WriteLine("Season Updated!");
         }
 
         public void SiegeList(TextTestClient client)
@@ -242,8 +285,16 @@ namespace TestClientRory
             protoMessage.ActionType = Actions.SiegeList;
             client.net.Send(protoMessage);
             var reply = GetActionReply(Actions.SiegeList, client);
-            var result = reply.Result;
-            Console.WriteLine(result.Message);
+            var result = (ProtoGenericArray<ProtoSiegeOverview>) reply.Result;
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Sieges Overview");
+            Console.WriteLine("-----------------------------");
+            foreach (var siege in result.fields)
+            {
+                Console.Write(siege.siegeID + ": " + siege.besiegingPlayer 
+                    + " vs. " + siege.defendingPlayer + " in " + siege.besiegedFief + "\n");
+                Console.WriteLine("-----------------------------");
+            }
         }
 
         public void JournalEntries(TextTestClient client)
@@ -256,14 +307,21 @@ namespace TestClientRory
             Console.WriteLine("-----------------------------");
             Console.WriteLine("Journal Entries");
             Console.WriteLine("-----------------------------");
-            foreach(var journal in result.fields)
+            if (result.fields != null)
             {
-                Console.WriteLine("-----------------------------");
-                Console.WriteLine("Journal Entry ID: " + journal.jEntryID);
-                Console.WriteLine("Journal Event Year: " + journal.year);
-                Console.WriteLine("Journal Event Location: " + journal.location);
-                Console.WriteLine("Journal Personae: " + journal.personae);
-                Console.WriteLine("-----------------------------");
+                foreach (var journal in result.fields)
+                {
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Journal Entry ID: " + journal.jEntryID);
+                    Console.WriteLine("Journal Event Year: " + journal.year);
+                    Console.WriteLine("Journal Event Location: " + journal.location);
+                    Console.WriteLine("Journal Personae: " + journal.personae);
+                    Console.WriteLine("-----------------------------");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No Journal Entries found.");
             }
         }
 
@@ -283,7 +341,15 @@ namespace TestClientRory
             Console.WriteLine("Journal Event Location: " + journal.location);
             Console.WriteLine("Journal Personae: " + journal.personae);
             Console.WriteLine("-----------------------------");
+        }
 
+        public void AdjustFiefExpenditure(string type, TextTestClient client)
+        {
+            ProtoNPC protoMessage = new ProtoNPC();
+            protoMessage.ActionType = Actions.AdjustExpenditure;
+            client.net.Send(protoMessage);
+            var reply = GetActionReply(Actions.GetNPCList, client);
+            var result = (ProtoGenericArray<ProtoNPC>) reply.Result;
         }
     }
 }

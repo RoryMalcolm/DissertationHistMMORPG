@@ -6,7 +6,7 @@
         {
             Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError,
             Exit, Players, Sieges, Profile, SeasonUpdate,
-            JournalEntries, Journal
+            JournalEntries, Journal, FiefExpenditure
         }
 
         public Tasks CheckWord(string InputWord)
@@ -42,6 +42,8 @@
                     return Tasks.JournalEntries;
                 case "JOURNAL":
                     return Tasks.Journal;
+                case "NPCS":
+                    return Tasks.FiefExpenditure;
                 default:
                     return Tasks.SyntaxError;
             }

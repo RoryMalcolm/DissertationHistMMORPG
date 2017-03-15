@@ -92,7 +92,8 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Move:
                     if (ValidateArgs(arguments))
                     {
-                        player.Move(wordRecogniser.CheckDirections(arguments[1]), _testClient);
+                        player.Move(wordRecogniser.CheckDirections(arguments[1]),
+                            _testClient);
                     }
                     else
                     {
@@ -102,7 +103,7 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Hire:
                     if (ValidateArgs(arguments))
                     {
-                        player.HireTroops(Convert.ToInt32(arguments[1]), "Army_" + arguments[2], _testClient);
+                        player.HireTroops(Convert.ToInt32(arguments[1]), _testClient);
                     }
                     break;
                 case WordRecogniser.Tasks.Pillage:
@@ -116,14 +117,7 @@ namespace TestClientRory
                     }
                     break;
                 case WordRecogniser.Tasks.Siege:
-                    if (ValidateArgs(arguments))
-                    {
-                        player.SiegeCurrentFief(arguments[1], _testClient);
-                    }
-                    else
-                    {
-                        SyntaxError();
-                    }
+                    player.SiegeCurrentFief(_testClient);
                     break;
                 case WordRecogniser.Tasks.Players:
                     player.Players(_testClient);
@@ -144,6 +138,16 @@ namespace TestClientRory
                     if (ValidateArgs(arguments))
                     {
                         player.Journal(arguments[1], _testClient);
+                    }
+                    else
+                    {
+                        SyntaxError();
+                    }
+                    break;
+                case WordRecogniser.Tasks.FiefExpenditure:
+                    if (ValidateArgs(arguments))
+                    {
+                        player.AdjustFiefExpenditure(arguments[1], _testClient);
                     }
                     else
                     {
