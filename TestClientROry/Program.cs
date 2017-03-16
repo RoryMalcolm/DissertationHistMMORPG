@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using hist_mmorpg;
 using System.Threading;
+using TestClientROry;
 
 namespace TestClientRory
 {
@@ -9,6 +10,7 @@ namespace TestClientRory
     {
         private static WordRecogniser _wordRecogniser;
         private static TextTestClient _testClient;
+        private static DisplayResults _displayResults;
 
         private static void Main(string[] args)
         {
@@ -16,6 +18,7 @@ namespace TestClientRory
             string datePatern = "MM_dd_H_mm";
             var logFilePath = "TestRun_NoSessions" + encryptString + DateTime.Now.ToString(datePatern) + ".txt";
             TextTestClient client = new TextTestClient();
+            _displayResults = new DisplayResults();
             Globals_Game.pcMasterList.Add("rory", new PlayerCharacter());
             using (Globals_Server.LogFile = new System.IO.StreamWriter(logFilePath))
             {
@@ -81,19 +84,23 @@ namespace TestClientRory
             switch (task)
             {
                 case WordRecogniser.Tasks.ArmyStatus:
-                    player.ArmyStatus(_testClient);
+                    var armyStatusResult = player.ArmyStatus(_testClient);
+                    _displayResults.DisplayArmyStatus(armyStatusResult);
                     break;
                 case WordRecogniser.Tasks.Check:
-                    player.Check(_testClient);
+                    var checkResult = player.Check(_testClient);
+                    _displayResults.DisplayCheck(checkResult);
                     break;
                 case WordRecogniser.Tasks.Fief:
-                    player.FiefDetails(_testClient);
+                    var fiefResult = player.FiefDetails(_testClient);
+                    _displayResults.DisplayFief(fiefResult);
                     break;
                 case WordRecogniser.Tasks.Move:
                     if (ValidateArgs(arguments))
                     {
-                        player.Move(wordRecogniser.CheckDirections(arguments[1]),
+                        var moveResult = player.Move(wordRecogniser.CheckDirections(arguments[1]),
                             _testClient);
+                        _displayResults.DisplayMove(moveResult);
                     }
                     else
                     {
@@ -103,41 +110,39 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.Hire:
                     if (ValidateArgs(arguments))
                     {
-                        player.HireTroops(Convert.ToInt32(arguments[1]), _testClient);
-                    }
-                    break;
-                case WordRecogniser.Tasks.Pillage:
-                    if (ValidateArgs(arguments))
-                    {
-                        player.Pillage("Army_" + arguments[1], _testClient);
-                    }
-                    else
-                    {
-                        SyntaxError();
+                        var hireResult = player.HireTroops(Convert.ToInt32(arguments[1]), _testClient);
+                        _displayResults.DisplayHire(hireResult);
                     }
                     break;
                 case WordRecogniser.Tasks.Siege:
-                    player.SiegeCurrentFief(_testClient);
+                    var siegeResult = player.SiegeCurrentFief(_testClient);
+                    _displayResults.DisplaySiege(siegeResult);
                     break;
                 case WordRecogniser.Tasks.Players:
-                    player.Players(_testClient);
+                    var playersResult = player.Players(_testClient);
+                    _displayResults.DisplayPlayers(playersResult);
                     break;
                 case WordRecogniser.Tasks.Profile: 
-                    player.Profile(_testClient);
+                    var profileResult = player.Profile(_testClient);
+                    _displayResults.DisplayProfile(profileResult);
                     break;
                 case WordRecogniser.Tasks.SeasonUpdate:
-                    player.SeasonUpdate(_testClient);
+                    var seasonUpdateResult = player.SeasonUpdate(_testClient);
+                    _displayResults.DisplaySeasonUpdate();
                     break;
                 case WordRecogniser.Tasks.Sieges:
-                    player.SiegeList(_testClient);
+                    var siegeListResult = player.SiegeList(_testClient);
+                    _displayResults.DisplaySiegeResult(siegeListResult);
                     break;
                 case WordRecogniser.Tasks.JournalEntries:
-                    player.JournalEntries(_testClient);
+                    var journalEntriesResult = player.JournalEntries(_testClient);
+                    _displayResults.DisplayJournalEntries(journalEntriesResult);
                     break;
                 case WordRecogniser.Tasks.Journal:
                     if (ValidateArgs(arguments))
                     {
-                        player.Journal(arguments[1], _testClient);
+                        var journalResult = player.Journal(arguments[1], _testClient);
+                        _displayResults.DisplayJournalEntry(journalResult);
                     }
                     else
                     {
@@ -147,7 +152,7 @@ namespace TestClientRory
                 case WordRecogniser.Tasks.FiefExpenditure:
                     if (ValidateArgs(arguments))
                     {
-                        player.AdjustFiefExpenditure(arguments[1], _testClient);
+                        var fiefExpendResult = player.AdjustFiefExpenditure(arguments[1], _testClient);
                     }
                     else
                     {

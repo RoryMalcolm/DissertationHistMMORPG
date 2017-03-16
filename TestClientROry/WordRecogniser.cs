@@ -1,10 +1,10 @@
 ﻿namespace TestClientRory
 {
-    class WordRecogniser
+    public class WordRecogniser
     {
         public enum Tasks
         {
-            Move, Pillage, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError,
+            Move, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError,
             Exit, Players, Sieges, Profile, SeasonUpdate,
             JournalEntries, Journal, FiefExpenditure
         }
@@ -16,8 +16,6 @@
             {
                 case "MOVE":
                     return Tasks.Move;
-                case "PILLAGE":
-                    return Tasks.Pillage;
                 case "CHECK":
                     return Tasks.Check;
                 case "ARMY":
