@@ -27,59 +27,59 @@ namespace ClientDLL
                 _testClient);
         }
 
-        public void ArmyStatus()
+        public ProtoGenericArray<ProtoArmyOverview> ArmyStatus()
         {
-            _playerOps.ArmyStatus(_testClient);
+            return _playerOps.ArmyStatus(_testClient);
         }
 
-        public void Check()
+        public ProtoGenericArray<ProtoFief> Check()
         {
-            _playerOps.Check(_testClient);
+            return _playerOps.Check(_testClient);
         }
 
-        public void Hire(string amount)
+        public ProtoMessage Hire(string amount)
         {
-            _playerOps.HireTroops(Convert.ToInt32(amount), _testClient);
+            return _playerOps.HireTroops(Convert.ToInt32(amount), _testClient);
         }
 
-        public void Siege()
+        public ProtoSiegeDisplay Siege()
         {
-            _playerOps.SiegeCurrentFief(_testClient);
+            return _playerOps.SiegeCurrentFief(_testClient);
         }
 
-        public void Players()
+        public ProtoGenericArray<ProtoPlayer> Players()
         {
-            _playerOps.Players(_testClient);
+            return _playerOps.Players(_testClient);
         }
 
-        public void Profile()
+        public ProtoPlayerCharacter Profile()
         {
-            _playerOps.Profile(_testClient);
+            return _playerOps.Profile(_testClient);
         }
 
-        public void SeasonUpdate()
+        public ProtoMessage SeasonUpdate()
         {
-            _playerOps.SeasonUpdate(_testClient);
+            return _playerOps.SeasonUpdate(_testClient);
         }
 
-        public void Sieges()
+        public ProtoGenericArray<ProtoSiegeOverview> Sieges()
         {
-            _playerOps.SiegeList(_testClient);
+            return _playerOps.SiegeList(_testClient);
         }
 
-        public void Journal(string journalForQuery)
+        public ProtoJournalEntry Journal(string journalForQuery)
         {
-            _playerOps.Journal(journalForQuery, _testClient);
+            return _playerOps.Journal(journalForQuery, _testClient);
         }
 
-        public void JournalEntries()
+        public ProtoGenericArray<ProtoJournalEntry> JournalEntries()
         {
-            _playerOps.JournalEntries(_testClient);
+            return _playerOps.JournalEntries(_testClient);
         }
 
-        public void FiefExpenditure(string type)
+        public ProtoGenericArray<ProtoNPC> FiefExpenditure(string type)
         {
-            _playerOps.AdjustFiefExpenditure(type, _testClient);
+            return _playerOps.AdjustFiefExpenditure(type, _testClient);
         }
     }
 }
