@@ -92,25 +92,6 @@ namespace hist_mmorpg
             net.Disconnect();
         }
 
-        public void SendMessage(Actions a, object o)
-        {
-            ProtoMessage msg = new ProtoMessage();
-            msg.ActionType = a;
-            msg.Message = o.ToString();
-            net.Send(msg, true);
-        }
-        /// <summary>
-        /// Switch to commanding a different character
-        /// </summary>
-        /// <param name="charID">ID of character to control. Must own the character, and character must not be captured/dead</param>
-        public void SwitchCharacter(string charID)
-        {
-            ProtoMessage message = new ProtoMessage();
-            message.ActionType = Actions.UseChar;
-            message.Message = charID;
-            net.Send(message);
-        }
-
         /// <summary>
         /// Gets the next message from the server by repeatedly polling the message queue. 
         /// </summary>
@@ -175,29 +156,6 @@ namespace hist_mmorpg
 
             return reply;
         }
-
-        /// <summary>
-        /// Request that a season update be performed. Note that this is an admin command
-        /// </summary>
-        public void SeasonUpdate()
-        {
-            ProtoMessage updateRequest = new ProtoMessage();
-            updateRequest.ActionType = Actions.SeasonUpdate;
-            net.Send(updateRequest);
-        }
-
-        /// <summary>
-        /// View a character
-        /// </summary>
-        /// <param name="charID">ID of character to view</param>
-        public void ViewCharacter(string charID)
-        {
-            ProtoMessage viewChar = new ProtoMessage();
-            viewChar.ActionType = Actions.ViewChar;
-            viewChar.Message = charID;
-            net.Send(viewChar);
-        }
-
         protected virtual void Dispose(bool dispose)
         {
             net.Dispose();
@@ -209,90 +167,6 @@ namespace hist_mmorpg
             GC.SuppressFinalize(this);
         }
     }
-
-    /*************************************
-         * Travel-related Commands ***
-    * **********************************/
-
-
-    public partial class TextTestClient
-    {
-        /// <summary>
-        /// Move a character to a chosen location
-        /// </summary>
-        /// <param name="character">Character ID</param>
-        /// <param name="location">Location ID</param>
-
-        /// <summary>
-        /// List all the characters in a place based on a character's location
-        /// </summary>
-        /// <param name="charID">charID of character whose location to use</param>
-        /// <param name="place">One of "court", "tavern", or "outside"</param>
-    }
-
-
-
-
-    /*****************
-    **Subterfuge actions***
-    ***************/
-    public partial class TextTestClient
-    {
-    }
-
-    /*****************************
-    ****Family-management commands
-    **************************/
-    public partial class TextTestClient
-    {
-        /// <summary>
-        /// Name a new heir
-        /// </summary>
-        /// <param name="charID">ID of character to be heir. Must be a male family member of correct age</param>
-        public void NameHeir(string charID)
-        {
-            ProtoMessage message = new ProtoMessage();
-            message.ActionType = Actions.AppointHeir;
-            message.Message = charID;
-            net.Send(message);
-        }
-
-        /// <summary>
-        /// Propose marriage between two characters
-        /// </summary>
-        /// <param name="groomID">character ID of the groom</param>
-        /// <param name="brideID">character ID of the bride</param>
-        public void Marry(string groomID, string brideID)
-        {
-            ProtoMessage marry = new ProtoMessage();
-            marry.ActionType = Actions.ProposeMarriage;
-            marry.Message = groomID;
-            marry.MessageFields = new string[] { brideID };
-            net.Send(marry);
-        }
-
-        /// <summary>
-        /// Attempt to produce an offspring
-        /// </summary>
-        /// <param name="charID">ID of character who will be trying for a child. Must be a male family member with a spouse</param>
-        public void TryForChild(string charID)
-        {
-            ProtoMessage tryForChild = new ProtoMessage();
-            tryForChild.ActionType = Actions.TryForChild;
-            tryForChild.Message = charID;
-            net.Send(tryForChild);
-        }
-    }
-
-
-
-    /**********************************
-    *********Fief-control commands ***
-    ***********************************/
-    public partial class TextTestClient
-    {
-    }
-
 
 
     public partial class TextTestClient
@@ -327,25 +201,12 @@ namespace hist_mmorpg
                 InitializeClient();
             }
 
-            public NetConnection GetConnection()
-            {
-                return connection;
-            }
-
-            public NetConnection GetServerConnection()
-            {
-                return client.ServerConnection;
-            }
 
             public string GetConnectionStatusString()
             {
                 return client.ConnectionStatus.ToString();
             }
 
-            public NetConnectionStatus GetConnectionStatus()
-            {
-                return client.ConnectionStatus;
-            }
 
             void InitializeClient()
             {
