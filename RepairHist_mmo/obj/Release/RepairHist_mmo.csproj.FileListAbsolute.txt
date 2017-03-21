@@ -31,3 +31,5 @@ E:\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Release\RiakClient.dll
 E:\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Release\RepairHist_mmo.csprojResolveAssemblyReference.cache
 E:\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Release\hist_mmorpg.exe.manifest
 E:\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Release\hist_mmorpg.application
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Release\hist_mmorpg.exe.config
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Release\RepairHist_mmo.csprojResolveAssemblyReference.cache
