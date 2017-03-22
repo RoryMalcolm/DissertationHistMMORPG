@@ -32,6 +32,7 @@ namespace ClientDLL
             _testClient = new TextTestClient();
             _wordRecogniser = new WordRecogniser();
             _playerOps = new PlayerOperations();
+            _testClient.LogInAndConnect("helen", "potato");
         }
 
         public ProtoFief Move(string directions)
@@ -69,7 +70,7 @@ namespace ClientDLL
         }
 
         public ProtoPlayerCharacter Profile()
-        {
+        { 
             return _playerOps.Profile(_testClient);
         }
 
