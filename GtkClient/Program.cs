@@ -19,6 +19,7 @@ public class GtkHelloWorld {
      Button southWest = new Button("South West");
 
      Label currentUserLabel = new Label("Current User:");
+     Label currentUserOutput = new Label("");
      //Add the label to the form
      tableLayout.Attach(northEast, 0,1,0,1);
      tableLayout.Attach(northWest, 1,2,0,1);
@@ -27,6 +28,7 @@ public class GtkHelloWorld {
      tableLayout.Attach(southEast, 0,1,2,3);
      tableLayout.Attach(southWest,1,2,2,3);
      tableLayout.Attach(currentUserLabel, 0,1,3,4);
+     tableLayout.Attach(currentUserOutput,1,2,3,4);
      myWin.Add(tableLayout);
 
      //Show Everything
