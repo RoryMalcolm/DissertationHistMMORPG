@@ -56,14 +56,14 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="ClientDLL">
-      <HintPath>..\..\..\ClientDLL\bin\Debug\ClientDLL.dll</HintPath>
-    </Reference>
     <Reference Include="hist_mmorpg">
       <HintPath>..\..\..\TestClientROry\bin\Debug\hist_mmorpg.exe</HintPath>
     </Reference>
     <Reference Include="TestClientROry">
       <HintPath>..\..\..\TestClientROry\bin\Debug\TestClientROry.exe</HintPath>
+    </Reference>
+    <Reference Include="ClientDLL">
+      <HintPath>..\..\..\ClientDLL\bin\Debug\ClientDLL.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +77,10 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PlayerOperations.cs" />
+    <Compile Include="WordRecogniser.cs" />
+    <Compile Include="TextTestClient.cs" />
+    <Compile Include="ProfileTable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
