@@ -1,0 +1,612 @@
+package com.example.user.myapplication;
+
+enum Actions {
+   Update = 0;
+   LogIn = 1;
+   UseChar = 2;
+   GetPlayers = 3;
+   ViewChar = 4;
+   ViewArmy = 5;
+   GetNPCList = 6;
+   HireNPC = 7;
+   FireNPC = 8;
+   TravelTo = 9;
+   MoveCharacter = 10;
+   ViewFief = 11;
+   ViewMyFiefs = 12;
+   AppointBailiff = 13;
+   RemoveBailiff = 14;
+   BarCharacters = 15;
+   BarNationalities = 16;
+   UnbarCharacters = 17;
+   UnbarNationalities = 18;
+   GrantFiefTitle = 19;
+   AdjustExpenditure = 20;
+   TransferFunds = 21;
+   TransferFundsToPlayer = 22;
+   EnterExitKeep = 23;
+   ListCharsInMeetingPlace = 24;
+   TakeThisRoute = 25;
+   Camp = 26;
+   AddRemoveEntourage = 27;
+   ProposeMarriage = 28;
+   AcceptRejectProposal = 29;
+   RejectProposal = 30;
+   AppointHeir = 31;
+   TryForChild = 32;
+   RecruitTroops = 33;
+   MaintainArmy = 34;
+   AppointLeader = 35;
+   DropOffTroops = 36;
+   ListDetachments = 37;
+   ListArmies = 38;
+   PickUpTroops = 39;
+   PillageFief = 40;
+   BesiegeFief = 41;
+   AdjustCombatValues = 42;
+   ExamineArmiesInFief = 43;
+   Attack = 44;
+   ViewJournalEntries = 45;
+   ViewJournalEntry = 46;
+   SiegeRoundReduction = 47;
+   SiegeRoundStorm = 48;
+   SiegeRoundNegotiate = 49;
+   SiegeList = 50;
+   ViewSiege = 51;
+   EndSiege = 52;
+   DisbandArmy = 53;
+   SpyFief = 54;
+   SpyCharacter = 55;
+   SpyArmy = 56;
+   Kidnap = 57;
+   ViewCaptives = 58;
+   ViewCaptive = 59;
+   RansomCaptive = 60;
+   ReleaseCaptive = 61;
+   ExecuteCaptive = 62;
+   RespondRansom = 63;
+   SeasonUpdate = 64;
+}
+enum DisplayMessages {
+   None = 0;
+   Success = 1;
+   Error = 2;
+   Armies = 3;
+   Fiefs = 4;
+   Characters = 5;
+   JournalEntries = 6;
+   ArmyMaintainInsufficientFunds = 7;
+   ArmyMaintainCost = 8;
+   ArmyMaintainConfirm = 9;
+   ArmyMaintainedAlready = 10;
+   JournalProposal = 11;
+   JournalProposalReply = 12;
+   JournalMarriage = 13;
+   ChallengeKingSuccess = 14;
+   ChallengeKingFail = 15;
+   ChallengeProvinceSuccess = 16;
+   ChallengeProvinceFail = 17;
+   newEvent = 18;
+   SwitchPlayerErrorNoID = 19;
+   SwitchPlayerErrorIDInvalid = 20;
+   ChallengeErrorExists = 21;
+   SiegeNegotiateSuccess = 22;
+   SiegeNegotiateFail = 23;
+   SiegeStormSuccess = 24;
+   SiegeStormFail = 25;
+   SiegeEndDefault = 26;
+   SiegeErrorDays = 27;
+   SiegeRaised = 28;
+   SiegeReduction = 29;
+   ArmyMove = 30;
+   ArmyAttritionDebug = 31;
+   ArmyDetachmentArrayWrongLength = 32;
+   ArmyDetachmentNotEnoughTroops = 33;
+   ArmyDetachmentNotSelected = 34;
+   ArmyRetreat = 35;
+   ArmyDisband = 36;
+   ErrorGenericNotEnoughDays = 37;
+   ErrorGenericPoorOrganisation = 38;
+   ErrorGenericUnidentifiedRecipient = 39;
+   ArmyNoLeader = 40;
+   ArmyBesieged = 41;
+   ArmyAttackSelf = 42;
+   ArmyPickupsDenied = 43;
+   ArmyPickupsNotEnoughDays = 44;
+   BattleBringSuccess = 45;
+   BattleBringFail = 46;
+   BattleResults = 47;
+   ErrorGenericNotInSameFief = 48;
+   BirthAlreadyPregnant = 49;
+   BirthSiegeSeparation = 50;
+   BirthNotMarried = 51;
+   CharacterMarriageDeath = 52;
+   CharacterDeath = 53;
+   CharacterDeathNoHeir = 54;
+   CharacterEnterArmy = 55;
+   CharacterAlreadyArmy = 56;
+   CharacterNationalityBarred = 57;
+   CharacterBarred = 58;
+   CharacterRoyalGiftPlayer = 59;
+   CharacterRoyalGiftSelf = 60;
+   CharacterNotMale = 61;
+   CharacterNotOfAge = 62;
+   CharacterLeaderLocation = 63;
+   CharacterLeadingArmy = 64;
+   CharacterDaysJourney = 65;
+   CharacterSpousePregnant = 66;
+   CharacterSpouseNotPregnant = 67;
+   CharacterSpouseNeverPregnant = 68;
+   CharacterBirthOK = 69;
+   CharacterBirthChildDead = 70;
+   CharacterBirthMumDead = 71;
+   CharacterBirthAllDead = 72;
+   RankTitleTransfer = 73;
+   CharacterCombatInjury = 74;
+   CharacterProposalMan = 75;
+   CharacterProposalUnderage = 76;
+   CharacterProposalEngaged = 77;
+   CharacterProposalMarried = 78;
+   CharacterProposalFamily = 79;
+   CharacterProposalIncest = 80;
+   CharacterProposalAlready = 81;
+   CharacterRemovedFromEntourage = 82;
+   CharacterCamp = 83;
+   CharacterCampAttrition = 84;
+   CharacterBailiffDuty = 85;
+   CharacterMoveEndSiege = 86;
+   MoveCancelled = 87;
+   CharacterInvalidMovement = 88;
+   ErrorGenericFiefUnidentified = 89;
+   CharacterHireNotEmployable = 90;
+   CharacterFireNotEmployee = 91;
+   CharacterOfferLow = 92;
+   CharacterOfferHigh = 93;
+   CharacterOfferOk = 94;
+   CharacterOfferAlmost = 95;
+   CharacterOfferHaggle = 96;
+   CharacterBarredKeep = 97;
+   CharacterRecruitOwn = 98;
+   CharacterRecruitAlready = 99;
+   CharacterLoyaltyLanguage = 100;
+   ErrorGenericInsufficientFunds = 101;
+   CharacterRecruitSiege = 102;
+   CharacterRecruitRebellion = 103;
+   RecruitCancelled = 104;
+   CharacterTransferTitle = 105;
+   CharacterTitleOwner = 106;
+   CharacterTitleHighest = 107;
+   CharacterTitleKing = 108;
+   CharacterTitleAncestral = 109;
+   CharacterHeir = 110;
+   PillageInitiateSiege = 111;
+   PillageRetreat = 112;
+   PillageDays = 113;
+   PillageOwnFief = 114;
+   PillageUnderSiege = 115;
+   PillageSiegeAlready = 116;
+   PillageAlready = 117;
+   PillageArmyDefeat = 118;
+   PillageSiegeRebellion = 119;
+   FiefExpenditureAdjustment = 120;
+   FiefExpenditureAdjusted = 121;
+   FiefStatus = 122;
+   FiefOwnershipHome = 123;
+   FiefOwnershipNewHome = 124;
+   FiefOwnershipNoFiefs = 125;
+   FiefChangeOwnership = 126;
+   FiefQuellRebellionFail = 127;
+   FiefEjectCharacter = 128;
+   FiefNoCaptives = 129;
+   ProvinceAlreadyOwn = 130;
+   KingdomAlreadyKing = 131;
+   KingdomOwnershipChallenge = 132;
+   ProvinceOwnershipChallenge = 133;
+   ErrorGenericCharacterUnidentified = 134;
+   ErrorGenericUnauthorised = 135;
+   ErrorGenericMessageInvalid = 136;
+   ErrorGenericTooFarFromFief = 137;
+   FiefNoBailiff = 138;
+   FiefCouldNotBar = 139;
+   FiefCouldNotUnbar = 140;
+   ErrorGenericBarOwnNationality = 141;
+   ErrorGenericPositiveInteger = 142;
+   GenericReceivedFunds = 143;
+   ErrorGenericNoHomeFief = 144;
+   CharacterRecruitInsufficientFunds = 145;
+   CharacterRecruitOk = 146;
+   SiegeNotBesieger = 147;
+   JournalEntryUnrecognised = 148;
+   JournalEntryNotProposal = 149;
+   ErrorGenericArmyUnidentified = 150;
+   ErrorGenericSiegeUnidentified = 151;
+   ErrorSpyDead = 152;
+   ErrorSpyCaptive = 153;
+   ErrorSpyOwn = 154;
+   SpyChance = 155;
+   SpySuccess = 156;
+   SpyFail = 157;
+   SpySuccessDetected = 158;
+   SpyFailDetected = 159;
+   SpyFailDead = 160;
+   SpyCancelled = 161;
+   EnemySpySuccess = 162;
+   EnemySpyFail = 163;
+   EnemySpyKilled = 164;
+   CharacterHeldCaptive = 165;
+   RansomReceived = 166;
+   RansomPaid = 167;
+   RansonDenied = 168;
+   RansomRepliedAlready = 169;
+   RansomCaptiveDead = 170;
+   RansomAlready = 171;
+   NotCaptive = 172;
+   EntryNotRansom = 173;
+   KidnapOwnCharacter = 174;
+   KidnapDead = 175;
+   KidnapNoPlayer = 176;
+   KidnapSuccess = 177;
+   KidnapSuccessDetected = 178;
+   KidnapFailDetected = 179;
+   KidnapFailDead = 180;
+   KidnapFail = 181;
+   EnemyKidnapSuccess = 182;
+   EnemyKidnapSuccessDetected = 183;
+   EnemyKidnapFail = 184;
+   EnemyKidnapKilled = 185;
+   CharacterExecuted = 186;
+   CharacterReleased = 187;
+   LogInSuccess = 188;
+   LogInFail = 189;
+   YouDied = 190;
+   YouDiedNoHeir = 191;
+   CharacterIsDead = 192;
+   Timeout = 193;
+}
+message Pair {
+   optional string key = 1;
+   optional string value = 2;
+}
+message ProtoAilment {
+   optional string _description = 1;
+   optional uint32 _effect = 2 [default = 0];
+   optional uint32 _minimumEffect = 3 [default = 0];
+   optional string _when = 4;
+}
+message ProtoArmy {
+   optional uint32 aggression = 1 [default = 0];
+   optional string armyID = 2;
+   optional uint32 combatOdds = 3 [default = 0];
+   optional double days = 4 [default = 0];
+   optional bool isMaintained = 5 [default = false];
+   optional string leader = 6;
+   optional string leaderID = 7;
+   optional string location = 8;
+   optional uint32 maintCost = 9 [default = 0];
+   optional string nationality = 10;
+   optional string owner = 11;
+   optional string ownerID = 12;
+   optional string siegeStatus = 13;
+   repeated uint32 troops = 14;
+}
+message ProtoArmyOverview {
+   optional string armyID = 1;
+   optional uint32 armySize = 2 [default = 0];
+   optional string leaderID = 3;
+   optional string leaderName = 4;
+   optional string locationID = 5;
+   optional string ownerName = 6;
+}
+message ProtoBattle {
+   optional bool DefenderDeadNoHeir = 1 [default = false];
+   optional uint32 attackerCasualties = 2 [default = 0];
+   optional string attackerLeader = 3;
+   optional string attackerOwner = 4;
+   optional bool attackerVictorious = 5 [default = false];
+   optional string battleLocation = 6;
+   optional bool battleTookPlace = 7 [default = false];
+   optional uint32 circumstance = 8 [default = 0];
+   repeated string deaths = 9;
+   optional uint32 defenderCasualties = 10 [default = 0];
+   optional string defenderLeader = 11;
+   optional string defenderOwner = 12;
+   repeated string disbandedArmies = 13;
+   optional bool isSiege = 14 [default = false];
+   repeated string retreatedArmies = 15;
+   optional string siegeBesieger = 16;
+   optional string siegeDefender = 17;
+   optional bool siegeRaised = 18 [default = false];
+   optional double statureChangeAttacker = 19 [default = 0];
+   optional double statureChangeDefender = 20 [default = 0];
+}
+message ProtoCharacter {
+   repeated Pair ailments = 1;
+   optional string armyID = 2;
+   optional uint32 birthSeason = 3 [default = 0];
+   optional uint32 birthYear = 4 [default = 0];
+   optional string captor = 5;
+   optional string charID = 6;
+   optional double combat = 7 [default = 0];
+   optional double days = 8 [default = 0];
+   optional string familyID = 9;
+   optional string familyName = 10;
+   optional string father = 11;
+   optional string fiancee = 12;
+   optional string firstName = 13;
+   repeated string goTo = 14;
+   optional double health = 15 [default = 0];
+   optional bool inKeep = 16 [default = false];
+   optional bool isAlive = 17 [default = false];
+   optional bool isMale = 18 [default = false];
+   optional bool isPregnant = 19 [default = false];
+   optional string language = 20;
+   optional string location = 21;
+   optional double management = 22 [default = 0];
+   optional double maxHealth = 23 [default = 0];
+   optional string mother = 24;
+   optional string nationality = 25;
+   optional SiegeRole siegeRole = 26 [default = NotAssigned];
+   optional string spouse = 27;
+   optional double stature = 28 [default = 0];
+   optional double statureModifier = 29 [default = 0];
+   repeated string titles = 30;
+   repeated Pair traits = 31;
+   optional double virility = 32 [default = 0];
+   // the following represent sub-types; at most 1 should have a value
+   optional ProtoPlayerCharacter ProtoPlayerCharacter = 35;
+   optional ProtoNPC ProtoNPC = 36;
+}
+message ProtoCharacterOverview {
+   optional string charID = 1;
+   optional string charName = 2;
+   optional bool isMale = 3 [default = false];
+   optional string locationID = 4;
+   optional string natID = 5;
+   optional string owner = 6;
+   optional string role = 7;
+}
+message ProtoClient {
+   optional ProtoMessage activeChar = 1;
+   optional double homeFiefTreasury = 2 [default = 0];
+   optional ProtoMessage playerChar = 3;
+   optional uint32 purse = 4 [default = 0];
+   optional double travelModifier = 5 [default = 0];
+}
+message ProtoCombatValues {
+   optional uint32 aggression = 1 [default = 0];
+   optional string armyID = 2;
+   optional uint32 odds = 3 [default = 0];
+}
+message ProtoDetachment {
+   optional string armyID = 1;
+   optional int32 days = 2 [default = 0];
+   optional string id = 3;
+   optional string leftBy = 4;
+   optional string leftFor = 5;
+   repeated uint32 troops = 6;
+}
+message ProtoFief {
+   optional ProtoMessage ancestralOwner = 1;
+   repeated ProtoMessage armies = 2;
+   optional ProtoMessage bailiff = 3;
+   optional double bailiffDaysInFief = 4 [default = 0];
+   repeated ProtoMessage barredCharacters = 5;
+   repeated string barredNationalities = 6;
+   repeated ProtoMessage charactersInFief = 7;
+   optional string fiefID = 8;
+   optional double fields = 9 [default = 0];
+   repeated ProtoMessage gaol = 10;
+   optional uint32 garrisonSpendNext = 11 [default = 0];
+   optional double industry = 12 [default = 0];
+   optional uint32 infrastructureSpendNext = 13 [default = 0];
+   optional bool isPillaged = 14 [default = false];
+   optional double keepLevel = 15 [default = 0];
+   optional uint32 keepSpendNext = 16 [default = 0];
+   repeated double keyStatsCurrent = 17;
+   repeated double keyStatsNext = 18;
+   repeated double keyStatsPrevious = 19;
+   optional double loyalty = 20 [default = 0];
+   optional int32 militia = 21 [default = 0];
+   optional uint32 officialsSpendNext = 22 [default = 0];
+   optional string owner = 23;
+   optional string ownerID = 24;
+   optional int32 population = 25 [default = 0];
+   optional string rank = 26;
+   optional string siege = 27;
+   optional uint32 status = 28 [default =  0];
+   optional double taxRate = 29 [default = 0];
+   optional double taxRateNext = 30 [default = 0];
+   optional string titleHolder = 31;
+   optional int32 treasury = 32 [default = 0];
+   optional uint32 troops = 33 [default = 0];
+}
+message ProtoGenericArray_Double {
+   repeated double fields = 1;
+}
+message ProtoGenericArray_ProtoArmyOverview {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoCharacterOverview {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoDetachment {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoFief {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoJournalEntry {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoPlayer {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_ProtoSiegeOverview {
+   repeated ProtoMessage fields = 1;
+}
+message ProtoGenericArray_String {
+   repeated string fields = 1;
+}
+message ProtoJournal {
+   optional bool areNewEntries = 1 [default = false];
+   repeated ProtoMessage entries = 2;
+   optional uint32 priority = 3 [default = 0];
+}
+message ProtoJournalEntry {
+   optional ProtoMessage eventDetails = 1;
+   optional uint32 jEntryID = 2 [default = 0];
+   optional string location = 3;
+   repeated ProtoMessage personae = 4;
+   optional bool replied = 5 [default = false];
+   optional uint32 season = 6 [default = 0];
+   optional string type = 7;
+   optional bool viewed = 8 [default = false];
+   optional uint32 year = 9 [default = 0];
+}
+message ProtoLogIn {
+   optional bytes Key = 1;
+   optional bytes Signature = 2;
+   optional string Text = 3;
+   optional bytes certificate = 4;
+   optional bytes sessionSalt = 5;
+   optional bytes userSalt = 6;
+}
+message ProtoMessage {
+   optional Actions ActionType = 1 [default = Update];
+   optional string Message = 2;
+   repeated string MessageFields = 3;
+   optional DisplayMessages ResponseType = 4 [default = None];
+   // the following represent sub-types; at most 1 should have a value
+   optional ProtoLogIn ProtoLogIn = 5;
+   optional ProtoPlayer ProtoPlayer = 6;
+   optional ProtoClient ProtoClient = 7;
+   optional ProtoGenericArray_ProtoPlayer ProtoGenericArray_ProtoPlayer = 8;
+   optional ProtoGenericArray_ProtoFief ProtoGenericArray_ProtoFief = 9;
+   optional ProtoGenericArray_String ProtoGenericArray_String = 10;
+   optional ProtoGenericArray_Double ProtoGenericArray_Double = 11;
+   optional ProtoGenericArray_ProtoCharacterOverview ProtoGenericArray_ProtoCharacterOverview = 12;
+   optional ProtoGenericArray_ProtoDetachment ProtoGenericArray_ProtoDetachment = 13;
+   optional ProtoGenericArray_ProtoSiegeOverview ProtoGenericArray_ProtoSiegeOverview = 14;
+   optional ProtoGenericArray_ProtoArmyOverview ProtoGenericArray_ProtoArmyOverview = 15;
+   optional ProtoGenericArray_ProtoJournalEntry ProtoGenericArray_ProtoJournalEntry = 16;
+   optional ProtoAilment ProtoAilment = 17;
+   optional ProtoArmy ProtoArmy = 18;
+   optional ProtoCharacter ProtoCharacter = 19;
+   optional ProtoFief ProtoFief = 20;
+   optional ProtoArmyOverview ProtoArmyOverview = 21;
+   optional ProtoCharacterOverview ProtoCharacterOverview = 22;
+   optional ProtoPillageResult ProtoPillageResult = 23;
+   optional ProtoSiegeOverview ProtoSiegeOverview = 24;
+   optional ProtoSiegeDisplay ProtoSiegeDisplay = 25;
+   optional ProtoBattle ProtoBattle = 26;
+   optional ProtoJournalEntry ProtoJournalEntry = 27;
+   optional ProtoJournal ProtoJournal = 28;
+   optional ProtoDetachment ProtoDetachment = 29;
+   optional ProtoTransfer ProtoTransfer = 30;
+   optional ProtoTransferPlayer ProtoTransferPlayer = 31;
+   optional ProtoTravelTo ProtoTravelTo = 32;
+   optional ProtoRecruit ProtoRecruit = 33;
+   optional ProtoCombatValues ProtoCombatValues = 34;
+}
+message ProtoNPC {
+   optional ProtoMessage employer = 1;
+   optional bool inEntourage = 2 [default = false];
+   optional bool isHeir = 3 [default = false];
+   optional uint32 lastOfferAmount = 4 [default = 0];
+   optional string lastOfferID = 5;
+   optional uint32 salary = 6 [default = 0];
+}
+message ProtoPillageResult {
+   optional string armyLeader = 1;
+   optional string armyOwner = 2;
+   optional double baseMoneyPillaged = 3 [default = 0];
+   optional double bonusMoneyPillaged = 4 [default = 0];
+   optional double daysTaken = 5 [default = 0];
+   optional string defenderLeader = 6;
+   optional string fiefID = 7;
+   optional string fiefName = 8;
+   optional string fiefOwner = 9;
+   optional double fieldsLoss = 10 [default = 0];
+   optional double industryLoss = 11 [default = 0];
+   optional bool isPillage = 12 [default = false];
+   optional double jackpot = 13 [default = 0];
+   optional double loyaltyLoss = 14 [default = 0];
+   optional double moneyPillagedOwner = 15 [default = 0];
+   optional int32 populationLoss = 16 [default = 0];
+   optional double statureModifier = 17 [default = 0];
+   optional int32 treasuryLoss = 18 [default = 0];
+}
+message ProtoPlayer {
+   optional string natID = 1;
+   optional string pcID = 2;
+   optional string pcName = 3;
+   optional string playerID = 4;
+}
+message ProtoPlayerCharacter {
+   optional string ancestralHomeFief = 1;
+   optional string homeFief = 2;
+   optional ProtoMessage myHeir = 3;
+   repeated ProtoMessage myNPCs = 4;
+   optional bool outlawed = 5 [default = false];
+   repeated string ownedFiefs = 6;
+   optional string playerID = 7;
+   repeated string provinces = 8;
+   optional uint32 purse = 9 [default = 0];
+}
+message ProtoRecruit {
+   optional uint32 amount = 1 [default = 0];
+   optional string armyID = 2;
+   optional int32 cost = 3 [default = 0];
+   optional bool isConfirm = 4 [default = false];
+   optional int32 treasury = 5 [default = 0];
+}
+message ProtoSiegeDisplay {
+   optional string besiegedFief = 1;
+   optional string besiegerArmy = 2;
+   optional bool besiegerWon = 3 [default = false];
+   optional string besiegingPlayer = 4;
+   repeated string captivesTaken = 5;
+   optional int32 casualtiesAttacker = 6 [default = 0];
+   optional int32 casualtiesDefender = 7 [default = 0];
+   optional double days = 8 [default = 0];
+   optional string defenderAdditional = 9;
+   optional string defenderGarrison = 10;
+   optional string defendingPlayer = 11;
+   optional string endDate = 12;
+   optional double keepLevel = 13 [default = 0];
+   optional int32 lootLost = 14 [default = 0];
+   optional string siegeID = 15;
+   optional double startKeepLevel = 16 [default = 0];
+   optional uint32 startSeason = 17 [default = 0];
+   optional uint32 startYear = 18 [default = 0];
+   optional int32 totalCasualtiesAttacker = 19 [default = 0];
+   optional int32 totalCasualtiesDefender = 20 [default = 0];
+   optional double totalDays = 21 [default = 0];
+   optional int32 totalRansom = 22 [default = 0];
+}
+message ProtoSiegeOverview {
+   optional string besiegedFief = 1;
+   optional string besiegingPlayer = 2;
+   optional string defendingPlayer = 3;
+   optional string siegeID = 4;
+}
+message ProtoTransfer {
+   optional int32 amount = 1 [default = 0];
+   optional string fiefFrom = 2;
+   optional string fiefTo = 3;
+}
+message ProtoTransferPlayer {
+   optional int32 amount = 1 [default = 0];
+   optional string playerTo = 2;
+}
+message ProtoTravelTo {
+   optional string characterID = 1;
+   optional string travelTo = 2;
+   repeated string travelVia = 3;
+}
+enum SiegeRole {
+   NotAssigned = 0;
+   Besieger = 1;
+   Defender = 2;
+   DefenderAdd = 3;
+}

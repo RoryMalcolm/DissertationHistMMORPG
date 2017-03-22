@@ -5,10 +5,12 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
     PlayerOperations playerOps;
+    ClientOperations clientOps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        clientOps = new ClientOperations();
         playerOps = new PlayerOperations();
     }
 }
