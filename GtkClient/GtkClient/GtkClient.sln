@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GtkClient", "GtkClient\GtkClient.csproj", "{EE00BDE0-4778-40CA-94F9-C1D65B017121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE00BDE0-4778-40CA-94F9-C1D65B017121}.Debug|x86.ActiveCfg = Debug|x86
+		{EE00BDE0-4778-40CA-94F9-C1D65B017121}.Debug|x86.Build.0 = Debug|x86
+		{EE00BDE0-4778-40CA-94F9-C1D65B017121}.Release|x86.ActiveCfg = Release|x86
+		{EE00BDE0-4778-40CA-94F9-C1D65B017121}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
