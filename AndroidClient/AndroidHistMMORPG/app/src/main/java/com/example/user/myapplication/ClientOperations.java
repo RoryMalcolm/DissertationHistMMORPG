@@ -22,7 +22,7 @@ public class ClientOperations {
 
     public ClientOperations(){
         try {
-            IP = InetAddress.getByName("localhost");
+            IP = InetAddress.getByName("10.0.2.2");
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
@@ -32,9 +32,14 @@ public class ClientOperations {
             e.printStackTrace();
         }
     }
-    public boolean Connect(String username, String password){
+    public boolean Connect(String username, String password) {
         clientUsername = username;
-
+        try {
+            socket.connect(InetAddress.getByName("10.0.2.2"), 8000);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
     public void Send(HistMmorpg.ProtoMessage message){
@@ -44,5 +49,19 @@ public class ClientOperations {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public HistMmorpg.ProtoMessage Receive(){
+        HistMmorpg.ProtoMessage.Builder message = HistMmorpg.ProtoMessage.newBuilder();
+        HistMmorpg.ProtoMessage msg = message.build();
+        byte [] buf = new byte[msg.getSerializedSize()];
+        DatagramPacket datagramPacket = new DatagramPacket(buf, msg.getSerializedSize());
+        try {
+            socket.receive(datagramPacket);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        datagramPacket.getData();
+        return msg;
     }
 }

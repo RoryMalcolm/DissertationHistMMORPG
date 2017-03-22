@@ -8,12 +8,25 @@ using hist_mmorpg;
 
 namespace ClientDLL
 {
+    public class MoveResult
+    {
+        private string FiefId;
+        MoveResult(string FiefId)
+        {
+            this.FiefId = FiefId;
+        }
+
+        public string getFiefId()
+        {
+            return this.FiefId;
+        }
+    }
     public class PlayerOperationsClassLib
     {
         private readonly TextTestClient _testClient;
         private readonly WordRecogniser _wordRecogniser;
         private readonly PlayerOperations _playerOps;
-
+        
         public PlayerOperationsClassLib()
         {
             _testClient = new TextTestClient();
@@ -23,8 +36,11 @@ namespace ClientDLL
 
         public ProtoFief Move(string directions)
         {
-            return _playerOps.Move(_wordRecogniser.CheckDirections(directions),
+            var move = _playerOps.Move(_wordRecogniser.CheckDirections(directions),
                 _testClient);
+
+            var moveReturnable = Move(move.fiefID);
+            return moveReturnable;
         }
 
         public ProtoGenericArray<ProtoArmyOverview> ArmyStatus()
