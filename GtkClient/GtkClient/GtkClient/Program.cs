@@ -110,6 +110,7 @@ public class GtkHelloWorld {
 
 	public static void FiefClickEvent(object obj, EventArgs args){
 		ProtoFief fief = playerOps.FiefDetails (client);
+		FiefTable fiefTable = new FiefTable();
 	}
 
 	public static void SetUpDirectionalButtonClicks(){

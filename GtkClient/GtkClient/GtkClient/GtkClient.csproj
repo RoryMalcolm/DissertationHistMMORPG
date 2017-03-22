@@ -81,6 +81,7 @@
     <Compile Include="WordRecogniser.cs" />
     <Compile Include="TextTestClient.cs" />
     <Compile Include="ProfileTable.cs" />
+    <Compile Include="FiefTable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
