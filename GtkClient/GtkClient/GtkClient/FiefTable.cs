@@ -1,6 +1,6 @@
 using System;
 using Gtk;
-
+using hist_mmorpg;
 public class FiefTable
 	{
 		Table ProfileLayout;
@@ -16,8 +16,8 @@ public class FiefTable
 		Label PlayerPurseLabel;
 		Label PlayerPurseOutput;
 
-		public FiefTable (string FiefID, string Owner, string IndustryLevel, ProtoCharacterOverview[] chars,
-        ProtoArmyOverview[] armys)
+	public FiefTable (string FiefID, string Owner, string IndustryLevel, ProtoCharacterOverview[] chars,
+		ProtoArmyOverview[] armys)
 		{
             uint tableRows =4;
 			ProfileLayout = new Table (4, 2, false);
@@ -58,7 +58,7 @@ public class FiefTable
                 tableRows = tableRows+1;
                 ProfileLayout.Resize(tableRows, 2);
                 ProfileLayout.Attach(new Label ("Size: "), 0,1,tableRows-1,tableRows);
-                ProfileLayout.Attach(new Label (army.armySize), 1,2,tableRows-1,tableRows);
+				ProfileLayout.Attach(new Label (Convert.ToString(army.armySize)), 1,2,tableRows-1,tableRows);
                 tableRows = tableRows+1;
                 ProfileLayout.Resize(tableRows, 2);
                 ProfileLayout.Attach(new Label ("Leader: "), 0,1,tableRows-1,tableRows);
@@ -66,12 +66,14 @@ public class FiefTable
                 tableRows = tableRows+1;
                 ProfileLayout.Resize(tableRows, 2);
                 ProfileLayout.Attach(new Label ("Owner: "), 0,1,tableRows-1,tableRows);
-                ProfileLayout.Attach(new Label (army.Owner), 1,2,tableRows-1,tableRows);
+				ProfileLayout.Attach(new Label (army.ownerName), 1,2,tableRows-1,tableRows);
             }
-
-			window.Add(ProfileLayout);
-			window.ShowAll();
 		}
+
+	public Table getProfileTable(){
+		return ProfileLayout;
 	}
 
-
+	public void setFiefID(string fiefIDInput){
+	}
+}

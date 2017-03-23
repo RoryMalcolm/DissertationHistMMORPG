@@ -16,6 +16,8 @@ public class GtkHelloWorld {
 	static Button profile;
 	static Button hire;
 	static Button siege;
+	static Table tableLayout;
+	static Window myWin;
 	//static PlayerOperationsClassLib playerOps;
 
 	static Label currentUserOutput;
@@ -27,11 +29,11 @@ public class GtkHelloWorld {
 		//playerOps = new PlayerOperationsClassLib();
 		Application.Init();
 		//Create the Window
-		Window myWin = new Window("HistMMorpg Client");
+		myWin = new Window("HistMMorpg Client");
 		myWin.Resize(1000,1000);
 
 		//Create a label and put some text in it.
-		Table tableLayout = new Table(4,4,false);
+		tableLayout = new Table(4,4,false);
 		northEast = new Button("North East");
 		northWest = new Button("North West");
 		east = new Button("East");
@@ -43,12 +45,14 @@ public class GtkHelloWorld {
 		siege = new Button ("Siege");
 		hire = new Button ("Hire");
 		SetUpDirectionalButtonClicks ();
+		SetUpOperationButtonClicks ();
 		Label currentUserLabel = new Label("Current User:");
 		currentUserOutput = new Label("");
 		//Add the label to the form
 		tableLayout.Attach(northEast, 0,1,0,1);
 		tableLayout.Attach(northWest, 1,2,0,1);
 		tableLayout.Attach (profile, 2, 3, 0, 1);
+		tableLayout.Attach (fief, 3, 4, 0, 1);
 		tableLayout.Attach(east, 0,1,1,2);
 		tableLayout.Attach(west,1,2,1,2);
 		tableLayout.Attach (siege, 2, 3, 1, 2);
@@ -68,37 +72,47 @@ public class GtkHelloWorld {
 	public static void NorthEastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Ne, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 	public static void NorthWestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Nw, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 	public static void EastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.E, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 	public static void WestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.W, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 	public static void SouthEastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Se, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 
 	public static void SouthWestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Sw, client);
 		currentUserOutput.Text = move.fiefID;
+		FiefClickEvent (obj,args);
 	}
 
 	public static void ProfileClickEvent(object obj, EventArgs args){
 		ProtoPlayerCharacter player = playerOps.Profile (client);
 		ProfileTable profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName);
+		Table forAdd = profileTable.getProfileLayout ();
+		tableLayout.Remove (forAdd);
+		tableLayout.Attach (forAdd, 3, 4, 1, 2);
+		myWin.ShowAll ();
 	}
 
 	public static void SiegeClickEvent(object obj, EventArgs args){
@@ -110,7 +124,10 @@ public class GtkHelloWorld {
 
 	public static void FiefClickEvent(object obj, EventArgs args){
 		ProtoFief fief = playerOps.FiefDetails (client);
-		FiefTable fiefTable = new FiefTable();
+		FiefTable fiefTable = new FiefTable (fief.fiefID, fief.owner, Convert.ToString(fief.industry),
+			fief.charactersInFief, fief.armies);
+		tableLayout.Attach (fiefTable.getProfileTable(), 3, 4, 2, 3);
+		myWin.ShowAll ();
 	}
 
 	public static void SetUpDirectionalButtonClicks(){
