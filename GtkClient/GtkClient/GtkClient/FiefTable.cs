@@ -15,11 +15,11 @@ public class FiefTable
 		Label PlayerArmyOutput;
 		Label PlayerPurseLabel;
 		Label PlayerPurseOutput;
-
+        uint tableRows;
 	public FiefTable (string FiefID, string Owner, string IndustryLevel, ProtoCharacterOverview[] chars,
 		ProtoArmyOverview[] armys)
 		{
-            uint tableRows =4;
+            tableRows =4;
 			ProfileLayout = new Table (4, 2, false);
 			PlayerProfile = new Label ("Fief Profile");
             FiefIDLabel = new Label ("Fief ID:");
@@ -75,5 +75,48 @@ public class FiefTable
 	}
 
 	public void setFiefID(string fiefIDInput){
+        FiefIDOuput.Text = fiefIDInput;
 	}
+
+    public void setOwner(string ownedIDInput){
+        OwnerOutput.Text = ownedIDInput;
+    }
+
+    public void setArmysandCharacters(ProtoCharacterOverview[] chars,
+		ProtoArmyOverview[] armys){
+            tableRows = 4;
+            foreach(var character in chars){
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Char ID: "), 0,1,tableRows-1,tableRows);
+                ProfileLayout.Attach(new Label (character.charID), 1,2,tableRows-1,tableRows);
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Name: "), 0,1,tableRows-1,tableRows);
+                ProfileLayout.Attach(new Label (character.charName), 1,2,tableRows-1,tableRows);
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Role: "), 0,1,tableRows-1,tableRows);
+                ProfileLayout.Attach(new Label (character.role), 1,2,tableRows-1,tableRows);
+            }
+            foreach(var army in armys){
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Army ID: "), 0,1,tableRows-1,tableRows);
+                ProfileLayout.Attach(new Label (army.armyID), 1,2,tableRows-1,tableRows);
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Size: "), 0,1,tableRows-1,tableRows);
+				ProfileLayout.Attach(new Label (Convert.ToString(army.armySize)), 1,2,tableRows-1,tableRows);
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Leader: "), 0,1,tableRows-1,tableRows);
+                ProfileLayout.Attach(new Label (army.leaderName), 1,2,tableRows-1,tableRows);
+                tableRows = tableRows+1;
+                ProfileLayout.Resize(tableRows, 2);
+                ProfileLayout.Attach(new Label ("Owner: "), 0,1,tableRows-1,tableRows);
+				ProfileLayout.Attach(new Label (army.ownerName), 1,2,tableRows-1,tableRows);
+            }
+
+    }
 }
