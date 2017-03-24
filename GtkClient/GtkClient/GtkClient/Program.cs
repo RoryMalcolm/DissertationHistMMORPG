@@ -18,17 +18,23 @@ public class GtkHelloWorld {
 	static Button siege;
 	static Table tableLayout;
 	static Window myWin;
+	static FiefTable fiefTable;
+	static ProfileTable profileTable;
+	static Button hireOkayButton;
+	static Entry hireTextEntry;
+	static Window hireWindow;
 	//static PlayerOperationsClassLib playerOps;
 
-	static Label currentUserOutput;
-
 	public static void Main() {
-		client = new TextTestClient ();
-		client.LogInAndConnect ("helen", "potato");
-		playerOps = new PlayerOperations();
-		//playerOps = new PlayerOperationsClassLib();
 		Application.Init();
-		//Create the Window
+		LogInWindow login = new LogInWindow ();
+		Application.Run();
+	}
+
+	public static void LoggedIn(string Username, string Password, object obj, EventArgs args){
+		client = new TextTestClient ();
+		client.LogInAndConnect (Username, Password);
+		playerOps = new PlayerOperations();
 		myWin = new Window("HistMMorpg Client");
 		myWin.Resize(1000,1000);
 
@@ -40,78 +46,84 @@ public class GtkHelloWorld {
 		west = new Button("West");
 		southEast = new Button("South East");
 		southWest = new Button("South West");
-		fief = new Button ("Fief");
-		profile = new Button ("Profile");
 		siege = new Button ("Siege");
 		hire = new Button ("Hire");
 		SetUpDirectionalButtonClicks ();
 		SetUpOperationButtonClicks ();
-		Label currentUserLabel = new Label("Current User:");
-		currentUserOutput = new Label("");
 		//Add the label to the form
 		tableLayout.Attach(northEast, 0,1,0,1);
 		tableLayout.Attach(northWest, 1,2,0,1);
-		tableLayout.Attach (profile, 2, 3, 0, 1);
-		tableLayout.Attach (fief, 3, 4, 0, 1);
 		tableLayout.Attach(east, 0,1,1,2);
 		tableLayout.Attach(west,1,2,1,2);
 		tableLayout.Attach (siege, 2, 3, 1, 2);
 		tableLayout.Attach(southEast, 0,1,2,3);
 		tableLayout.Attach(southWest,1,2,2,3);
-		tableLayout.Attach(hire,2,3,2,3);
-		tableLayout.Attach(currentUserLabel, 0,1,3,4);
-		tableLayout.Attach(currentUserOutput,1,2,3,4);
+		tableLayout.Attach(hire,2,3,0,1);
 		myWin.Add(tableLayout);
 
+		/*ProtoPlayerCharacter player = playerOps.Profile (client);
+		profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName, player.ownedFiefs, player.location, player.armyID, Convert.ToString( player.purse));
+		tableLayout.Attach (profileTable.getProfileLayout (), 3, 4, 1, 2);
+		ProtoFief fiefData = playerOps.FiefDetails (client);
+		fiefTable = new FiefTable (fiefData.fiefID, fiefData.owner, Convert.ToString (fiefData.industry),
+			fiefData.charactersInFief, fiefData.armies);
+		tableLayout.Attach (fiefTable.getProfileTable (), 3, 4, 2, 3);*/
+		//ProfileClickEvent (null, null);
+		//FiefClickEvent (null, null);
 		//Show Everything
+		FiefClickEvent(obj,args);
+		ProfileClickEvent (obj, args);
 		myWin.ShowAll();
-
-		Application.Run();
 	}
 
 	public static void NorthEastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Ne, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
 	}
 
 	public static void NorthWestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Nw, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
 	}
 
 	public static void EastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.E, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
+
 	}
 
 	public static void WestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.W, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
+
 	}
 
 	public static void SouthEastClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Se, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
 	}
 
 
 	public static void SouthWestClickEvent(object obj, EventArgs args){
 		ProtoFief move = playerOps.Move(PlayerOperations.MoveDirections.Sw, client);
-		currentUserOutput.Text = move.fiefID;
 		FiefClickEvent (obj,args);
+		ProfileClickEvent (obj, args);
 	}
 
 	public static void ProfileClickEvent(object obj, EventArgs args){
 		ProtoPlayerCharacter player = playerOps.Profile (client);
-		ProfileTable profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName);
-		Table forAdd = profileTable.getProfileLayout ();
-		tableLayout.Remove (forAdd);
-		tableLayout.Attach (forAdd, 3, 4, 1, 2);
+		if (profileTable == null) {
+			profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName, player.ownedFiefs, player.location, player.armyID, Convert.ToString( player.purse));
+		} else {
+			profileTable.DestroyTable ();
+			profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName, player.ownedFiefs, player.location, player.armyID, Convert.ToString( player.purse));
+		}
+		tableLayout.Attach (profileTable.getProfileLayout (), 3, 4, 1, 2);
 		myWin.ShowAll ();
 	}
 
@@ -120,13 +132,40 @@ public class GtkHelloWorld {
 	}
 
 	public static void HireClickEvent(object obj, EventArgs args){
+		hireWindow = new Window ("How much?");
+		Table gridTable = new Table (2, 1, false);
+		hireOkayButton = new Button ("Okay");
+		gridTable.Attach (hireOkayButton, 0, 1, 0, 1);
+		hireOkayButton.Clicked += HireClickOkayEvent;
+		hireTextEntry = new Entry ();
+		gridTable.Attach (hireTextEntry, 1, 2, 0, 1);
+		hireWindow.Add (gridTable);
+		hireWindow.ShowAll ();
 	}
 
+	public static void HireClickOkayEvent(object obj, EventArgs args){
+		int parsed;
+		if (hireTextEntry.Text != "") {
+			int.TryParse (hireTextEntry.Text, out parsed);
+		}
+		if (parsed != null) {
+			playerOps.HireTroops (Convert.ToInt32 (hireTextEntry.Text), client);
+			ProfileClickEvent (obj, args);
+		}
+		hireWindow.Destroy ();
+	}
 	public static void FiefClickEvent(object obj, EventArgs args){
 		ProtoFief fief = playerOps.FiefDetails (client);
-		FiefTable fiefTable = new FiefTable (fief.fiefID, fief.owner, Convert.ToString(fief.industry),
-			fief.charactersInFief, fief.armies);
-		tableLayout.Attach (fiefTable.getProfileTable(), 3, 4, 2, 3);
+		if (fiefTable == null) {
+			fiefTable = new FiefTable (fief.fiefID, fief.owner, Convert.ToString (fief.industry),
+				fief.charactersInFief, fief.armies, Convert.ToString(fief.militia));
+		} else {
+			fiefTable.destroyTable ();
+
+			fiefTable = new FiefTable (fief.fiefID, fief.owner, Convert.ToString (fief.industry),
+				fief.charactersInFief, fief.armies, Convert.ToString(fief.militia));
+		}
+		tableLayout.Attach (fiefTable.getProfileTable (), 3, 4, 2, 3);
 		myWin.ShowAll ();
 	}
 
@@ -140,9 +179,7 @@ public class GtkHelloWorld {
 	}
 
 	public static void SetUpOperationButtonClicks(){
-		profile.Clicked += ProfileClickEvent;
 		siege.Clicked += SiegeClickEvent;
 		hire.Clicked += HireClickEvent;
-		fief.Clicked += FiefClickEvent;
 	}
 }

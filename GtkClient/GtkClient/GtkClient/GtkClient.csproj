@@ -82,6 +82,7 @@
     <Compile Include="TextTestClient.cs" />
     <Compile Include="ProfileTable.cs" />
     <Compile Include="FiefTable.cs" />
+    <Compile Include="LogInWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

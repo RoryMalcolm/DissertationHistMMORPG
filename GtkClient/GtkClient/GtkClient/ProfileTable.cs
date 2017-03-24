@@ -9,16 +9,11 @@ public class ProfileTable
 		Label PlayerIDOutput;
 		Label PlayerNameLabel;
 		Label PlayerNameOutput;
-		Label PlayerLocationLabel;
-		Label PlayerLocatiobOutput;
-		Label PlayerArmyLabel;
-		Label PlayerArmyOutput;
-		Label PlayerPurseLabel;
-		Label PlayerPurseOutput;
 
-		public ProfileTable (string PlayerID, string PlayerName)
+	public ProfileTable (string PlayerID, string PlayerName, string[] PlayerFiefs, string PlayerLocation, string PlayerArmy, string PlayerPurse)
 		{
-			ProfileLayout = new Table (3, 2, false);
+			uint tableRows = 5;
+			ProfileLayout = new Table (4, 2, false);
 			PlayerProfile = new Label ("Player Profile");
 			PlayerIDLabel = new Label ("Player ID:");
 			PlayerIDOutput = new Label (PlayerID);
@@ -29,9 +24,31 @@ public class ProfileTable
 			ProfileLayout.Attach (PlayerIDOutput, 1, 2, 1, 2);
 			ProfileLayout.Attach (PlayerNameLabel, 0, 1, 2, 3);
 			ProfileLayout.Attach (PlayerNameOutput, 1, 2, 2, 3);
+			ProfileLayout.Attach(new Label("Owned Fiefs:"),0,2,3,4);
+			foreach (var fief in PlayerFiefs) {
+				ProfileLayout.Resize (tableRows + 1, 2);
+				ProfileLayout.Attach (new Label (fief), 0, 2, tableRows, tableRows + 1);
+				tableRows++;
+			}
+			ProfileLayout.Resize (tableRows + 1, 2);
+			ProfileLayout.Attach (new Label ("Location :"), 0, 1, tableRows, tableRows + 1);
+			ProfileLayout.Attach (new Label (PlayerLocation), 1, 2, tableRows, tableRows + 1);
+			tableRows++;
+			ProfileLayout.Resize (tableRows + 1, 2);
+			ProfileLayout.Attach (new Label ("Army ID :"), 0, 1, tableRows, tableRows + 1);
+			ProfileLayout.Attach (new Label (PlayerArmy), 1, 2, tableRows, tableRows + 1);
+			tableRows++;
+			ProfileLayout.Resize (tableRows + 1, 2);
+			ProfileLayout.Attach (new Label ("Purse :"), 0, 1, tableRows, tableRows + 1);
+			ProfileLayout.Attach (new Label (PlayerPurse), 1, 2, tableRows, tableRows + 1);
+			tableRows++;
 		}
 
 	public Table getProfileLayout(){
 		return ProfileLayout;
+	}
+
+	public void DestroyTable(){
+		ProfileLayout.Destroy ();
 	}
 }
