@@ -26,6 +26,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
-    compile files('src/main/java/com/example/user/myapplication/protobuf-java-2.1.0.jar')
     compile files('src/main/java/com/example/user/myapplication/protobuf-java-3.2.0.jar')
 }

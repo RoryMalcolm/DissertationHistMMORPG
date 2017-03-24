@@ -1,5 +1,7 @@
 package com.example.user.myapplication;
 
+import java.security.NoSuchAlgorithmException;
+
 /**
  * Created by User on 19/03/2017.
  */
@@ -12,11 +14,19 @@ public class PlayerOperations {
     }
 
     public PlayerOperations(){
-        clientOperations = new ClientOperations();
+        try {
+            clientOperations = new ClientOperations();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
         clientOperations.Connect("helen", "potato");
     }
 
     public void Move(PlayerDirections moveDirection){
+        HistMmorpg.ProtoTravelTo.Builder protoMove = HistMmorpg.ProtoTravelTo.newBuilder();
+        protoMove.addTravelVia(moveDirection.toString());
+        protoMove.setCharacterID("Char_158");
+        clientOperations.Send(protoMove.build().toByteArray());
 
     }
 

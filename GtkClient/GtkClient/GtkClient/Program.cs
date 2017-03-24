@@ -36,10 +36,8 @@ public class GtkHelloWorld {
 		client.LogInAndConnect (Username, Password);
 		playerOps = new PlayerOperations();
 		myWin = new Window("HistMMorpg Client");
-		myWin.Resize(1000,1000);
-
 		//Create a label and put some text in it.
-		tableLayout = new Table(4,4,false);
+		tableLayout = new Table(5,5,false);
 		northEast = new Button("North East");
 		northWest = new Button("North West");
 		east = new Button("East");
@@ -123,7 +121,7 @@ public class GtkHelloWorld {
 			profileTable.DestroyTable ();
 			profileTable = new ProfileTable (player.playerID, player.firstName + " " + player.familyName, player.ownedFiefs, player.location, player.armyID, Convert.ToString( player.purse));
 		}
-		tableLayout.Attach (profileTable.getProfileLayout (), 3, 4, 1, 2);
+		tableLayout.Attach (profileTable.getProfileLayout (), 1, 2, 4, 5);
 		myWin.ShowAll ();
 	}
 
@@ -165,7 +163,7 @@ public class GtkHelloWorld {
 			fiefTable = new FiefTable (fief.fiefID, fief.owner, Convert.ToString (fief.industry),
 				fief.charactersInFief, fief.armies, Convert.ToString(fief.militia));
 		}
-		tableLayout.Attach (fiefTable.getProfileTable (), 3, 4, 2, 3);
+		tableLayout.Attach (fiefTable.getProfileTable (), 0, 1, 4, 5);
 		myWin.ShowAll ();
 	}
 
