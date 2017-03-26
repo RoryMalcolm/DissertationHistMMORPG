@@ -25,6 +25,7 @@ public class ClientOperations {
     private int port = 8000;
     private DatagramSocket socket;
     private String pass;
+    private byte[] key;
     MessageDigest md = MessageDigest.getInstance("SHA-256");
 
     public ClientOperations() throws NoSuchAlgorithmException {
@@ -64,6 +65,8 @@ public class ClientOperations {
         try {
             socket.connect(InetAddress.getByName("10.0.2.2"), 8000);
             HistMmorpg.ProtoLogIn.Builder protoLogin = HistMmorpg.ProtoLogIn.newBuilder();
+            HistMmorpg.ProtoLogIn logInSalts = protoLogin.build();
+            ComputeAndSendHashAndKey(logInSalts, key);
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
@@ -133,4 +136,67 @@ public class ClientOperations {
         datagramPacket.getData();
         return msg;
     }
+
+    public boolean ValidateCertificateAndCreateKey(HistMmorpg.ProtoLogIn login, byte[] key)
+    {
+        if (login == null || login.getCertificate() == null)
+        {
+            key = null;
+            return false;
+        }
+        else
+        {
+            try
+            {
+                // Get certificate
+                X509Certificate2 cert = new X509Certificate2(login.getCertificate());
+                RSACryptoServiceProvider rsa = (RSACryptoServiceProvider)cert.PublicKey.Key;
+                if (this.key != null)
+                {
+                    if (this.key.Length == 0)
+                    {
+                        alg = new NetAESEncryption(client);
+                    }
+                    else
+                    {
+                        alg = new NetAESEncryption(client,
+                                this.key, 0, this.key.Length);
+                    }
+                    key = rsa.Encrypt(this.key, false);
+                }
+                else
+                {
+                    // If no key, do not use an encryption algorithm
+                    alg = null;
+                    key = null;
+                }
+                // Validate certificate
+                if (!cert.Verify())
+                {
+                    X509Chain CertificateChain = new X509Chain();
+                    //If you do not provide revokation information, use the following line.
+                    CertificateChain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
+                    boolean IsCertificateChainValid = CertificateChain.Build(cert);
+                    if (!IsCertificateChainValid)
+                    {
+                        for (int i = 0; i < CertificateChain.ChainStatus.Length; i++)
+                        {
+                        }
+                        // TODO change to false after testing
+                        return true;
+                    }
+
+                }
+                // temporary certificate validation fix
+                return true;
+                //return cert.Verify();
+            }
+            catch (Exception e)
+            {
+                key = null;
+                return false;
+            }
+        }
+    }
+
 }
