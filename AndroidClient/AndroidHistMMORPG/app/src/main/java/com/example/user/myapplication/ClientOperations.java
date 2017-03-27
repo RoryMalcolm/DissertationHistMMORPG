@@ -1,5 +1,7 @@
 package com.example.user.myapplication;
 
+import android.os.AsyncTask;
+
 import com.google.protobuf.ByteString;
 
 import java.io.IOException;
@@ -21,7 +23,7 @@ import javax.crypto.spec.SecretKeySpec;
  * Created by User on 21/03/2017.
  */
 
-public class ClientOperations {
+public class ClientOperations extends AsyncTask<String, Void, Boolean>{
     private String clientUsername;
     private InetAddress IP;
     private int port = 8000;
@@ -38,10 +40,26 @@ public class ClientOperations {
             e.printStackTrace();
         }
         try {
-            socket = new DatagramSocket(port, IP);
+            socket = new DatagramSocket(port);
         } catch (SocketException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected Boolean doInBackground(String... params) {
+        pass = params[0];
+        clientUsername = params[1];
+        try {
+            socket.connect(InetAddress.getByName("10.0.2.2"), 8000);
+            HistMmorpg.ProtoLogIn.Builder protoLogin = HistMmorpg.ProtoLogIn.newBuilder();
+            HistMmorpg.ProtoLogIn logInSalts = protoLogin.build();
+            ComputeAndSendHashAndKey(logInSalts, key);
+
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
     public byte[] ComputeHash(byte[] toHash, byte[] salt)
@@ -61,21 +79,6 @@ public class ClientOperations {
         return hashcode;
     }
 
-
-    public boolean Connect(String username, String password) {
-        pass = password;
-        clientUsername = username;
-        try {
-            socket.connect(InetAddress.getByName("10.0.2.2"), 8000);
-            HistMmorpg.ProtoLogIn.Builder protoLogin = HistMmorpg.ProtoLogIn.newBuilder();
-            HistMmorpg.ProtoLogIn logInSalts = protoLogin.build();
-            ComputeAndSendHashAndKey(logInSalts, key);
-
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        return true;
-    }
 
     public void Send(byte[] message){
         DatagramPacket outgoingPacket = new DatagramPacket(message, message.length);
@@ -121,8 +124,11 @@ public class ClientOperations {
         }
         HistMmorpg.ProtoLogIn.Builder response = HistMmorpg.ProtoLogIn.newBuilder();
         response.setUserSalt(ByteString.copyFrom(hashFull));
-        response.setKey(ByteString.copyFrom(key));
-        Send(response.build().toByteArray());
+        if(key != null) {
+            response.setKey(ByteString.copyFrom(key));
+        }
+        HistMmorpg.ProtoLogIn sendPacket = response.build();
+        Send(sendPacket.toByteArray());
     }
 
 

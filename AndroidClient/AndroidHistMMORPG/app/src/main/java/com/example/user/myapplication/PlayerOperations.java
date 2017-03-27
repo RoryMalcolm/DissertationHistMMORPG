@@ -13,13 +13,12 @@ public class PlayerOperations {
         NE, NW, W, E, SE, SW
     }
 
-    public PlayerOperations(){
+    public PlayerOperations() {
         try {
-            clientOperations = new ClientOperations();
+             new ClientOperations().execute("helen", "potato");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        clientOperations.Connect("helen", "potato");
     }
 
     public void Move(PlayerDirections moveDirection){
@@ -27,7 +26,6 @@ public class PlayerOperations {
         protoMove.addTravelVia(moveDirection.toString());
         protoMove.setCharacterID("Char_158");
         clientOperations.Send(protoMove.build().toByteArray());
-
     }
 
     public void ArmyStatus(){
