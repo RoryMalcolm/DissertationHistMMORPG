@@ -313,10 +313,12 @@ namespace hist_mmorpg
                 {
                     fullHash += b.ToString();
                 }
-                ProtoLogIn response = new ProtoLogIn();
-                response.userSalt = hashFull;
-                response.ActionType = Actions.LogIn;
-                response.Key = key;
+                var response = new ProtoLogIn
+                {
+                    userSalt = hashFull,
+                    ActionType = Actions.LogIn,
+                    Key = key
+                };
                 Send(response, false);
             }
 

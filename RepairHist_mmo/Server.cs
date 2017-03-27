@@ -7,6 +7,7 @@ using ProtoBuf;
 using System.Threading;
 using System.Diagnostics.Contracts;
 using System.Globalization;
+using System.Text;
 
 namespace hist_mmorpg
 {
