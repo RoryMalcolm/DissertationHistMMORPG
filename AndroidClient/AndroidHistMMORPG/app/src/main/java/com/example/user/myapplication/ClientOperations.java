@@ -15,6 +15,8 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAKey;
 
+import javax.crypto.spec.SecretKeySpec;
+
 /**
  * Created by User on 21/03/2017.
  */
@@ -27,6 +29,7 @@ public class ClientOperations {
     private String pass;
     private byte[] key;
     MessageDigest md = MessageDigest.getInstance("SHA-256");
+    SecretKeySpec secretKey;
 
     public ClientOperations() throws NoSuchAlgorithmException {
         try {
@@ -139,48 +142,38 @@ public class ClientOperations {
 
     public boolean ValidateCertificateAndCreateKey(HistMmorpg.ProtoLogIn login, byte[] key)
     {
-        if (login == null || login.getCertificate() == null)
+        /*if (login == null || login.getCertificate() == null)
         {
             key = null;
             return false;
         }
-        else
-        {
-            try
-            {
+        else {
+            try {
                 // Get certificate
-                X509Certificate2 cert = new X509Certificate2(login.getCertificate());
-                RSACryptoServiceProvider rsa = (RSACryptoServiceProvider)cert.PublicKey.Key;
-                if (this.key != null)
-                {
-                    if (this.key.Length == 0)
-                    {
+                X509Certificate cert = new X509Certificate(login.getCertificate()) {
+                };
+                secretKey = new SecretKeySpec(key, "AES");
+                if (this.key != null) {
+                    if (this.key.length == 0) {
                         alg = new NetAESEncryption(client);
-                    }
-                    else
-                    {
+                    } else {
                         alg = new NetAESEncryption(client,
                                 this.key, 0, this.key.Length);
                     }
-                    key = rsa.Encrypt(this.key, false);
-                }
-                else
-                {
+                    key = secretKey.getEncoded();
+                } else {
                     // If no key, do not use an encryption algorithm
                     alg = null;
                     key = null;
                 }
                 // Validate certificate
-                if (!cert.Verify())
-                {
+                if (!cert.Verify()) {
                     X509Chain CertificateChain = new X509Chain();
                     //If you do not provide revokation information, use the following line.
                     CertificateChain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
                     boolean IsCertificateChainValid = CertificateChain.Build(cert);
-                    if (!IsCertificateChainValid)
-                    {
-                        for (int i = 0; i < CertificateChain.ChainStatus.Length; i++)
-                        {
+                    if (!IsCertificateChainValid) {
+                        for (int i = 0; i < CertificateChain.ChainStatus.Length; i++) {
                         }
                         // TODO change to false after testing
                         return true;
@@ -190,13 +183,12 @@ public class ClientOperations {
                 // temporary certificate validation fix
                 return true;
                 //return cert.Verify();
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 key = null;
                 return false;
             }
-        }
+        }*/
+        return true;
     }
 
 }
