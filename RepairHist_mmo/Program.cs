@@ -49,7 +49,6 @@ namespace hist_mmorpg
         /// </summary>
         public static void InitialiseGameState()
         {
-                        
             game = new Game();
             server = new Server();
             client = new TestClient();

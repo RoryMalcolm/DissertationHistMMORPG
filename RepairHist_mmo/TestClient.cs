@@ -64,7 +64,7 @@ namespace hist_mmorpg
         /// <param name="pass">Password</param>
         public void LogInAndConnect(string user, string pass, byte[] key = null)
         {
-            
+
             net = new Network(this, key);
             net.Connect(user, pass);
             this.playerID = user;
@@ -156,7 +156,7 @@ namespace hist_mmorpg
         private string CheckForStringMessage()
         {
             string s = null;
-            var waitHandles = new WaitHandle[] {stringMessageQueue.eventWaiter, net.ctSource.Token.WaitHandle};
+            var waitHandles = new WaitHandle[] { stringMessageQueue.eventWaiter, net.ctSource.Token.WaitHandle };
             while (!stringMessageQueue.TryDequeue(out s))
             {
                 EventWaitHandle.WaitAny(waitHandles);
@@ -911,7 +911,7 @@ namespace hist_mmorpg
 
                     WaitHandle.WaitAny(new WaitHandle[] { client.MessageReceivedEvent, ctSource.Token.WaitHandle });
                     NetIncomingMessage im;
-                    while ((im = client.ReadMessage()) != null&&!ctSource.IsCancellationRequested)
+                    while ((im = client.ReadMessage()) != null && !ctSource.IsCancellationRequested)
                     {
 
                         switch (im.MessageType)
