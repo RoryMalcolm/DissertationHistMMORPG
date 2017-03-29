@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityClient", "UnityClient\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientDLL", "ClientDLL\ClientDLL.csproj", "{D1921BAB-9513-493C-AEA6-E02A3C661214}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoMessage", "ProtoMessage\ProtoMessage.csproj", "{946FDB6E-74FC-44BA-851E-6109459F631B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,12 @@ Global
 		{D1921BAB-9513-493C-AEA6-E02A3C661214}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D1921BAB-9513-493C-AEA6-E02A3C661214}.Verification|Any CPU.ActiveCfg = Release|Any CPU
 		{D1921BAB-9513-493C-AEA6-E02A3C661214}.Verification|Any CPU.Build.0 = Release|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Verification|Any CPU.ActiveCfg = Release|Any CPU
+		{946FDB6E-74FC-44BA-851E-6109459F631B}.Verification|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
