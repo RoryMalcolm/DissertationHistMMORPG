@@ -1,4 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-	<Button android:id="@+id/myButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hello" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="2">
+        <Button
+            android:id="@+id/north_west"
+            android:text="@string/north_west" />
+        <Button
+            android:id="@+id/north_east"
+            android:text="@string/north_east" />
+        <Button
+            android:id="@+id/east"
+            android:text="@string/east" />
+        <Button
+            android:id="@+id/west"
+            android:text="@string/west" />
+        <Button
+            android:id="@+id/south_west"
+            android:text="@string/south_west" />
+        <Button
+            android:id="@+id/south_east"
+            android:text="@string/south_east" />
+        <Button
+            android:id="@+id/siege"
+            android:text="@string/siege" />
+        <Button
+            android:id="@+id/hire"
+            android:text="@string/hire" />
+    </GridLayout>
 </LinearLayout>

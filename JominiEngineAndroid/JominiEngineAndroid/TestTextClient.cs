@@ -9,7 +9,8 @@ using System.Net;
 using System.IO;
 using ProtoBuf;
 using System.Security.Cryptography.X509Certificates;
-using hist_mmorpg;
+using ProtoMessage;
+
 /// <summary>
 /// Extends the ConcurrentQueue to fire an event whenever a new item is enqueued
 /// </summary>
@@ -37,7 +38,7 @@ public class ConcurrentQueueWithEvent<T> : ConcurrentQueue<T>
 }
 public partial class TextTestClient
 {
-	public ConcurrentQueueWithEvent<ProtoMessage> protobufMessageQueue;
+	public ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage> protobufMessageQueue;
 	public ConcurrentQueueWithEvent<string> stringMessageQueue;
 	public Network net;
 	public string playerID;
@@ -45,7 +46,7 @@ public partial class TextTestClient
 
 	public TextTestClient()
 	{
-		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage>();
+		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage>();
 		stringMessageQueue = new ConcurrentQueueWithEvent<string>();
 	}
 	/*************************************
@@ -79,7 +80,7 @@ public partial class TextTestClient
 	public void ClearMessageQueues()
 	{
 		// Note- With ConcurrentQueues, it is preferrable to discard the previous queue than to attempt to Dequeue all elements in case the queue is currently being written to
-		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage>();
+		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage>();
 
 		stringMessageQueue = new ConcurrentQueueWithEvent<string>();
 
@@ -95,9 +96,9 @@ public partial class TextTestClient
 	/// </summary>
 	/// <returns>Message from server</returns>
 	/// <throws>TaskCanceledException if task is cancelled</throws>
-	private ProtoMessage CheckForProtobufMessage()
+	private ProtoMessage.ProtoMessage CheckForProtobufMessage()
 	{
-		ProtoMessage m = null;
+		ProtoMessage.ProtoMessage m = null;
 		var waitHandles = new WaitHandle[] { protobufMessageQueue.eventWaiter, net.ctSource.Token.WaitHandle };
 		while (!protobufMessageQueue.TryDequeue(out m))
 		{
@@ -128,10 +129,10 @@ public partial class TextTestClient
 	/// Gets the next message recieved from the server
 	/// </summary>
 	/// <returns>Task containing the reply as a result</returns>
-	public async Task<ProtoMessage> GetReply(string id = null)
+	public async Task<ProtoMessage.ProtoMessage> GetReply(string id = null)
 	{
 
-		ProtoMessage reply = await (Task.Run(() => CheckForProtobufMessage()));
+		ProtoMessage.ProtoMessage reply = await (Task.Run(() => CheckForProtobufMessage()));
 #if DEBUG
 		if (reply == null)
 		{
@@ -179,7 +180,7 @@ public partial class TextTestClient
 		private NetConnection connection;
 		private string user;
 		private string pass;
-		private IPAddress ip = NetUtility.Resolve("localhost");
+		private IPAddress ip = NetUtility.Resolve("10.0.2.2");
 		private int port = 8000;
 		private NetEncryption alg = null;
 		/// <summary>
@@ -263,13 +264,13 @@ public partial class TextTestClient
 			return hashcode;
 		}
 
-		public void Send(ProtoMessage message, bool encrypt = true)
+		public void Send(ProtoMessage.ProtoMessage message, bool encrypt = true)
 		{
 			NetOutgoingMessage msg = client.CreateMessage();
 			MemoryStream ms = new MemoryStream();
 			try
 			{
-				Serializer.SerializeWithLengthPrefix<ProtoMessage>(ms, message, ProtoBuf.PrefixStyle.Fixed32);
+				Serializer.SerializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms, message, ProtoBuf.PrefixStyle.Fixed32);
 				msg.Write(ms.GetBuffer());
 				if (alg != null && encrypt)
 				{
@@ -426,10 +427,10 @@ public partial class TextTestClient
 									im.Decrypt(alg);
 								}
 								MemoryStream ms = new MemoryStream(im.Data);
-								ProtoMessage m = null;
+								ProtoMessage.ProtoMessage m = null;
 								try
 								{
-									m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms, PrefixStyle.Fixed32);
+									m = Serializer.DeserializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms, PrefixStyle.Fixed32);
 
 								}
 								catch (Exception e)
@@ -501,7 +502,7 @@ public partial class TextTestClient
 									try
 									{
 										MemoryStream ms2 = new MemoryStream(im.SenderConnection.RemoteHailMessage.Data);
-										ProtoMessage m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms2, PrefixStyle.Fixed32);
+										ProtoMessage.ProtoMessage m = Serializer.DeserializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms2, PrefixStyle.Fixed32);
 										if (m != null)
 										{
 											tClient.protobufMessageQueue.Enqueue(m);

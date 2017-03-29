@@ -8,7 +8,7 @@ using System.Threading;
 using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.Text;
-
+using ProtoMessage;
 namespace hist_mmorpg
 {
     /// <summary>
@@ -145,10 +145,13 @@ namespace hist_mmorpg
                                 im.Decrypt(c.alg);
                             }
                             ProtoMessage m = null;
+                            global::ProtoMessage.ProtoMessage y = null;
                             using (MemoryStream ms = new MemoryStream(im.Data))
                             {
                                 try
                                 {
+                                        y = Serializer.DeserializeWithLengthPrefix<global::ProtoMessage.ProtoMessage>(ms,
+                                        PrefixStyle.Fixed32);
                                     m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms, PrefixStyle.Fixed32);
                                 }
                                 catch (Exception e)
@@ -164,7 +167,7 @@ namespace hist_mmorpg
                                     Globals_Server.logError("Failed to deserialize message for client: " + c.username);
                                 }
                             }
-                            if (m == null)
+                            if (m == null && y == null)
                             {
                                 string error = "Recieved null message from " + im.SenderEndPoint.ToString();
                                 if (clientConnections.ContainsKey(im.SenderConnection))
@@ -224,7 +227,52 @@ namespace hist_mmorpg
                                     im.SenderConnection.Disconnect("Not logged in- Disconnecting");
                                 }
                             }
-                        }
+                            //IF Y ACTION 
+                                if (y.ActionType == Actions.LogIn)
+                                {
+                                    ProtoLogIn login = m as ProtoLogIn;
+                                    if (login == null)
+                                    {
+                                        im.SenderConnection.Disconnect("Not login");
+                                        return;
+                                    }
+                                    lock (ServerLock)
+                                    {
+                                        if (LogInManager.VerifyUser(c.username, login.userSalt))
+                                        {
+                                            if (LogInManager.ProcessLogIn(login, c))
+                                            {
+                                                string log = c.username + " logs in from " + im.SenderEndPoint.ToString();
+                                                Globals_Server.logEvent(log);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ProtoMessage reply = new ProtoMessage
+                                            {
+                                                ActionType = Actions.LogIn,
+                                                ResponseType = DisplayMessages.LogInFail
+                                            };
+                                            im.SenderConnection.Disconnect("Authentication Fail");
+                                        }
+                                    }
+                                }
+                                // temp for testing, should validate connection first
+                                else if (clientConnections.ContainsKey(im.SenderConnection))
+                                {
+                                    if (Globals_Game.IsObserver(c))
+                                    {
+                                        ProcessMessage(m, im.SenderConnection);
+                                        ProtoClient clientDetails = new ProtoClient(c);
+                                        clientDetails.ActionType = Actions.Update;
+                                        SendViaProto(clientDetails, im.SenderConnection, c.alg);
+                                    }
+                                    else
+                                    {
+                                        im.SenderConnection.Disconnect("Not logged in- Disconnecting");
+                                    }
+                                }
+                            }
                             break;
                         case NetIncomingMessageType.StatusChanged:
                             byte stat = im.ReadByte();

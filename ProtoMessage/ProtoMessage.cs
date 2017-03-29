@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using ProtoBuf;
 using ProtoBuf.Meta;
+using ProtoMessage;
+
 namespace ProtoMessage
 {
     /**************A Note on ProtoBufs ************
@@ -31,11 +33,11 @@ namespace ProtoMessage
     /// </summary>
     // Subtypes need to be declared in order for serialization to work
     [ProtoInclude(5, typeof(ProtoLogIn))]
-    [ProtoInclude(6,typeof(ProtoPlayer))]
-    [ProtoInclude(7,typeof(ProtoClient))]
+    [ProtoInclude(6, typeof(ProtoPlayer))]
+    [ProtoInclude(7, typeof(ProtoClient))]
     [ProtoInclude(8, typeof(ProtoGenericArray<ProtoPlayer>))]
     [ProtoInclude(9, typeof(ProtoGenericArray<ProtoFief>))]
-    [ProtoInclude(10,typeof(ProtoGenericArray<string>))]
+    [ProtoInclude(10, typeof(ProtoGenericArray<string>))]
     [ProtoInclude(11, typeof(ProtoGenericArray<double>))]
     [ProtoInclude(12, typeof(ProtoGenericArray<ProtoCharacterOverview>))]
     [ProtoInclude(13, typeof(ProtoGenericArray<ProtoDetachment>))]
@@ -60,6 +62,7 @@ namespace ProtoMessage
     [ProtoInclude(32, typeof(ProtoTravelTo))]
     [ProtoInclude(33, typeof(ProtoRecruit))]
     [ProtoInclude(34, typeof(ProtoCombatValues))]
+    [ProtoContract, Serializable]
     public class ProtoMessage
     {
         /// <summary>
@@ -132,7 +135,7 @@ namespace ProtoMessage
         /// <summary>
         /// The session salt, used to salt the password hash
         /// </summary>
-        public byte[] sessionSalt {get;set;}
+        public byte[] sessionSalt { get; set; }
         /// <summary>
         /// The user's salt, used to salt the password hash
         /// </summary>
@@ -144,7 +147,7 @@ namespace ProtoMessage
         /// <summary>
         /// Challenge text to be signed by server
         /// </summary>
-        public string Text { get;set; }
+        public string Text { get; set; }
         /// <summary>
         /// Result of server signing certificate
         /// </summary>
@@ -197,7 +200,7 @@ namespace ProtoMessage
         {
             this.purse = c.myPlayerCharacter.purse;
             travelModifier = Globals_Game.clock.CalcSeasonTravMod();
-            if (c.activeChar.GetArmy()!=null)
+            if (c.activeChar.GetArmy() != null)
             {
                 travelModifier = travelModifier * c.activeChar.GetArmy().CalcMovementModifier();
             }
@@ -219,8 +222,8 @@ namespace ProtoMessage
     /// Class for serializing an Ailment
     /// (At present, only minimumEffect is hidden)
     /// </summary>
-    [ProtoContract(ImplicitFields=ImplicitFields.AllPublic)]
-    public class ProtoAilment: ProtoMessage
+    [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+    public class ProtoAilment : ProtoMessage
     {
         /// <summary>
         /// Holds ailmentID
@@ -255,12 +258,13 @@ namespace ProtoMessage
             this._effect = a.effect;
             this._minimumEffect = 0;
         }
-        public ProtoAilment():base()
+        public ProtoAilment() : base()
         {
 
         }
-        public bool ShouldSerializeminimumEffect() {
-            return (_minimumEffect!=0);
+        public bool ShouldSerializeminimumEffect()
+        {
+            return (_minimumEffect != 0);
         }
     }
     /// <summary>
@@ -341,11 +345,11 @@ namespace ProtoMessage
         /// </summary>
         public string siegeStatus { get; set; }
 
-        public ProtoArmy():base()
+        public ProtoArmy() : base()
         {
 
         }
-        public ProtoArmy(Army a, Character observer) 
+        public ProtoArmy(Army a, Character observer)
         {
             this.ownerID = a.owner;
             this.armyID = a.armyID;
@@ -354,7 +358,7 @@ namespace ProtoMessage
                 this.leader = a.GetLeader().firstName + " " + a.GetLeader().familyName;
             }
             this.leaderID = a.leader;
-            this.owner = a.GetOwner().firstName+" "+a.GetOwner().familyName;
+            this.owner = a.GetOwner().firstName + " " + a.GetOwner().familyName;
             this.location = a.GetLocation().name + ", " + a.GetLocation().province.name + ", " + a.GetLocation().province.kingdom.name;
             this.nationality = a.GetOwner().nationality.natID;
             // check if is garrison in a siege
@@ -413,8 +417,8 @@ namespace ProtoMessage
     /// Class for sending details of a character
     /// </summary>
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    [ProtoInclude(35,typeof(ProtoPlayerCharacter))]
-    [ProtoInclude(36,typeof(ProtoNPC))]
+    [ProtoInclude(35, typeof(ProtoPlayerCharacter))]
+    [ProtoInclude(36, typeof(ProtoNPC))]
     public class ProtoCharacter : ProtoMessage
     {
         /* BASIC CHARACTER DETAILS */
@@ -433,11 +437,11 @@ namespace ProtoMessage
         /// <summary>
         /// Character's year of birth
         /// </summary>
-        public uint birthYear{ get; set; }
+        public uint birthYear { get; set; }
         /// <summary>
         /// Character's birth season
         /// </summary>
-        public byte birthSeason {get;set;}
+        public byte birthSeason { get; set; }
         /// <summary>
         /// Holds if character male
         /// </summary>
@@ -473,7 +477,7 @@ namespace ProtoMessage
         /// <summary>
         /// Character's language ID
         /// </summary>
-        public string language {get;set;}
+        public string language { get; set; }
         /// <summary>
         /// number of days left in season
         /// </summary>
@@ -543,15 +547,15 @@ namespace ProtoMessage
         /// </summary>
         public string captor { get; set; }
         // Holds information as to whether character is involved in a siege
-        public enum SiegeRole { None=0, Besieger, Defender, DefenderAdd };
+        public enum SiegeRole { None = 0, Besieger, Defender, DefenderAdd };
         public SiegeRole siegeRole;
-        public ProtoCharacter():base()
+        public ProtoCharacter() : base()
         {
 
         }
         public ProtoCharacter(Character c)
         {
-           
+
             this.charID = c.charID;
             this.firstName = c.firstName;
             this.familyName = c.familyName;
@@ -569,7 +573,7 @@ namespace ProtoMessage
             this.isPregnant = c.isPregnant;
             this.titles = c.myTitles.ToArray();
             this.armyID = c.armyID;
-            if (c.GetArmy()!=null)
+            if (c.GetArmy() != null)
             {
                 if (c.GetArmy().CheckIfBesieger() != null)
                 {
@@ -591,29 +595,33 @@ namespace ProtoMessage
             this.captor = c.captorID;
         }
 
-        public void includeAll(Character c) {
+        public void includeAll(Character c)
+        {
             this.inKeep = c.inKeep;
             this.virility = c.virility;
             this.maxHealth = c.maxHealth;
             this.health = c.CalculateHealth();
-            this.stature=c.CalculateStature();
+            this.stature = c.CalculateStature();
             this.days = c.days;
             this.location = c.location.id;
             this.statureModifier = c.statureModifier;
             this.management = c.management;
             this.combat = c.combat;
             this.traits = new Pair[c.traits.Length];
-            for(int i = 0;i<c.traits.Length;i++) {
-                Tuple<Trait,int> t = c.traits[i];
-                traits[i] = new Pair(t.Item1.name,t.Item2.ToString());
+            for (int i = 0; i < c.traits.Length; i++)
+            {
+                Tuple<Trait, int> t = c.traits[i];
+                traits[i] = new Pair(t.Item1.name, t.Item2.ToString());
             }
             List<Pair> tmpAilments = new List<Pair>();
-            foreach(KeyValuePair<string,Ailment> pair in c.ailments) {
-                tmpAilments.Add(new Pair(pair.Key,pair.Value.description));
+            foreach (KeyValuePair<string, Ailment> pair in c.ailments)
+            {
+                tmpAilments.Add(new Pair(pair.Key, pair.Value.description));
             }
             this.ailments = tmpAilments.ToArray();
             List<string> tmpGoTo = new List<string>();
-            foreach(var item in c.goTo) {
+            foreach (var item in c.goTo)
+            {
                 tmpGoTo.Add(item.id);
             }
             this.goTo = tmpGoTo.ToArray();
@@ -655,15 +663,15 @@ namespace ProtoMessage
         }
         public void includeLocation(Character c)
         {
-            this.location = c.location.id ;
+            this.location = c.location.id;
             this.inKeep = c.inKeep;
         }
-        
+
         /// <summary>
         /// Method to ensure message incudes all information from inheriting classes
         /// </summary>
         /// <param name="c">Character whose details to include</param>
-        public virtual void onIncludeAll(Character c )
+        public virtual void onIncludeAll(Character c)
         {
         }
         /// <summary>
@@ -821,13 +829,15 @@ namespace ProtoMessage
 
         public ProtoNPC(NonPlayerCharacter npc) : base(npc)
         {
-            
-        }
-
-        public ProtoNPC() :base(){
 
         }
-        public override void onIncludeAll(Character character) {
+
+        public ProtoNPC() : base()
+        {
+
+        }
+        public override void onIncludeAll(Character character)
+        {
             NonPlayerCharacter npc = character as NonPlayerCharacter;
             if (!string.IsNullOrWhiteSpace(npc.employer))
             {
@@ -852,7 +862,7 @@ namespace ProtoMessage
         public void IncludeHire(NonPlayerCharacter character, string observerID)
         {
             this.lastOfferID = observerID;
-            uint lastoffer=0;
+            uint lastoffer = 0;
             character.lastOffer.TryGetValue(observerID, out lastoffer);
             this.lastOfferAmount = lastoffer;
         }
@@ -969,7 +979,7 @@ namespace ProtoMessage
         /// <summary>
         /// Holds overviews of characters present in fief
         /// </summary>
-        public ProtoCharacterOverview[] charactersInFief { get;set; }
+        public ProtoCharacterOverview[] charactersInFief { get; set; }
         /// <summary>
         /// Holds characters banned from keep (charIDs)
         /// </summary>
@@ -1033,7 +1043,7 @@ namespace ProtoMessage
                 Globals_Server.logError("Title holder is null for fief " + f.id);
                 this.titleHolder = "None";
             }
-            this.owner = f.owner.firstName + " "+f.owner.familyName;
+            this.owner = f.owner.firstName + " " + f.owner.familyName;
             this.ownerID = f.owner.charID;
             this.rank = f.rank.GetName(f.language);
             this.population = f.population;
@@ -1059,14 +1069,15 @@ namespace ProtoMessage
             i = 0;
             this.ancestralOwner = new ProtoCharacterOverview(f.ancestralOwner);
             if (f.bailiff != null) { this.bailiff = new ProtoCharacterOverview(f.bailiff); }
-            
+
             this.isPillaged = f.isPillaged;
             this.siege = f.siege;
             this.armies = new ProtoArmyOverview[f.armies.Count];
             foreach (var a in f.armies)
             {
                 var army = Globals_Game.armyMasterList[a];
-                if(army!=null) {
+                if (army != null)
+                {
                     this.armies[i] = new ProtoArmyOverview(army);
                 }
                 i++;
@@ -1093,8 +1104,9 @@ namespace ProtoMessage
         /// Includes all data in the ProtoMessage (useful for fief 
         /// </summary>
         /// <param name="f"></param>
-        public void includeAll(Fief f) {
-            this.keyStatsCurrent=new double[14];
+        public void includeAll(Fief f)
+        {
+            this.keyStatsCurrent = new double[14];
             this.keyStatsNext = new double[14]; ;
             this.keyStatsPrevious = new double[14];
             this.fields = f.fields;
@@ -1105,6 +1117,7 @@ namespace ProtoMessage
             this.keyStatsNext[0] = f.CalcNewLoyalty();
             this.keyStatsNext[1] = f.CalcNewGDP();
             this.keyStatsNext[2] = f.taxRateNext;
+            Console.WriteLine("Tax rate next: " + f.taxRateNext);
             this.keyStatsNext[3] = f.officialsSpendNext;
             this.keyStatsNext[4] = f.garrisonSpendNext;
             this.keyStatsNext[5] = f.infrastructureSpendNext;
@@ -1116,13 +1129,13 @@ namespace ProtoMessage
             this.keyStatsNext[11] = f.CalcNewOlordTaxes();
             this.keyStatsNext[12] = f.province.taxRate;
             this.keyStatsNext[13] = f.CalcNewBottomLine();
-     
+
             this.keyStatsCurrent = f.keyStatsCurrent;
             this.keyStatsPrevious = f.keyStatsPrevious;
             this.loyalty = f.loyalty;
             this.bailiffDaysInFief = f.bailiffDaysInFief;
             this.treasury = f.GetAvailableTreasury(true);
-            
+
         }
 
         public void includeSpy(Fief f)
@@ -1184,7 +1197,7 @@ namespace ProtoMessage
             this.locationID = a.location;
             this.armySize = a.CalcArmySize();
         }
-                
+
     }
     /// <summary>
     /// Class for summarising the basic details of a character
@@ -1234,26 +1247,33 @@ namespace ProtoMessage
                     this.role = (c as NonPlayerCharacter).GetFunction(pc);
                 }
             }
-            else {
-                if(c is PlayerCharacter) {
+            else
+            {
+                if (c is PlayerCharacter)
+                {
                     PlayerCharacter pc = (c as PlayerCharacter);
-                    if(pc.CheckIfOverlord()) {
+                    if (pc.CheckIfOverlord())
+                    {
                         this.role = "Overlord";
                     }
-                    if(pc.CheckIsKing()) {
+                    if (pc.CheckIsKing())
+                    {
                         this.role = "King";
                     }
-                    if(pc.CheckIsSysAdmin()) {
+                    if (pc.CheckIsSysAdmin())
+                    {
                         this.role = "Admin";
                     }
-                    if(pc.CheckIsPrince()) {
+                    if (pc.CheckIsPrince())
+                    {
                         this.role = "Prince";
                     }
-                    if(pc.CheckIsHerald()) {
+                    if (pc.CheckIsHerald())
+                    {
                         this.role = "Herald";
                     }
                 }
-            }    
+            }
         }
         public void showLocation(Character c)
         {
@@ -1287,7 +1307,7 @@ namespace ProtoMessage
 
 
 
-        public ProtoPillageResult(): base()
+        public ProtoPillageResult() : base()
         {
 
         }
@@ -1612,6 +1632,8 @@ namespace ProtoMessage
             this.viewed = j.viewed;
             this.replied = j.replied;
             getCharacterOverviews(j);
+
+            Console.WriteLine("Entry type:" + this.type + ", entry year:" + this.year);
         }
 
         public ProtoJournalEntry() : base()
@@ -1623,7 +1645,8 @@ namespace ProtoMessage
     /// ProtoMessage for sending an entire Journal
     /// </summary>
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-    public class ProtoJournal : ProtoMessage  {
+    public class ProtoJournal : ProtoMessage
+    {
         /// <summary>
         /// Holds entries
         /// </summary>
@@ -1652,7 +1675,7 @@ namespace ProtoMessage
             }
             this.entries = entries.ToArray();
         }
-        public ProtoJournal() :base()
+        public ProtoJournal() : base()
         {
 
         }
@@ -1692,7 +1715,7 @@ namespace ProtoMessage
         /// Days left of person who created detachment at time of creation
         /// </summary>
         public int days { get; set; }
-        
+
         public ProtoDetachment(string id, uint[] troops, string leftFor, string armyID)
         {
             this.id = id;
@@ -1719,7 +1742,7 @@ namespace ProtoMessage
         // amount being transferred
         public int amount { get; set; }
 
-        public ProtoTransfer(): base()
+        public ProtoTransfer() : base()
         {
             this.ActionType = Actions.TransferFunds;
         }
@@ -1818,7 +1841,7 @@ namespace ProtoMessage
             this.armyID = armyID;
         }
 
-        public ProtoCombatValues():base()
+        public ProtoCombatValues() : base()
         {
             this.ActionType = Actions.AdjustCombatValues;
         }
@@ -1839,7 +1862,8 @@ namespace ProtoMessage
         {
         }
 
-        public ProtoPlayer(PlayerCharacter pc) {
+        public ProtoPlayer(PlayerCharacter pc)
+        {
             this.pcID = pc.charID;
             this.pcName = pc.firstName + " " + pc.familyName;
             this.playerID = pc.playerID;

@@ -118,3 +118,11 @@ C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mm
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\hist_mmorpg.pdb
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Debug\hist_mmorpg.exe.manifest
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\obj\Debug\hist_mmorpg.application
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\ProtoMessage.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\ProtoMessage.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\Shim.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\Shim.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\Shim.xml

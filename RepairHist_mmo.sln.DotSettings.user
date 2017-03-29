@@ -3,4 +3,5 @@
   &lt;Assembly Path="C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\Lidgren.Network.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\RepairHist_mmo\bin\Debug\protobuf-net.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /&gt;&#xD;
-&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:Int64 x:Key="/Default/Environment/SearchAndNavigation/DefaultOccurrencesGroupingIndex/@EntryValue">2</s:Int64></wpf:ResourceDictionary>

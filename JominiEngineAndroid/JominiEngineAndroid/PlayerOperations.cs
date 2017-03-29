@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using hist_mmorpg;
+using ProtoMessage;
 
 public class PlayerOperations
 {
@@ -21,7 +21,7 @@ public class PlayerOperations
 
 	public ProtoGenericArray<ProtoFief> Check(TextTestClient client)
 	{
-		ProtoMessage checkMessage = new ProtoMessage();
+		ProtoMessage.ProtoMessage checkMessage = new ProtoMessage.ProtoMessage();
 		checkMessage.ActionType = Actions.ViewMyFiefs;
 		client.net.Send(checkMessage);
 		var reply = GetActionReply(Actions.ViewMyFiefs, client);
@@ -40,9 +40,9 @@ public class PlayerOperations
 		return armies;
 	}
 
-	public Task<ProtoMessage> GetActionReply(Actions action, TextTestClient client)
+	public Task<ProtoMessage.ProtoMessage> GetActionReply(Actions action, TextTestClient client)
 	{
-		Task<ProtoMessage> responseTask = client.GetReply();
+		Task<ProtoMessage.ProtoMessage> responseTask = client.GetReply();
 		responseTask.Wait();
 		while (responseTask.Result.ActionType != action)
 		{
@@ -53,7 +53,7 @@ public class PlayerOperations
 		return responseTask;
 	}
 
-	public ProtoMessage HireTroops(int amount, TextTestClient client)
+	public ProtoMessage.ProtoMessage HireTroops(int amount, TextTestClient client)
 	{
 		ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
 		protoMessage.Message = "Char_158";
@@ -82,7 +82,7 @@ public class PlayerOperations
 		client.net.Send(protoMessage);
 		var locReply = GetActionReply(Actions.ViewChar, client);
 		var locResult = (ProtoPlayerCharacter)locReply.Result;
-		ProtoMessage protoSiegeStart = new ProtoMessage();
+		ProtoMessage.ProtoMessage protoSiegeStart = new ProtoMessage.ProtoMessage();
 		protoSiegeStart.ActionType = Actions.BesiegeFief;
 		protoSiegeStart.Message = locResult.armyID;
 		client.net.Send(protoSiegeStart);
@@ -125,9 +125,9 @@ public class PlayerOperations
 		return (ProtoPlayerCharacter)reply.Result;
 	}
 
-	public ProtoMessage SeasonUpdate(TextTestClient client)
+	public ProtoMessage.ProtoMessage SeasonUpdate(TextTestClient client)
 	{
-		ProtoMessage protoMessage = new ProtoMessage();
+		ProtoMessage.ProtoMessage protoMessage = new ProtoMessage.ProtoMessage();
 		protoMessage.ActionType = Actions.SeasonUpdate;
 		client.net.Send(protoMessage);
 		var reply = GetActionReply(Actions.SeasonUpdate, client);
@@ -136,7 +136,7 @@ public class PlayerOperations
 
 	public ProtoGenericArray<ProtoSiegeOverview> SiegeList(TextTestClient client)
 	{
-		ProtoMessage protoMessage = new ProtoMessage();
+		ProtoMessage.ProtoMessage protoMessage = new ProtoMessage.ProtoMessage();
 		protoMessage.ActionType = Actions.SiegeList;
 		client.net.Send(protoMessage);
 		var reply = GetActionReply(Actions.SiegeList, client);
@@ -145,7 +145,7 @@ public class PlayerOperations
 
 	public ProtoGenericArray<ProtoJournalEntry> JournalEntries(TextTestClient client)
 	{
-		ProtoMessage protoMessage = new ProtoMessage();
+		ProtoMessage.ProtoMessage protoMessage = new ProtoMessage.ProtoMessage();
 		protoMessage.ActionType = Actions.ViewJournalEntries;
 		client.net.Send(protoMessage);
 		var reply = GetActionReply(Actions.ViewJournalEntries, client);
@@ -154,7 +154,7 @@ public class PlayerOperations
 
 	public ProtoJournalEntry Journal(string Journal, TextTestClient client)
 	{
-		ProtoMessage protoMessage = new ProtoMessage();
+		ProtoMessage.ProtoMessage protoMessage = new ProtoMessage.ProtoMessage();
 		protoMessage.ActionType = Actions.ViewJournalEntry;
 		protoMessage.Message = Journal;
 		client.net.Send(protoMessage);

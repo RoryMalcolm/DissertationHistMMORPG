@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bkiPtTGBuMwLjeZ24N/9fka3nfiIlIuef53xio7Pv8s=</dsig:DigestValue>
+        <dsig:DigestValue>9A8YQs00KcQgt0eOtUa26CqJhaq8X5Cz2vaoKpN45qA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,6 +86,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>ZmU9eHq3lqVcVa/fo10v2a14yJu9UeDQGWUhQ5n6VrY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoMessage.dll" size="279040">
+      <assemblyIdentity name="ProtoMessage" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>VFds9VrcbYSRH1hVtODsM2AojHb3IhqyYqEK2D3rsAE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -137,13 +149,25 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="hist_mmorpg.exe.config" size="450">
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Shim.dll" size="32768">
+      <assemblyIdentity name="Shim" version="2.0.1.0" publicKeyToken="C55EC16D10C4B366" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4xpB1vB5WJkPBk2zQl7TTza4uHcncKxLkh/h9KP4TJ0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="hist_mmorpg.exe.config" size="808">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5ftWHDgYT/+xGxzhtXvh/QeRglje+mtLk2TH1uCGHaE=</dsig:DigestValue>
+      <dsig:DigestValue>Yhx6yTqxsCTpoobU7DfQXnjQrZ1y4EKBZcgQ+0BqTqA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

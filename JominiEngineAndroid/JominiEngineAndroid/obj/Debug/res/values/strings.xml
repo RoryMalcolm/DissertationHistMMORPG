@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">JominiEngineAndroid</string></resources>
+<resources><string name="north_west">North West</string><string name="north_east">North East</string><string name="east">East</string><string name="west">West</string><string name="south_west">South West</string><string name="south_east">South East</string><string name="hire">Hire</string><string name="siege">Siege</string><string name="app_name">JominiEngineAndroid</string></resources>

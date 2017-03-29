@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="hist_mmorpg.exe.manifest" size="8159">
+    <dependentAssembly dependencyType="install" codebase="hist_mmorpg.exe.manifest" size="9462">
       <assemblyIdentity name="hist_mmorpg.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AdYUsByOl2cVxzEyK9oCNLNPLZIHu84nS7Am/MCh5+o=</dsig:DigestValue>
+        <dsig:DigestValue>tj9VctnWqSf3laibCVpCEwRR0LwAjtTZCPFl6dg2ulQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
