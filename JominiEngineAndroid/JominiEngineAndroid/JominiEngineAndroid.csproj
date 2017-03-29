@@ -43,17 +43,17 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Lidgren.Network">
-      <HintPath>..\..\GtkClient\GtkClient\GtkClient\bin\Debug\Lidgren.Network.dll</HintPath>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\GtkClient\GtkClient\GtkClient\bin\Debug\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ProtoMessage">
+      <HintPath>..\..\ProtoMessage\bin\Debug\ProtoMessage.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\GtkClient\GtkClient\GtkClient\bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>..\..\GtkClient\GtkClient\GtkClient\bin\Debug\protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="ClientDLL">
-      <HintPath>..\..\ClientDLL\bin\Debug\ClientDLL.dll</HintPath>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\..\Libraries\lidgren-network-gen3\Lidgren.Network\bin\Debug\Lidgren.Network.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

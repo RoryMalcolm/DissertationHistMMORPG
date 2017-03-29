@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="25"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="32796742927258"
+    token="-7691797785352388022"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="299" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="24" />
+    <task
+        name="verifier"
+        duration="3" />
+
+    <artifact
+        location="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="29937778978087"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="32796742927258"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

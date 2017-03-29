@@ -9,7 +9,6 @@ using System.Net;
 using System.IO;
 using ProtoBuf;
 using System.Security.Cryptography.X509Certificates;
-using hist_mmorpg;
 /// <summary>
 /// Extends the ConcurrentQueue to fire an event whenever a new item is enqueued
 /// </summary>
@@ -37,7 +36,7 @@ public class ConcurrentQueueWithEvent<T> : ConcurrentQueue<T>
 }
 public partial class TextTestClient
 {
-	public ConcurrentQueueWithEvent<ProtoMessage> protobufMessageQueue;
+	public ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage> protobufMessageQueue;
 	public ConcurrentQueueWithEvent<string> stringMessageQueue;
 	public Network net;
 	public string playerID;
@@ -45,7 +44,7 @@ public partial class TextTestClient
 
 	public TextTestClient()
 	{
-		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage>();
+		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage>();
 		stringMessageQueue = new ConcurrentQueueWithEvent<string>();
 	}
 	/*************************************
@@ -79,7 +78,7 @@ public partial class TextTestClient
 	public void ClearMessageQueues()
 	{
 		// Note- With ConcurrentQueues, it is preferrable to discard the previous queue than to attempt to Dequeue all elements in case the queue is currently being written to
-		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage>();
+		protobufMessageQueue = new ConcurrentQueueWithEvent<ProtoMessage.ProtoMessage>();
 
 		stringMessageQueue = new ConcurrentQueueWithEvent<string>();
 
@@ -95,9 +94,9 @@ public partial class TextTestClient
 	/// </summary>
 	/// <returns>Message from server</returns>
 	/// <throws>TaskCanceledException if task is cancelled</throws>
-	private ProtoMessage CheckForProtobufMessage()
+	private ProtoMessage.ProtoMessage CheckForProtobufMessage()
 	{
-		ProtoMessage m = null;
+		ProtoMessage.ProtoMessage m = null;
 		var waitHandles = new WaitHandle[] { protobufMessageQueue.eventWaiter, net.ctSource.Token.WaitHandle };
 		while (!protobufMessageQueue.TryDequeue(out m))
 		{
@@ -128,10 +127,10 @@ public partial class TextTestClient
 	/// Gets the next message recieved from the server
 	/// </summary>
 	/// <returns>Task containing the reply as a result</returns>
-	public async Task<ProtoMessage> GetReply(string id = null)
+	public async Task<ProtoMessage.ProtoMessage> GetReply(string id = null)
 	{
 
-		ProtoMessage reply = await (Task.Run(() => CheckForProtobufMessage()));
+		ProtoMessage.ProtoMessage reply = await (Task.Run(() => CheckForProtobufMessage()));
 #if DEBUG
 		if (reply == null)
 		{
@@ -263,13 +262,13 @@ public partial class TextTestClient
 			return hashcode;
 		}
 
-		public void Send(ProtoMessage message, bool encrypt = true)
+		public void Send(ProtoMessage.ProtoMessage message, bool encrypt = true)
 		{
 			NetOutgoingMessage msg = client.CreateMessage();
 			MemoryStream ms = new MemoryStream();
 			try
 			{
-				Serializer.SerializeWithLengthPrefix<ProtoMessage>(ms, message, ProtoBuf.PrefixStyle.Fixed32);
+				Serializer.SerializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms, message, ProtoBuf.PrefixStyle.Fixed32);
 				msg.Write(ms.GetBuffer());
 				if (alg != null && encrypt)
 				{
@@ -285,7 +284,7 @@ public partial class TextTestClient
 
 		}
 
-		public void ComputeAndSendHashAndKey(ProtoLogIn salts, byte[] key)
+		public void ComputeAndSendHashAndKey(ProtoMessage.ProtoLogIn salts, byte[] key)
 		{
 
 			string hashstring = "";
@@ -311,9 +310,9 @@ public partial class TextTestClient
 			{
 				fullHash += b.ToString();
 			}
-			ProtoLogIn response = new ProtoLogIn();
+			ProtoMessage.ProtoLogIn response = new ProtoMessage.ProtoLogIn();
 			response.userSalt = hashFull;
-			response.ActionType = Actions.LogIn;
+			response.ActionType = ProtoMessage.Actions.LogIn;
 			response.Key = key;
 			Send(response, false);
 		}
@@ -323,7 +322,7 @@ public partial class TextTestClient
 		/// </summary>
 		/// <returns><c>true</c>, if certificate was validated, <c>false</c> otherwise.</returns>
 		/// <param name="login">ProtoLogin containing certificate</param>
-		public bool ValidateCertificateAndCreateKey(ProtoLogIn login, out byte[] key)
+		public bool ValidateCertificateAndCreateKey(ProtoMessage.ProtoLogIn login, out byte[] key)
 		{
 			if (login == null || login.certificate == null)
 			{
@@ -426,10 +425,10 @@ public partial class TextTestClient
 									im.Decrypt(alg);
 								}
 								MemoryStream ms = new MemoryStream(im.Data);
-								ProtoMessage m = null;
+								ProtoMessage.ProtoMessage m = null;
 								try
 								{
-									m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms, PrefixStyle.Fixed32);
+									m = Serializer.DeserializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms, PrefixStyle.Fixed32);
 
 								}
 								catch (Exception e)
@@ -444,26 +443,26 @@ public partial class TextTestClient
 								}
 								if (m != null)
 								{
-									if (m.ResponseType == DisplayMessages.LogInSuccess)
+									if (m.ResponseType == ProtoMessage.DisplayMessages.LogInSuccess)
 									{
 										loggedIn = true;
 										tClient.protobufMessageQueue.Enqueue(m);
 									}
 									else
 									{
-										if (m.ActionType == Actions.Update)
+										if (m.ActionType == ProtoMessage.Actions.Update)
 										{
 											// Don't do anything at the moment for updates
 										}
 										else
 										{
 											tClient.protobufMessageQueue.Enqueue(m);
-											if (m.ActionType == Actions.LogIn && m.ResponseType == DisplayMessages.None)
+											if (m.ActionType == ProtoMessage.Actions.LogIn && m.ResponseType == ProtoMessage.DisplayMessages.None)
 											{
 												byte[] key = null;
-												if (ValidateCertificateAndCreateKey(m as ProtoLogIn, out key))
+												if (ValidateCertificateAndCreateKey(m as ProtoMessage.ProtoLogIn, out key))
 												{
-													ComputeAndSendHashAndKey(m as ProtoLogIn, key);
+													ComputeAndSendHashAndKey(m as ProtoMessage.ProtoLogIn, key);
 												}
 											}
 											else
@@ -486,7 +485,6 @@ public partial class TextTestClient
 							}
 							catch (Exception e)
 							{
-								Globals_Server.logError("Error in reading data: " + e.GetType() + " :" + e.Message + "; Stack Trace: " + e.StackTrace);
 							}
 							break;
 						case NetIncomingMessageType.StatusChanged:
@@ -501,18 +499,18 @@ public partial class TextTestClient
 									try
 									{
 										MemoryStream ms2 = new MemoryStream(im.SenderConnection.RemoteHailMessage.Data);
-										ProtoMessage m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms2, PrefixStyle.Fixed32);
+										ProtoMessage.ProtoMessage m = Serializer.DeserializeWithLengthPrefix<ProtoMessage.ProtoMessage>(ms2, PrefixStyle.Fixed32);
 										if (m != null)
 										{
 											tClient.protobufMessageQueue.Enqueue(m);
-											if (m.ActionType == Actions.LogIn && m.ResponseType == DisplayMessages.None)
+											if (m.ActionType == ProtoMessage.Actions.LogIn && m.ResponseType == ProtoMessage.DisplayMessages.None)
 											{
 												byte[] key = null;
-												if (ValidateCertificateAndCreateKey(m as ProtoLogIn, out key))
+												if (ValidateCertificateAndCreateKey(m as ProtoMessage.ProtoLogIn, out key))
 												{
 													if (autoLogIn)
 													{
-														ComputeAndSendHashAndKey(m as ProtoLogIn, key);
+														ComputeAndSendHashAndKey(m as ProtoMessage.ProtoLogIn, key);
 													}
 												}
 												else
@@ -557,7 +555,6 @@ public partial class TextTestClient
 				}
 			}
 #if DEBUG
-			Globals_Server.logEvent("Client listening thread ends");
 #endif
 		}
 

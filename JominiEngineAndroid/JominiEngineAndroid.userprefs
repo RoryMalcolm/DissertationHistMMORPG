@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../Library/Frameworks/Xamarin.Android.framework/Versions/7.1.0-43/lib/xbuild/Xamarin/Android/Xamarin.Android.Common.targets">
     <Files>
       <File FileName="JominiEngineAndroid/MainActivity.cs" Line="4" Column="1" />
-      <File FileName="JominiEngineAndroid/PlayerOperations.cs" Line="163" Column="3" />
-      <File FileName="JominiEngineAndroid/TestTextClient.cs" Line="13" Column="14" />
+      <File FileName="JominiEngineAndroid/PlayerOperations.cs" Line="158" Column="73" />
+      <File FileName="JominiEngineAndroid/TestTextClient.cs" Line="443" Column="10" />
       <File FileName="../../../../../../Library/Frameworks/Xamarin.Android.framework/Versions/7.1.0-43/lib/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
