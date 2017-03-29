@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     public static class Birth
     {

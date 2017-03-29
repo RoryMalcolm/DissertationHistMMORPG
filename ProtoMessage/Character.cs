@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing data on character (PC and NPC)

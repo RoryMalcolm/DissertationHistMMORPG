@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
 using System.Runtime.Serialization;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing data on fief

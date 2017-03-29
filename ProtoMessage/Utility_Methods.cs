@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Methods used throughout the JominiEngine- includes ID verification and retrieving objects from IDs

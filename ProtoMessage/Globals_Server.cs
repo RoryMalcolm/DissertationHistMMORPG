@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using RiakClient;
 using Lidgren.Network;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing any required static variables for server-side

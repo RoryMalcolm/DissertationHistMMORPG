@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Runtime.Serialization;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing data on terrain

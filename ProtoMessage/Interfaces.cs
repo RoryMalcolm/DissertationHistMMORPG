@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     public interface Game_Observer
     {

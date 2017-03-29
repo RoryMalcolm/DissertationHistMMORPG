@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Runtime.Serialization;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     public abstract class Place
     {

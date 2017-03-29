@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// enum representing all valid actions in the gane

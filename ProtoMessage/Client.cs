@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using Lidgren.Network;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Represents a client, their details and the information about their objects

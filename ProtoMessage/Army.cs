@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Text;
 using System.IO;
 using System.Threading;
-namespace hist_mmorpg 
+namespace ProtoMessage 
 {
     /// <summary>
     /// Class storing data on army 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using ProtoBuf;
 using ProtoBuf.Meta;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /**************A Note on ProtoBufs ************
      * This class is used to transmit information to players. As such, it is responsible for deciding which information a client can see

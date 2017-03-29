@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing data on a Trait

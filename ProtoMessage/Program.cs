@@ -7,7 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
 
     static class Program

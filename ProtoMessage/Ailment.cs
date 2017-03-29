@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class storing data on ailments effecting character health

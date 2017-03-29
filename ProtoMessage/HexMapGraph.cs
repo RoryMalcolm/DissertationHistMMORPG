@@ -7,7 +7,7 @@ using QuickGraph.Algorithms;
 using QuickGraph.Serialization;
 using System.Xml;
 using System.Diagnostics;
-namespace hist_mmorpg
+namespace ProtoMessage
 {
     /// <summary>
     /// Class defining HexMapGraph
