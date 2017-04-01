@@ -17,6 +17,7 @@ namespace JominiEngineAndroid
 	    private Button _southWButton;
 	    private Button _hireButton;
 	    private Button _siegeButton;
+	    private TextView _currentFiefTextView;
         protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -28,6 +29,7 @@ namespace JominiEngineAndroid
 
 			// Get our button from the layout resource,
 			// and attach an event to it
+		    _currentFiefTextView = FindViewById<TextView>(Resource.Id.current_fief);
             SetUpButtons();
         }
 
@@ -43,27 +45,27 @@ namespace JominiEngineAndroid
             _siegeButton = FindViewById<Button>(Resource.Id.siege);
             _northWButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.Nw, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.Nw, _testClient).fiefID;
             };
             _northEButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.Ne, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.Ne, _testClient).fiefID;
             };
             _eastButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.E, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.E, _testClient).fiefID;
             };
             _westButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.W, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.W, _testClient).fiefID;
             };
             _southWButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.Sw, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.Sw, _testClient).fiefID;
             };
             _southEButton.Click += delegate
             {
-                _playerOperations.Move(PlayerOperations.MoveDirections.Se, _testClient);
+                _currentFiefTextView.Text = _playerOperations.Move(PlayerOperations.MoveDirections.Se, _testClient).fiefID;
             };
 	        _hireButton.Click += delegate
 	        {

@@ -1306,6 +1306,12 @@ namespace hist_mmorpg
             registeredObservers.Add(obs);
         }
 
+        public static void RegisterObserver(global::ProtoMessage.Client obs)
+        {
+            Client foraddClient = new Client(obs.username, obs.myPlayerCharacter.playerID);
+            registeredObservers.Add(foraddClient);
+        }
+
         /// <summary>
         /// Removes an observer (Form1 object) from the list of registered observers
         /// </summary>

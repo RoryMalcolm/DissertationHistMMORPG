@@ -142,11 +142,11 @@ public class GtkHelloWorld {
 	}
 
 	public static void HireClickOkayEvent(object obj, EventArgs args){
-		int parsed;
+		int parsed = -1;
 		if (hireTextEntry.Text != "") {
 			int.TryParse (hireTextEntry.Text, out parsed);
 		}
-		if (parsed != null) {
+		if (parsed != -1) {
 			playerOps.HireTroops (Convert.ToInt32 (hireTextEntry.Text), client);
 			ProfileClickEvent (obj, args);
 		}

@@ -145,13 +145,13 @@ namespace hist_mmorpg
                                 im.Decrypt(c.alg);
                             }
                             ProtoMessage m = null;
-                            global::ProtoMessage.ProtoMessage y = null;
+                            //global::ProtoMessage.ProtoMessage y = null;
                             using (MemoryStream ms = new MemoryStream(im.Data))
                             {
                                 try
                                 {
-                                        y = Serializer.DeserializeWithLengthPrefix<global::ProtoMessage.ProtoMessage>(ms,
-                                        PrefixStyle.Fixed32);
+                                        //y = Serializer.DeserializeWithLengthPrefix<global::ProtoMessage.ProtoMessage>(ms,
+                                        //PrefixStyle.Fixed32);
                                     m = Serializer.DeserializeWithLengthPrefix<ProtoMessage>(ms, PrefixStyle.Fixed32);
                                 }
                                 catch (Exception e)
@@ -167,7 +167,7 @@ namespace hist_mmorpg
                                     Globals_Server.logError("Failed to deserialize message for client: " + c.username);
                                 }
                             }
-                            if (m == null && y == null)
+                            if (m == null /*&& y == null*/)
                             {
                                 string error = "Recieved null message from " + im.SenderEndPoint.ToString();
                                 if (clientConnections.ContainsKey(im.SenderConnection))
@@ -227,10 +227,11 @@ namespace hist_mmorpg
                                     im.SenderConnection.Disconnect("Not logged in- Disconnecting");
                                 }
                             }
-                            //IF Y ACTION 
-                                if (y.ActionType == Actions.LogIn)
+                            /*//IF Y ACTION 
+                                if (y.ActionType == global::ProtoMessage.Actions.LogIn)
                                 {
-                                    ProtoLogIn login = m as ProtoLogIn;
+                                    global::ProtoMessage.Client forCheck = new global::ProtoMessage.Client(c.username, c.myPlayerCharacter.playerID);
+                                    global::ProtoMessage.ProtoLogIn login = y as global::ProtoMessage.ProtoLogIn;
                                     if (login == null)
                                     {
                                         im.SenderConnection.Disconnect("Not login");
@@ -240,7 +241,7 @@ namespace hist_mmorpg
                                     {
                                         if (LogInManager.VerifyUser(c.username, login.userSalt))
                                         {
-                                            if (LogInManager.ProcessLogIn(login, c))
+                                            if (LogInManager.ProcessLogIn(login, forCheck, true))
                                             {
                                                 string log = c.username + " logs in from " + im.SenderEndPoint.ToString();
                                                 Globals_Server.logEvent(log);
@@ -262,7 +263,7 @@ namespace hist_mmorpg
                                 {
                                     if (Globals_Game.IsObserver(c))
                                     {
-                                        ProcessMessage(m, im.SenderConnection);
+                                        ProcessMessage(y, im.SenderConnection);
                                         ProtoClient clientDetails = new ProtoClient(c);
                                         clientDetails.ActionType = Actions.Update;
                                         SendViaProto(clientDetails, im.SenderConnection, c.alg);
@@ -271,7 +272,7 @@ namespace hist_mmorpg
                                     {
                                         im.SenderConnection.Disconnect("Not logged in- Disconnecting");
                                     }
-                                }
+                                }*/
                             }
                             break;
                         case NetIncomingMessageType.StatusChanged:
@@ -363,6 +364,21 @@ namespace hist_mmorpg
             server.FlushSendQueue();
         }
 
+        public static void SendViaProto(global::ProtoMessage.ProtoMessage m, NetConnection conn, bool isPCL, NetEncryption alg = null)
+        {
+            Contract.Requires(m != null && conn != null);
+            NetOutgoingMessage msg = server.CreateMessage();
+            MemoryStream ms = new MemoryStream();
+            Serializer.SerializeWithLengthPrefix<global::ProtoMessage.ProtoMessage>(ms, m, PrefixStyle.Fixed32);
+            msg.Write(ms.GetBuffer());
+            if (alg != null)
+            {
+                msg.Encrypt(alg);
+            }
+            server.SendMessage(msg, conn, NetDeliveryMethod.ReliableOrdered);
+            server.FlushSendQueue();
+        }
+
         /// <summary>
         /// Read a message, get the relevant reply and send to client
         /// </summary>
@@ -411,7 +427,61 @@ namespace hist_mmorpg
             }
         }
 
+        public void ProcessMessage(global::ProtoMessage.ProtoMessage m, NetConnection connection)
+        {
+            Contract.Requires(connection != null && m != null);
+            Client client;
+            clientConnections.TryGetValue(connection, out client);
+            if (client == null)
+            {
+                NetOutgoingMessage errorMessage =
+                    server.CreateMessage("There was a problem with the connection. Please try re-connecting");
+                server.SendMessage(errorMessage, connection, NetDeliveryMethod.ReliableOrdered);
+                string log = "Connection from peer " + connection.Peer.UniqueIdentifier +
+                             " not found in client connections. Timestamp: " +
+                             DateTime.Now.ToString(DateTimeFormatInfo.CurrentInfo);
+                Globals_Server.logError(log);
+                return;
+            }
+            var pc = client.myPlayerCharacter;
+            if (pc == null || !pc.isAlive)
+            {
+                NetOutgoingMessage msg = server.CreateMessage("You have no valid PlayerCharacter!");
+                server.SendMessage(msg, connection, NetDeliveryMethod.ReliableOrdered);
+                server.FlushSendQueue();
+            }
+            else
+            {
+                ProtoMessage forActionController = new ProtoMessage();
+                string responseType = m.ResponseType.ToString();
+                /*forActionController.ResponseType = responseType;
+                ProtoMessage reply = Game.ActionController(m, client);
+                // Set action type to ensure client knows which action invoked response
+                if (reply == null)
+                {
+                    ProtoMessage invalid = new ProtoMessage(DisplayMessages.ErrorGenericMessageInvalid);
+                    invalid.ActionType = Actions.Update;
+                    reply = invalid;
+                }
+                else
+                {
+                    reply.ActionType = m.ActionType;
+                }
+                SendViaProto(reply, connection, true, client.alg);
+                Globals_Server.logEvent("From " + clientConnections[connection] + ": request = " +
+                                        m.ActionType.ToString() + ", reply = " + reply.ResponseType.ToString());*/
+            }
+        }
 
+        public DisplayMessages StringToResponseType(string forConversion)
+        {
+            /*switch (forConversion)
+            {
+                case forConversion == "":
+                    return 
+            }*/
+            return DisplayMessages.Armies;
+        }
         /// <summary>
         /// Initialise and start the server
         /// </summary>

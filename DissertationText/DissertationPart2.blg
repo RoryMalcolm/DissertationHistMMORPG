@@ -1,18 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: DissertationPart2.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: DissertationPart2.aux
 The style file: biblatex.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: DissertationPart2-blx.bib
 Database file #2: DissertationPart2.bib
 I was expecting a `,' or a `}'---line 12 of file DissertationPart2.bib
@@ -29,48 +16,5 @@ Repeated entry---line 120 of file DissertationPart2.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "python" isn't style-file defined
 --line 323 of file DissertationPart2.bib
-Biblatex version: 3.0
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 25 entries,
-            6047 wiz_defined-function locations,
-            1281 strings with 12777 characters,
-and the built_in function-call counts, 89411 in all, are:
-= -- 2792
-> -- 5754
-< -- 891
-+ -- 3748
-- -- 3825
-* -- 5253
-:= -- 7681
-add.period$ -- 0
-call.type$ -- 25
-change.case$ -- 307
-chr.to.int$ -- 360
-cite$ -- 48
-duplicate$ -- 9054
-empty$ -- 8378
-format.name$ -- 1349
-if$ -- 17378
-int.to.chr$ -- 0
-int.to.str$ -- 61
-missing$ -- 0
-newline$ -- 615
-num.names$ -- 1068
-pop$ -- 7697
-preamble$ -- 1
-purify$ -- 349
-quote$ -- 0
-skip$ -- 4479
-stack$ -- 0
-substring$ -- 2205
-swap$ -- 3060
-text.length$ -- 764
-text.prefix$ -- 24
-top$ -- 1
-type$ -- 937
-warning$ -- 0
-while$ -- 718
-width$ -- 0
-write$ -- 589
+Biblatex version: 3.3
 (There were 3 error messages)

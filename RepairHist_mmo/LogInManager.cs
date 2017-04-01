@@ -301,6 +301,50 @@ namespace hist_mmorpg
             }
         }
 
+        public static bool ProcessLogIn(global::ProtoMessage.ProtoLogIn login, global::ProtoMessage.Client c, bool isPCL)
+        {
+            Contract.Requires(c != null && login != null);
+            if (!VerifyUser(c.username, login.userSalt))
+            {
+                return false;
+            }
+            try
+            {
+                if (login.Key != null)
+                {
+                    byte[] key = rsa.Decrypt(login.Key, false);
+                    // Key must be non-null and long enough
+
+                    if (key == null || key.Length < 5)
+                    {
+                        return false;
+                    }
+                    c.alg = new NetAESEncryption(Globals_Server.server, key, 0, key.Length);
+                }
+                else
+                {
+#if ALLOW_UNENCRYPT
+                    c.alg = null;
+#else
+                    return false;
+#endif
+                }
+                global::ProtoMessage.ProtoClient clientDetails = new global::ProtoMessage.ProtoClient(c);
+                clientDetails.ActionType = global::ProtoMessage.Actions.LogIn;
+                clientDetails.ResponseType = global::ProtoMessage.DisplayMessages.LogInSuccess;
+                Server.SendViaProto(clientDetails, c.conn, true, c.alg);
+                Globals_Game.RegisterObserver(c);
+                return true;
+            }
+            catch (Exception e)
+            {
+#if DEBUG
+                Console.WriteLine("Failure during decryption: " + e.GetType() + " " + e.Message + ";" + e.StackTrace);
+#endif
+                return false;
+            }
+        }
+
         class InvalidLogInException : Exception
         {
 
