@@ -130,7 +130,7 @@ namespace TestClientROry
             Console.WriteLine("-----------------------------");
             var militia = fiefProtoBuf.militia;
             Console.WriteLine("Number of recruits available: " + militia);
-            Console.WriteLine("Number of troops in fief:" + fiefProtoBuf.troops);
+            Console.WriteLine("Number of troops in fief: " + fiefProtoBuf.troops);
             Console.WriteLine("-----------------------------");
         }
 
