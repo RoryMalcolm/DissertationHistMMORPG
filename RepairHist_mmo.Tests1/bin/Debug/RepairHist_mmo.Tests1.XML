@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RepairHist_mmo.Tests1</name>
+    </assembly>
+    <members>
+        <member name="T:hist_mmorpg.Tests1.TestClientTest">
+            <summary>This class contains parameterized unit tests for TestClient</summary>
+        </member>
+        <member name="F:hist_mmorpg.Tests1.TestClientTest.game">
+            <summary>
+            The Game object for this test (contains and handles all game data)
+            </summary>
+        </member>
+        <member name="F:hist_mmorpg.Tests1.TestClientTest.server">
+            <summary>
+            The Server object used for this test (contains connected client information
+            </summary>
+        </member>
+        <member name="F:hist_mmorpg.Tests1.TestClientTest.client">
+            <summary>
+            The dummy Client to be used for this test
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.InitialiseGameState(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            Initialise game state for the TestSuite
+            </summary>
+            <param name="ctx"></param>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.ValidClientState(hist_mmorpg.TestClient,hist_mmorpg.Client@)">
+            <summary>
+            Assert that the test client is logged in, has a PlayerCharacter and is a registered observer
+            </summary>
+            <param name="testClient"></param>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureTest(hist_mmorpg.TestClient,System.String,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>Test stub for AdjustExpenditure(String, Double, Double, Double, Double, Double)</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTest(hist_mmorpg.TestClient,System.String,System.String,System.Byte[])">
+            <summary>Test stub for LogIn(String, String, Byte[])</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.MaintainArmyTest(hist_mmorpg.TestClient,System.String)">
+            <summary>Test stub for MaintainArmy(String)</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.MarryTest(hist_mmorpg.TestClient,System.String,System.String)">
+            <summary>Test stub for Marry(String, String)</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.MoveTest(hist_mmorpg.TestClient,System.String,System.String,System.String[])">
+            <summary>Test stub for Move(String, String, String[])</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.RansomCaptiveTest(hist_mmorpg.TestClient,System.String)">
+            <summary>Test stub for RansomCaptive(String)</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyCharacterTest(hist_mmorpg.TestClient,System.String,System.String,System.Boolean)">
+            <summary>
+            Test stub for spy character
+            </summary>
+            <param name="testClient"></param>
+            <param name="charID"></param>
+            <param name="targetID"></param>
+            <param name="DoSpy"></param>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyArmyTest(hist_mmorpg.TestClient,System.String,System.String)">
+            <summary>
+            Test stub for spy character
+            </summary>
+            <param name="testClient"></param>
+            <param name="charID"></param>
+            <param name="targetID"></param>
+            <param name="DoSpy"></param>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyFiefTest(hist_mmorpg.TestClient,System.String,System.String,System.Boolean)">
+            <summary>
+            Test stub for spy character
+            </summary>
+            <param name="testClient"></param>
+            <param name="charID"></param>
+            <param name="targetID"></param>
+            <param name="DoSpy"></param>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.RecruitTroopsTest(hist_mmorpg.TestClient,System.String,System.UInt32,System.Boolean)">
+            <summary>Test stub for RecruitTroops(String, UInt32, Boolean)</summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestValid">
+            <summary>
+            Try to log in with valid credentials
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogOutBeforeLogIn">
+            <summary>
+            Try logging out before logging in
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestBadPassword">
+            <summary>
+            Log in with an invalid password
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestNullPassword">
+            <summary>
+            Log in with no password
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestNoKey">
+            <summary>
+            Log in without using an encryption key. This is valid, it simply will result in unencrypted messages
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestInvalidUsername">
+            <summary>
+            Log in with an unrecognised username
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestNullUsername">
+            <summary>
+            Log in with no username
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTestEmptyUsername">
+            <summary>
+            Log in with an empty string as a username
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.DoubleLogIn">
+            <summary>
+            Try logging in twice. The second log in should cause the server to terminate the connection
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.LogInTimeout">
+            <summary>
+            Tests that a log in will time out correctly
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureTestNotLoggedIn">
+            <summary>
+            Attempt to perform an action (in this case, adjusting expenditure) without logging in
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureTestBadFief">
+            <summary>
+            Try to adjust the expenditure for a non-existent fief
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureTestNotOwnedFief">
+            <summary>
+            Try to adjust the expenditure of someone else's fief
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureBadData">
+            <summary>
+            Try to adjust the expenditure using invalid numbers
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureSuccess">
+            <summary>
+            Adjust the expenditure of your own fief (should succeed)
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AdjustExpenditureTooMuch">
+            <summary>
+            Try to adjust your expenditure past what funds you have
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.AttackValid">
+            <summary>
+            Attack another army (should succeed)
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyArmyValid">
+            <summary>
+            Spy on a character
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyArmyNotOwned">
+            <summary>
+            Spy on an army with a character you do not own
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyArmyTooFar">
+            <summary>
+            Spy on an army which is not in the same location as your spy
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyFiefValid">
+            <summary>
+            Spy on a character
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.SpyCharacterValid">
+            <summary>
+            Spy on a character
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelValidFief">
+            <summary>
+            Travel to a fief indicated by fief ID
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelValidInstructions">
+            <summary>
+            Travel using instructions
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelInvalidFief">
+            <summary>
+            Attempt to travel to an invalid fief
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelInvalidInstructions">
+            <summary>
+            Attempt to travel with unrecognised instructions
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelNoFiefOrInstructions">
+            <summary>
+            Attempt to travel with a null fief id and no instructions
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelNotOwnedCharacter">
+            <summary>
+            Attempt to travel using a character you do not own
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelInvalidCharacter">
+            <summary>
+            Attempt to travel with invalid character IDs
+            </summary>
+        </member>
+        <member name="M:hist_mmorpg.Tests1.TestClientTest.TravelNotEnoughDays">
+            <summary>
+            Attempt to travel without enough days
+            </summary>
+        </member>
+    </members>
+</doc>

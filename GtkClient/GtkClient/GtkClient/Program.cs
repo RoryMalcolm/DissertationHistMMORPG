@@ -1,8 +1,6 @@
 ﻿using System;
 using Gtk;
 using hist_mmorpg;
-using ClientDLL;
-
 public class GtkHelloWorld {
 	static PlayerOperations playerOps;
 	static TextTestClient client;

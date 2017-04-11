@@ -17,6 +17,25 @@
 \endgroup
 
 \sortlist[entry]{nty/global/}
+  \entry{DavidBond}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BD}{%
+         family={Bond},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BD1}
+    \strng{fullhash}{BD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Design and implementation of a massively multi-playeronline
+  historical role-playing game}
+  \endentry
+
   \entry{6098224}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=BK}{%

@@ -15,3 +15,10 @@ C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROr
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientRory.csprojResolveAssemblyReference.cache
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.exe
 C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\ProtoMessage.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\Shim.dll
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\ProtoMessage.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\Shim.pdb
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\Shim.xml
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\TestClientROry.exe.CodeAnalysisLog.xml
+C:\Users\User\HistMMORPG\hist_mmorpg\hist_mmoServer\RepairHist_mmo\TestClientROry\bin\Debug\TestClientROry.exe.lastcodeanalysissucceeded
