@@ -8,6 +8,7 @@ public class PlayerOperations
 	{
 		E, W, Se, Sw, Ne, Nw, SyntaxError
 	}
+
 	public ProtoFief Move(MoveDirections directions, TextTestClient client)
 	{
 		ProtoTravelTo protoTravel = new ProtoTravelTo();

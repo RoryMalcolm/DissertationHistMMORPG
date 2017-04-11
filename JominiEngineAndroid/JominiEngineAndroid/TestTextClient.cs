@@ -9,8 +9,6 @@ using System.Net;
 using System.IO;
 using ProtoBuf;
 using System.Security.Cryptography.X509Certificates;
-using ProtoMessage;
-
 /// <summary>
 /// Extends the ConcurrentQueue to fire an event whenever a new item is enqueued
 /// </summary>
@@ -180,7 +178,7 @@ public partial class TextTestClient
 		private NetConnection connection;
 		private string user;
 		private string pass;
-		private IPAddress ip = NetUtility.Resolve("10.0.2.2");
+		private IPAddress ip = NetUtility.Resolve("localhost");
 		private int port = 8000;
 		private NetEncryption alg = null;
 		/// <summary>
@@ -286,7 +284,7 @@ public partial class TextTestClient
 
 		}
 
-		public void ComputeAndSendHashAndKey(ProtoLogIn salts, byte[] key)
+		public void ComputeAndSendHashAndKey(ProtoMessage.ProtoLogIn salts, byte[] key)
 		{
 
 			string hashstring = "";
@@ -312,9 +310,9 @@ public partial class TextTestClient
 			{
 				fullHash += b.ToString();
 			}
-			ProtoLogIn response = new ProtoLogIn();
+			ProtoMessage.ProtoLogIn response = new ProtoMessage.ProtoLogIn();
 			response.userSalt = hashFull;
-			response.ActionType = Actions.LogIn;
+			response.ActionType = ProtoMessage.Actions.LogIn;
 			response.Key = key;
 			Send(response, false);
 		}
@@ -324,7 +322,7 @@ public partial class TextTestClient
 		/// </summary>
 		/// <returns><c>true</c>, if certificate was validated, <c>false</c> otherwise.</returns>
 		/// <param name="login">ProtoLogin containing certificate</param>
-		public bool ValidateCertificateAndCreateKey(ProtoLogIn login, out byte[] key)
+		public bool ValidateCertificateAndCreateKey(ProtoMessage.ProtoLogIn login, out byte[] key)
 		{
 			if (login == null || login.certificate == null)
 			{
@@ -445,26 +443,26 @@ public partial class TextTestClient
 								}
 								if (m != null)
 								{
-									if (m.ResponseType == DisplayMessages.LogInSuccess)
+									if (m.ResponseType == ProtoMessage.DisplayMessages.LogInSuccess)
 									{
 										loggedIn = true;
 										tClient.protobufMessageQueue.Enqueue(m);
 									}
 									else
 									{
-										if (m.ActionType == Actions.Update)
+										if (m.ActionType == ProtoMessage.Actions.Update)
 										{
 											// Don't do anything at the moment for updates
 										}
 										else
 										{
 											tClient.protobufMessageQueue.Enqueue(m);
-											if (m.ActionType == Actions.LogIn && m.ResponseType == DisplayMessages.None)
+											if (m.ActionType == ProtoMessage.Actions.LogIn && m.ResponseType == ProtoMessage.DisplayMessages.None)
 											{
 												byte[] key = null;
-												if (ValidateCertificateAndCreateKey(m as ProtoLogIn, out key))
+												if (ValidateCertificateAndCreateKey(m as ProtoMessage.ProtoLogIn, out key))
 												{
-													ComputeAndSendHashAndKey(m as ProtoLogIn, key);
+													ComputeAndSendHashAndKey(m as ProtoMessage.ProtoLogIn, key);
 												}
 											}
 											else
@@ -487,7 +485,6 @@ public partial class TextTestClient
 							}
 							catch (Exception e)
 							{
-								Globals_Server.logError("Error in reading data: " + e.GetType() + " :" + e.Message + "; Stack Trace: " + e.StackTrace);
 							}
 							break;
 						case NetIncomingMessageType.StatusChanged:
@@ -506,14 +503,14 @@ public partial class TextTestClient
 										if (m != null)
 										{
 											tClient.protobufMessageQueue.Enqueue(m);
-											if (m.ActionType == Actions.LogIn && m.ResponseType == DisplayMessages.None)
+											if (m.ActionType == ProtoMessage.Actions.LogIn && m.ResponseType == ProtoMessage.DisplayMessages.None)
 											{
 												byte[] key = null;
-												if (ValidateCertificateAndCreateKey(m as ProtoLogIn, out key))
+												if (ValidateCertificateAndCreateKey(m as ProtoMessage.ProtoLogIn, out key))
 												{
 													if (autoLogIn)
 													{
-														ComputeAndSendHashAndKey(m as ProtoLogIn, key);
+														ComputeAndSendHashAndKey(m as ProtoMessage.ProtoLogIn, key);
 													}
 												}
 												else
@@ -558,7 +555,6 @@ public partial class TextTestClient
 				}
 			}
 #if DEBUG
-			Globals_Server.logEvent("Client listening thread ends");
 #endif
 		}
 

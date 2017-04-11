@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_78f5103d65ac783f96279255a4ed083bc799ed0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/src/main/java/com/example/user/myapplication/protobuf-java-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="62ccf171a106ff6791507f2d5364c275f9a3131d">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/2/protobuf-java-3.2.0_ddd72df0c1568677634d21124819608a813aeab1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_b502118b6e39f9854a3fa0c3694d7e3d3dfe31bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_0ffd99dcbfe510c3c600041ff3f9f14af9406284/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_3f5cec97217402c976759302334a88b481a2ba5b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e18585f003e706b600338a776f7c625e67275877">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_beecd7c982f575e581d2d00ff442782b6318611d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_3cf5f777afa37600ed1b0b558c512d90a89bcf5a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_2201b65d6cc5e5785cb3c367ba356ff9d2152df4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_5b3d1596c5c57849831dee356e137152d4e5e000/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_c47da85db11c7639605e74da1cdb83881312cd20/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_8112f6537e5e22d7056b9ce0061c5e1d2e4e7938/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_174ce200362c4885b30b62ffe03c9c8c43832bbd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_1e234a39b90936b124f36f91141ff854b18309d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_ddadfa5feeb179d3b9775bbb3622e5a0d2d0dac2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c623ebb982200ca1ec10fe79c848010afff8a62a">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1b96447f6dfe86e8ed553f9d10b18a3dc6cfa1f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_6b857260e7a837c689948c3a85addfeb88cbc6b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_6a6193b5b6a5b0f8bc7659e1727bf973aed69061/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/rorymalcolm/Documents/Diss/DissertationHistMMORPG/AndroidClient/AndroidHistMMORPG/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_c82881cc1f5fcef6c70a920473bf644acf5b16ab/classes.dex" />
+    </item>
+
+</items>

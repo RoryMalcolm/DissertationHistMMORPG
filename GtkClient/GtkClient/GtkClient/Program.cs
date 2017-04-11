@@ -125,6 +125,10 @@ public class GtkHelloWorld {
 
 	public static void SiegeClickEvent(object obj, EventArgs args){
 		ProtoSiegeDisplay siege = playerOps.SiegeCurrentFief (client);
+		SiegeResultWindow siegeResultWindow = new SiegeResultWindow(siege.besiegingPlayer, siege.defendingPlayer);
+		Window siegeWindow = new Window("Siege Result Window");
+		siegeWindow.Add(siegeResultWindow.getSiegeLayout());
+		siegeWindow.Show();
 	}
 
 	public static void HireClickEvent(object obj, EventArgs args){
