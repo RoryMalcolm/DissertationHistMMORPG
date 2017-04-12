@@ -1,20 +1,51 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: DissertationPart2.aux
-The style file: biblatex.bst
-Database file #1: DissertationPart2-blx.bib
-Database file #2: DissertationPart2.bib
-I was expecting a `,' or a `}'---line 12 of file DissertationPart2.bib
- : @article{DoThoseWhoPlay, author = {Ioana Cărătărescu-Petrică}, title = {Do those who play together stay together? The World of Warcraft community between play, practice and game design}, journal ={Journal of Comparitive Research in Anthropology and Sociology}, volume = {6} 
- :                                                                                                                                                                                                                                                                                       number = {1}, issn = {ISSN 2068 – 0317I2068 – 0317}}
-I'm skipping whatever remains of this entry
-Repeated entry---line 48 of file DissertationPart2.bib
- : @article{Hainey:2011:DMO:2304793.2305216
- :                                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 120 of file DissertationPart2.bib
- : @inproceedings{6098224
- :                       ,
-I'm skipping whatever remains of this entry
-Warning--entry type for "python" isn't style-file defined
---line 323 of file DissertationPart2.bib
-Biblatex version: 3.3
-(There were 3 error messages)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DissertationPart2.aux
+I couldn't open style file biblatex.bst
+---line 2 of file DissertationPart2.aux
+ : \bibstyle{biblatex
+ :                   }
+I'm skipping whatever remains of this command
+I found no style file---while reading file DissertationPart2.aux
+You've used 26 entries,
+            0 wiz_defined-function locations,
+            129 strings with 1166 characters,
+and the built_in function-call counts, 0 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 0
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 0
+format.name$ -- 0
+if$ -- 0
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 0
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 0
+purify$ -- 0
+quote$ -- 0
+skip$ -- 0
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 0
+(There were 2 error messages)
