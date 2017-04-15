@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using hist_mmorpg;
 using System.Threading;
 using TestClientROry;
@@ -50,7 +51,17 @@ namespace TestClientRory
             var usernameForReturn = Console.ReadLine();
             Console.Write("What is your password: ");
             var passwordForReturn = Console.ReadLine();
-            _testClient.LogInAndConnect(usernameForReturn, passwordForReturn);
+            Console.Write("What is the Server's IP Address?");
+            var ipForReturn = Console.ReadLine();
+            try
+            {
+                IPAddress.Parse(ipForReturn);
+            }
+            catch
+            {
+                
+            }
+            _testClient.LogInAndConnect(usernameForReturn, passwordForReturn, ipForReturn);
             Console.Clear();
         }
 

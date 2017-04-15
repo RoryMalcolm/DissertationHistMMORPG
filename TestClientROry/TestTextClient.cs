@@ -58,6 +58,14 @@ namespace hist_mmorpg
         /// </summary>
         /// <param name="user">Username</param>
         /// <param name="pass">Password</param>
+        public void LogInAndConnect(string user, string pass, string ipAddress, byte[] key = null)
+        {
+
+            net = new Network(this, key);
+            net.Connect(user, pass, ipAddress);
+            this.playerID = user;
+        }
+
         public void LogInAndConnect(string user, string pass, byte[] key = null)
         {
 
@@ -65,6 +73,8 @@ namespace hist_mmorpg
             net.Connect(user, pass);
             this.playerID = user;
         }
+
+
 
         public bool IsConnectedAndLoggedIn()
         {
@@ -238,6 +248,30 @@ namespace hist_mmorpg
                 t_reader.Start();
 
             }
+
+            public void Connect(string username, string pass, string ipAddress)
+            {
+                user = username;
+                this.pass = pass;
+                client.Start();
+                string host = ipAddress;
+                // remember to encrypt the bloody thing in the final
+                if (username != null)
+                {
+                    NetOutgoingMessage msg = client.CreateMessage(username);
+                    msg.Write("TestString");
+                    NetConnection c = client.Connect(host, port, msg);
+                }
+                else
+                {
+                    connection = client.Connect(host, port);
+                }
+                // Start listening for responses
+                Thread t_reader = new Thread(new ThreadStart(this.read));
+                t_reader.Start();
+
+            }
+
 
             public void Disconnect()
             {

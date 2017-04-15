@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.5 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,640 +16,728 @@
   {}
 \endgroup
 
-\entry{DavidBond}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Bond}{B.}%
-     {David}{D.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BD1}
-  \strng{fullhash}{BD1}
-  \field{sortinit}{B}
-  \field{title}{Design and implementation of a massively multi-playeronline
+\sortlist[entry]{nty/global/}
+  \entry{DavidBond}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BD}{%
+         family={Bond},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BD1}
+    \strng{fullhash}{BD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Design and implementation of a massively multi-playeronline
   historical role-playing game}
-\endentry
+  \endentry
 
-\entry{6098224}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Boussetta}{B.}%
-     {K.}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Kaiser}{K.}%
-     {A.}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Achir}{A.}%
-     {N.}{N.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{ad hoc networks;delays;first person shooter game;multiplayer gaming
+  \entry{6098224}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=BK}{%
+         family={Boussetta},
+         familyi={B\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kaiser},
+         familyi={K\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AN}{%
+         family={Achir},
+         familyi={A\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{ad hoc networks;delays;first person shooter game;multiplayer gaming
   experience;packetization delay effect;packets losses;single hop ad-hoc
   network;time-sensitive multiplayer games;wireless technology;Ad hoc
   networks;Delay;Games;IEEE 802.11 Standards;IP networks;Quality of
   service;Servers}
-  \strng{namehash}{BKKAAN1}
-  \strng{fullhash}{BKKAAN1}
-  \field{sortinit}{B}
-  \field{booktitle}{Wireless Days (WD), 2011 IFIP}
-  \verb{doi}
-  \verb 10.1109/WD.2011.6098224
-  \endverb
-  \field{issn}{2156-9711}
-  \field{pages}{1\bibrangedash 6}
-  \field{title}{Effects of packetization delay on multiplayer gaming experience
-  over ad hoc networks}
-  \field{year}{2011}
-  \warn{\item Invalid format of field 'month'}
-\endentry
+    \strng{namehash}{BKKAAN1}
+    \strng{fullhash}{BKKAAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{Wireless Days (WD), 2011 IFIP}
+    \verb{doi}
+    \verb 10.1109/WD.2011.6098224
+    \endverb
+    \field{issn}{2156-9711}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Effects of packetization delay on multiplayer gaming
+  experience over ad hoc networks}
+    \field{year}{2011}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
 
-\entry{Brooke96sus:a}{misc}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Brooke}{B.}%
-     {John}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BJ1}
-  \strng{fullhash}{BJ1}
-  \field{sortinit}{B}
-  \field{title}{SUS: A quick and dirty usability scale}
-  \field{year}{1996}
-\endentry
+  \entry{Brooke96sus:a}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BJ}{%
+         family={Brooke},
+         familyi={B\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJ1}
+    \strng{fullhash}{BJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{SUS: A quick and dirty usability scale}
+    \field{year}{1996}
+  \endentry
 
-\entry{Caffeine}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Caffeine}{C.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{C1}
-  \strng{fullhash}{C1}
-  \field{sortinit}{C}
-  \field{title}{Caffeine Caching Library}
-  \verb{url}
-  \verb https://github.com/ben-manes/caffeine
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{Caffeine}{online}{}
+    \name{author}{1}{}{%
+      {{hash=C}{%
+         family={Caffeine},
+         familyi={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Caffeine Caching Library}
+    \verb{url}
+    \verb https://github.com/ben-manes/caffeine
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{Christou:2012:EPP:2367616.2367630}{inproceedings}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Christou}{C.}%
-     {Georgios}{G.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {ACM}%
-  }
-  \keyw{MMORPG, World of Warcraft, game design, game experience, player
+  \entry{Christou:2012:EPP:2367616.2367630}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=CG}{%
+         family={Christou},
+         familyi={C\bibinitperiod},
+         given={Georgios},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \keyw{MMORPG, World of Warcraft, game design, game experience, player
   perceptions}
-  \strng{namehash}{CG1}
-  \strng{fullhash}{CG1}
-  \field{sortinit}{C}
-  \field{booktitle}{Proceedings of the 4th International Conference on Fun and
-  Games}
-  \verb{doi}
-  \verb 10.1145/2367616.2367630
-  \endverb
-  \field{isbn}{978-1-4503-1570-8}
-  \field{pages}{105\bibrangedash 108}
-  \field{series}{FnG '12}
-  \field{title}{Exploring Player Perceptions That Contribute to the Appeal of
+    \strng{namehash}{CG1}
+    \strng{fullhash}{CG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Proceedings of the 4th International Conference on Fun
+  and Games}
+    \verb{doi}
+    \verb 10.1145/2367616.2367630
+    \endverb
+    \field{isbn}{978-1-4503-1570-8}
+    \field{pages}{105\bibrangedash 108}
+    \field{series}{FnG '12}
+    \field{title}{Exploring Player Perceptions That Contribute to the Appeal of
   World of Warcraft}
-  \verb{url}
-  \verb http://doi.acm.org/10.1145/2367616.2367630
-  \endverb
-  \list{location}{1}{%
-    {Toulouse, France}%
-  }
-  \field{year}{2012}
-  \warn{\item Can't use 'location' + 'address'}
-\endentry
+    \verb{url}
+    \verb http://doi.acm.org/10.1145/2367616.2367630
+    \endverb
+    \list{location}{1}{%
+      {Toulouse, France}%
+    }
+    \field{year}{2012}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
 
-\entry{DoThoseWhoPlay}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Cărătărescu-Petrică}{C.-P.}%
-     {Ioana}{I.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{CPI1}
-  \strng{fullhash}{CPI1}
-  \field{sortinit}{C}
-  \field{title}{Do those who play together stay together? The World of Warcraft
-  community between play, practice and game design}
-  \field{volume}{6}
-  \field{journaltitle}{Journal of Comparitive Research in Anthropology and
+  \entry{DoThoseWhoPlay}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CPI}{%
+         family={Cărătărescu-Petrică},
+         familyi={C\bibinitperiod-P\bibinitperiod},
+         given={Ioana},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CPI1}
+    \strng{fullhash}{CPI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Do those who play together stay together? The World of
+  Warcraft community between play, practice and game design}
+    \field{volume}{6}
+    \field{journaltitle}{Journal of Comparitive Research in Anthropology and
   Sociology}
-\endentry
+  \endentry
 
-\entry{bowman:2012:EPP:2367616.2367630}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {David~Bowman}{D.~B.}%
-     {Nicholas}{N.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schultheiss}{S.}%
-     {Daniel}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schumann}{S.}%
-     {Christina}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{DBNSDSC1}
-  \strng{fullhash}{DBNSDSC1}
-  \field{sortinit}{D}
-  \field{isbn}{978-1-4503-1570-8}
-  \field{pages}{169\bibrangedash 74}
-  \field{title}{I’m Attached, and I’m a Good Guy/Gal!’’: How Character
-  Attachment Influences Pro- and Anti-Social Motivations to Play Massively
-  Multiplayer Online Role-Playing Game}
-  \field{journaltitle}{Cyberpsychology, Behavior, and Social Networking}
-  \field{year}{2012}
-\endentry
+  \entry{bowman:2012:EPP:2367616.2367630}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=DBN}{%
+         family={David\bibnamedelima Bowman},
+         familyi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Schultheiss},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Schumann},
+         familyi={S\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DBNSDSC1}
+    \strng{fullhash}{DBNSDSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{isbn}{978-1-4503-1570-8}
+    \field{pages}{169\bibrangedash 74}
+    \field{title}{I’m Attached, and I’m a Good Guy/Gal!’’: How
+  Character Attachment Influences Pro- and Anti-Social Motivations to Play
+  Massively Multiplayer Online Role-Playing Game}
+    \field{journaltitle}{Cyberpsychology, Behavior, and Social Networking}
+    \field{year}{2012}
+  \endentry
 
-\entry{seriousgames}{inproceedings}{}
-  \field{sortinit}{D}
-  \field{issue}{4}
-  \field{pages}{255\bibrangedash –275}
-  \field{title}{Developing serious games for cultural heritage: a
+  \entry{seriousgames}{inproceedings}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{issue}{4}
+    \field{pages}{255\bibrangedash –275}
+    \field{title}{Developing serious games for cultural heritage: a
   state-of-the-art review}
-  \field{volume}{14}
-  \field{journaltitle}{Virtual Reality}
-  \field{year}{2010}
-\endentry
+    \field{volume}{14}
+    \field{journaltitle}{Virtual Reality}
+    \field{year}{2010}
+  \endentry
 
-\entry{Fritsch:2005:ELN:1103599.1103623}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Fritsch}{F.}%
-     {Tobias}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Ritter}{R.}%
-     {Hartmut}{H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schiller}{S.}%
-     {Jochen}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {ACM}%
-  }
-  \keyw{Everquest2, MMORPG, mobile gaming, network games, user study}
-  \strng{namehash}{FTRHSJ1}
-  \strng{fullhash}{FTRHSJ1}
-  \field{sortinit}{F}
-  \field{booktitle}{Proceedings of 4th ACM SIGCOMM Workshop on Network and
+  \entry{Fritsch:2005:ELN:1103599.1103623}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=FT}{%
+         family={Fritsch},
+         familyi={F\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RH}{%
+         family={Ritter},
+         familyi={R\bibinitperiod},
+         given={Hartmut},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Schiller},
+         familyi={S\bibinitperiod},
+         given={Jochen},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \keyw{Everquest2, MMORPG, mobile gaming, network games, user study}
+    \strng{namehash}{FTRHSJ1}
+    \strng{fullhash}{FTRHSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{booktitle}{Proceedings of 4th ACM SIGCOMM Workshop on Network and
   System Support for Games}
-  \verb{doi}
-  \verb 10.1145/1103599.1103623
-  \endverb
-  \field{isbn}{1-59593-156-2}
-  \field{pages}{1\bibrangedash 9}
-  \field{series}{NetGames '05}
-  \field{title}{The Effect of Latency and Network Limitations on MMORPGs: A
+    \verb{doi}
+    \verb 10.1145/1103599.1103623
+    \endverb
+    \field{isbn}{1-59593-156-2}
+    \field{pages}{1\bibrangedash 9}
+    \field{series}{NetGames '05}
+    \field{title}{The Effect of Latency and Network Limitations on MMORPGs: A
   Field Study of Everquest2}
-  \verb{url}
-  \verb http://doi.acm.org/10.1145/1103599.1103623
-  \endverb
-  \list{location}{1}{%
-    {Hawthorne, NY}%
-  }
-  \field{year}{2005}
-  \warn{\item Can't use 'location' + 'address'}
-\endentry
+    \verb{url}
+    \verb http://doi.acm.org/10.1145/1103599.1103623
+    \endverb
+    \list{location}{1}{%
+      {Hawthorne, NY}%
+    }
+    \field{year}{2005}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
 
-\entry{AndroidUI}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Google}{G.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{G1}
-  \strng{fullhash}{G1}
-  \field{sortinit}{G}
-  \field{title}{Android User Interface Overview}
-  \verb{url}
-  \verb https://developer.android.com/guide/topics/ui/index.html
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{AndroidUI}{online}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{Android User Interface Overview}
+    \verb{url}
+    \verb https://developer.android.com/guide/topics/ui/index.html
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{Protobuf}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Google}{G.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{G1}
-  \strng{fullhash}{G1}
-  \field{sortinit}{G}
-  \field{title}{Protobuf}
-  \verb{url}
-  \verb https://developers.google.com/protocol-buffers/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{Protobuf}{online}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{Protobuf}
+    \verb{url}
+    \verb https://developers.google.com/protocol-buffers/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{QuickGraph}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Graph}{G.}%
-     {Quick}{Q.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{GQ1}
-  \strng{fullhash}{GQ1}
-  \field{sortinit}{G}
-  \field{title}{Quick Graph Library}
-  \verb{url}
-  \verb https://quickgraph.codeplex.com/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{QuickGraph}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GQ}{%
+         family={Graph},
+         familyi={G\bibinitperiod},
+         given={Quick},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GQ1}
+    \strng{fullhash}{GQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{Quick Graph Library}
+    \verb{url}
+    \verb https://quickgraph.codeplex.com/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{Hainey:2011:DMO:2304793.2305216}{article}{}
-  \name{author}{4}{}{%
-    {{}%
-     {Hainey}{H.}%
-     {Tom}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Connolly}{C.}%
-     {Thomas}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Stansfield}{S.}%
-     {Mark}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Boyle}{B.}%
-     {Elizabeth}{E.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier Science Ltd.}%
-  }
-  \keyw{Empirical evidence, Motivations, Multiplayer, Offline, Online,
+  \entry{Hainey:2011:DMO:2304793.2305216}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HT}{%
+         family={Hainey},
+         familyi={H\bibinitperiod},
+         given={Tom},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CT}{%
+         family={Connolly},
+         familyi={C\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Stansfield},
+         familyi={S\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BE}{%
+         family={Boyle},
+         familyi={B\bibinitperiod},
+         given={Elizabeth},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Science Ltd.}%
+    }
+    \keyw{Empirical evidence, Motivations, Multiplayer, Offline, Online,
   Participation, Single player}
-  \strng{namehash}{HT+1}
-  \strng{fullhash}{HTCTSMBE1}
-  \field{sortinit}{H}
-  \verb{doi}
-  \verb 10.1016/j.compedu.2011.06.001
-  \endverb
-  \field{issn}{0360-1315}
-  \field{number}{4}
-  \field{pages}{2197\bibrangedash 2211}
-  \field{title}{The Differences in Motivations of Online Game Players and
+    \strng{namehash}{HT+1}
+    \strng{fullhash}{HTCTSMBE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1016/j.compedu.2011.06.001
+    \endverb
+    \field{issn}{0360-1315}
+    \field{number}{4}
+    \field{pages}{2197\bibrangedash 2211}
+    \field{title}{The Differences in Motivations of Online Game Players and
   Offline Game Players: A Combined Analysis of Three Studies at Higher
   Education Level}
-  \verb{url}
-  \verb http://dx.doi.org/10.1016/j.compedu.2011.06.001
-  \endverb
-  \field{volume}{57}
-  \list{location}{1}{%
-    {Oxford, UK, UK}%
-  }
-  \field{journaltitle}{Comput. Educ.}
-  \field{month}{12}
-  \field{year}{2011}
-\endentry
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/j.compedu.2011.06.001
+    \endverb
+    \field{volume}{57}
+    \list{location}{1}{%
+      {Oxford, UK, UK}%
+    }
+    \field{journaltitle}{Comput. Educ.}
+    \field{month}{12}
+    \field{year}{2011}
+  \endentry
 
-\entry{JCurses}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {JCurses}{J.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{J1}
-  \strng{fullhash}{J1}
-  \field{sortinit}{J}
-  \field{title}{Java Curses Library}
-  \verb{url}
-  \verb https://sourceforge.net/projects/javacurses/
-  \endverb
-  \field{year}{2001}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{JCurses}{online}{}
+    \name{author}{1}{}{%
+      {{hash=J}{%
+         family={JCurses},
+         familyi={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{J1}
+    \strng{fullhash}{J1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{Java Curses Library}
+    \verb{url}
+    \verb https://sourceforge.net/projects/javacurses/
+    \endverb
+    \field{year}{2001}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{JMonkey}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {JMonkey}{J.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{J2}
-  \strng{fullhash}{J2}
-  \field{sortinit}{J}
-  \field{title}{JMonkey Engine}
-  \verb{url}
-  \verb http://jmonkeyengine.org/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{JMonkey}{online}{}
+    \name{author}{1}{}{%
+      {{hash=J}{%
+         family={JMonkey},
+         familyi={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{J2}
+    \strng{fullhash}{J2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{JMonkey Engine}
+    \verb{url}
+    \verb http://jmonkeyengine.org/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{1354485}{inproceedings}{}
-  \name{author}{4}{}{%
-    {{}%
-     {Knutsson}{K.}%
-     {B.}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Lu}{L.}%
-     {Honghui}{H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Xu}{X.}%
-     {Wei}{W.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hopkins}{H.}%
-     {B.}{B.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Internet;computer games;SimMud;massively multiplayer game;node
+  \entry{1354485}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=KB}{%
+         family={Knutsson},
+         familyi={K\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Honghui},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XW}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Hopkins},
+         familyi={H\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{Internet;computer games;SimMud;massively multiplayer game;node
   failure;online player;peer-to-peer overlay support;player
   participation;self-organizing group;Availability;Bandwidth;Computational
   Intelligence Society;Computer architecture;Costs;Frequency;Grid
   computing;Memory management;Peer to peer computing;Scalability}
-  \strng{namehash}{KB+1}
-  \strng{fullhash}{KBLHXWHB1}
-  \field{sortinit}{K}
-  \field{booktitle}{INFOCOM 2004. Twenty-third AnnualJoint Conference of the
+    \strng{namehash}{KB+1}
+    \strng{fullhash}{KBLHXWHB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{INFOCOM 2004. Twenty-third AnnualJoint Conference of the
   IEEE Computer and Communications Societies}
-  \verb{doi}
-  \verb 10.1109/INFCOM.2004.1354485
-  \endverb
-  \field{issn}{0743-166X}
-  \field{pages}{107}
-  \field{title}{Peer-to-peer support for massively multiplayer games}
-  \field{volume}{1}
-  \field{year}{2004}
-  \warn{\item Invalid format of field 'month'}
-\endentry
+    \verb{doi}
+    \verb 10.1109/INFCOM.2004.1354485
+    \endverb
+    \field{issn}{0743-166X}
+    \field{pages}{107}
+    \field{title}{Peer-to-peer support for massively multiplayer games}
+    \field{volume}{1}
+    \field{year}{2004}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
 
-\entry{CacheManager}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Manager}{M.}%
-     {Cache}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{MC1}
-  \strng{fullhash}{MC1}
-  \field{sortinit}{M}
-  \field{title}{Cache Manager}
-  \verb{url}
-  \verb http://cachemanager.net/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{CacheManager}{online}{}
+    \name{author}{1}{}{%
+      {{hash=MC}{%
+         family={Manager},
+         familyi={M\bibinitperiod},
+         given={Cache},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MC1}
+    \strng{fullhash}{MC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Cache Manager}
+    \verb{url}
+    \verb http://cachemanager.net/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{ConsoleClass}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Microsoft}{M.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{M1}
-  \strng{fullhash}{M1}
-  \field{sortinit}{M}
-  \field{title}{C Sharp Console Class}
-  \verb{url}
-  \verb https://msdn.microsoft.com/en-us/library/system.console(v=vs.110).aspx/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{ConsoleClass}{online}{}
+    \name{author}{1}{}{%
+      {{hash=M}{%
+         family={Microsoft},
+         familyi={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{M1}
+    \strng{fullhash}{M1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{C Sharp Console Class}
+    \verb{url}
+    \verb https://msdn.microsoft.com/en-us/library/system.console(v=vs.110).asp
+    \verb x/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{unsafe}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Microsoft}{M.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{M1}
-  \strng{fullhash}{M1}
-  \field{sortinit}{M}
-  \field{title}{Unsafe Code Reference}
-  \verb{url}
-  \verb https://msdn.microsoft.com/en-us/library/chfa2zb8.aspx
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{unsafe}{online}{}
+    \name{author}{1}{}{%
+      {{hash=M}{%
+         family={Microsoft},
+         familyi={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{M1}
+    \strng{fullhash}{M1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Unsafe Code Reference}
+    \verb{url}
+    \verb https://msdn.microsoft.com/en-us/library/chfa2zb8.aspx
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{python}{misc}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Python}{P.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{P1}
-  \strng{fullhash}{P1}
-  \field{sortinit}{P}
-  \field{title}{Python IDLE}
-  \verb{url}
-  \verb https://docs.python.org/3/library/idle.html
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{python}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=P}{%
+         family={Python},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P1}
+    \strng{fullhash}{P1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Python IDLE}
+    \verb{url}
+    \verb https://docs.python.org/3/library/idle.html
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{helenrankin}{inproceedings}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Rankin}{R.}%
-     {Helen}{H.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RH1}
-  \strng{fullhash}{RH1}
-  \field{sortinit}{R}
-  \field{title}{Improving the Security and Correctness of a Historical
+  \entry{helenrankin}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=RH}{%
+         family={Rankin},
+         familyi={R\bibinitperiod},
+         given={Helen},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RH1}
+    \strng{fullhash}{RH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Improving the Security and Correctness of a Historical
   Massively Multiplayer Online Role-Playing Game Server}
-  \field{journaltitle}{Heriot Watt University}
-  \field{year}{2016}
-\endentry
+    \field{journaltitle}{Heriot Watt University}
+    \field{year}{2016}
+  \endentry
 
-\entry{Unity3D}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Unity3D}{U.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{U1}
-  \strng{fullhash}{U1}
-  \field{sortinit}{U}
-  \field{title}{Unity 3D}
-  \verb{url}
-  \verb https://unity3d.com/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{Unity3D}{online}{}
+    \name{author}{1}{}{%
+      {{hash=U}{%
+         family={Unity3D},
+         familyi={U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{U1}
+    \strng{fullhash}{U1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{title}{Unity 3D}
+    \verb{url}
+    \verb https://unity3d.com/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{vulkan}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Vulkan}{V.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{V1}
-  \strng{fullhash}{V1}
-  \field{sortinit}{V}
-  \field{title}{Vulkan C++ Library}
-  \verb{url}
-  \verb https://github.com/KhronosGroup/Vulkan-Hpp
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
+  \entry{vulkan}{online}{}
+    \name{author}{1}{}{%
+      {{hash=V}{%
+         family={Vulkan},
+         familyi={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{V1}
+    \strng{fullhash}{V1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{title}{Vulkan C++ Library}
+    \verb{url}
+    \verb https://github.com/KhronosGroup/Vulkan-Hpp
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
 
-\entry{Wang:2012:CMG:2331675.2331679}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Wang}{W.}%
-     {Shaoxuan}{S.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Dey}{D.}%
-     {Sujit}{S.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {ACM}%
-  }
-  \strng{namehash}{WSDS1}
-  \strng{fullhash}{WSDS1}
-  \field{sortinit}{W}
-  \verb{doi}
-  \verb 10.1145/2331675.2331679
-  \endverb
-  \field{issn}{1559-1662}
-  \field{number}{1}
-  \field{pages}{10\bibrangedash 21}
-  \field{title}{Cloud Mobile Gaming: Modeling and Measuring User Experience in
-  Mobile Wireless Networks}
-  \verb{url}
-  \verb http://doi.acm.org/10.1145/2331675.2331679
-  \endverb
-  \field{volume}{16}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{journaltitle}{SIGMOBILE Mob. Comput. Commun. Rev.}
-  \field{month}{07}
-  \field{year}{2012}
-\endentry
+  \entry{Wang:2012:CMG:2331675.2331679}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shaoxuan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Dey},
+         familyi={D\bibinitperiod},
+         given={Sujit},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{WSDS1}
+    \strng{fullhash}{WSDS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.1145/2331675.2331679
+    \endverb
+    \field{issn}{1559-1662}
+    \field{number}{1}
+    \field{pages}{10\bibrangedash 21}
+    \field{title}{Cloud Mobile Gaming: Modeling and Measuring User Experience
+  in Mobile Wireless Networks}
+    \verb{url}
+    \verb http://doi.acm.org/10.1145/2331675.2331679
+    \endverb
+    \field{volume}{16}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{journaltitle}{SIGMOBILE Mob. Comput. Commun. Rev.}
+    \field{month}{07}
+    \field{year}{2012}
+  \endentry
 
-\entry{Xamarin}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Xamarin}{X.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{X1}
-  \strng{fullhash}{X1}
-  \field{sortinit}{X}
-  \field{title}{Xamarin}
-  \verb{url}
-  \verb https://www.xamarin.com/
-  \endverb
-  \field{year}{2016}
-  \field{urlday}{16}
-  \field{urlmonth}{11}
-  \field{urlyear}{2016}
-\endentry
-
-\lossort
-\endlossort
-
+  \entry{Xamarin}{online}{}
+    \name{author}{1}{}{%
+      {{hash=X}{%
+         family={Xamarin},
+         familyi={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{X1}
+    \strng{fullhash}{X1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{title}{Xamarin}
+    \verb{url}
+    \verb https://www.xamarin.com/
+    \endverb
+    \field{year}{2016}
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2016}
+  \endentry
+\endsortlist
 \endinput
