@@ -1,6 +1,9 @@
 ﻿using System;
+using GLib;
 using Gtk;
 using hist_mmorpg;
+using Thread = System.Threading.Thread;
+
 public class GtkHelloWorld {
 	static PlayerOperations playerOps;
 	static TextTestClient client;
@@ -32,6 +35,10 @@ public class GtkHelloWorld {
 	public static void LoggedIn(string Username, string Password, object obj, EventArgs args){
 		client = new TextTestClient ();
 		client.LogInAndConnect (Username, Password);
+	    while (client.IsConnectedAndLoggedIn() == false)
+	    {
+	        Thread.Sleep(0);
+	    }
 		playerOps = new PlayerOperations();
 		myWin = new Window("HistMMorpg Client");
 		//Create a label and put some text in it.
