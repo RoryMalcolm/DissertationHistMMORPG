@@ -51,7 +51,7 @@ namespace TestClientRory
             var usernameForReturn = Console.ReadLine();
             Console.Write("What is your password: ");
             var passwordForReturn = Console.ReadLine();
-            Console.Write("What is the Server's IP Address?");
+            Console.Write("What is the Server's IP Address?: ");
             var ipForReturn = Console.ReadLine();
             try
             {
