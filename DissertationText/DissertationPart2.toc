@@ -28,13 +28,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.1.6}C\# or Java}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.7}Portability}{14}
+\contentsline {subsubsection}{\numberline {2.1.7}Modularity}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.8}Scalability}{14}
+\contentsline {subsubsection}{\numberline {2.1.8}Usability Surveying}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.9}Usability Surveying}{15}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.10}Dynamic and Static Analysis}{16}
+\contentsline {subsubsection}{\numberline {2.1.9}Dynamic and Static Analysis}{16}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Implementation}{18}
 \defcounter {refsection}{0}\relax 
@@ -60,78 +58,98 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.2}Modifications to Server Code}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.3}Structure of Program}{23}
+\contentsline {subsubsection}{\numberline {3.3.3}Structure of Program}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.4}User Input Processing}{24}
+\contentsline {subsubsection}{\numberline {3.3.4}User Input Processing}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.5}Operation Execution}{25}
+\contentsline {subsubsection}{\numberline {3.3.5}Operation Execution}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.6}Displaying Data}{25}
+\contentsline {subsubsection}{\numberline {3.3.6}Displaying Data}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.7}Modularity}{27}
+\contentsline {subsubsection}{\numberline {3.3.7}Modularity}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Graphical Client}{28}
+\contentsline {subsection}{\numberline {3.4}Graphical Client}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}.NET Version Incompatibility}{28}
+\contentsline {subsubsection}{\numberline {3.4.1}.NET Version Incompatibility}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Inexperience with Unity}{28}
+\contentsline {subsubsection}{\numberline {3.4.2}Inexperience with Unity}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.3}Gtk Rollout}{29}
+\contentsline {subsubsection}{\numberline {3.4.3}Gtk Implementation}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4}Structure of Program}{29}
+\contentsline {subsubsection}{\numberline {3.4.4}Structure of Program}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.5}Display Grid}{29}
+\contentsline {subsubsection}{\numberline {3.4.5}Display Grid}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.6}Profile and Fief Display Classes}{30}
+\contentsline {subsubsection}{\numberline {3.4.6}Profile and Fief Display Classes}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.7}User Interface}{30}
+\contentsline {subsubsection}{\numberline {3.4.7}User Interface}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Android Client }{31}
+\contentsline {subsection}{\numberline {3.5}Android Client }{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Android Networking}{31}
+\contentsline {subsubsection}{\numberline {3.5.1}Android Networking}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}Protobuf-net to Proto}{32}
+\contentsline {subsubsection}{\numberline {3.5.2}Communication Protocol}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}Networking Interface}{32}
+\contentsline {subsubsection}{\numberline {3.5.3}Networking Interface}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}Move to Xamarin}{34}
+\contentsline {subsubsection}{\numberline {3.5.4}Development Environment}{37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.5}Portable Class Library}{34}
+\contentsline {subsubsection}{\numberline {3.5.5}Portable Class Library}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.6}Structure of Program}{36}
+\contentsline {subsubsection}{\numberline {3.5.6}Structure of Program}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.7}User Interface}{36}
+\contentsline {subsubsection}{\numberline {3.5.7}User Interface}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Evaluation}{37}
+\contentsline {subsubsection}{\numberline {3.5.8}Completion With Regards To JominiEngine Functions}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Methodology}{37}
+\contentsline {section}{\numberline {4}Technical Evaluation}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Text Client}{38}
+\contentsline {subsection}{\numberline {4.1}Methodology}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Static Analysis}{38}
+\contentsline {subsection}{\numberline {4.2}Text Client}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Dynamic Analysis}{39}
+\contentsline {subsubsection}{\numberline {4.2.1}Static Analysis}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Gtk Client}{40}
+\contentsline {subsubsection}{\numberline {4.2.2}Dynamic Analysis}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Static Analysis}{40}
+\contentsline {subsection}{\numberline {4.3}Gtk Client}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2}Dynamic Analysis}{41}
+\contentsline {subsubsection}{\numberline {4.3.1}Static Analysis}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Android Client}{41}
+\contentsline {subsubsection}{\numberline {4.3.2}Dynamic Analysis}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Static Analysis}{41}
+\contentsline {subsection}{\numberline {4.4}Android Client}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Dynamic Analysis}{41}
+\contentsline {subsubsection}{\numberline {4.4.1}Static Analysis}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{42}
+\contentsline {subsubsection}{\numberline {4.4.2}Dynamic Analysis}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Future Work}{44}
+\contentsline {section}{\numberline {5}User Evaluation}{47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Bibliography}{46}
+\contentsline {subsection}{\numberline {5.1}Methodology}{47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Appendix}{49}
+\contentsline {subsection}{\numberline {5.2}Results}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}SUS Form}{49}
+\contentsline {section}{\numberline {6}Conclusion}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}UML Diagram}{50}
+\contentsline {subsection}{\numberline {6.1}Project Summary}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Project Management}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Concerns}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.1}Legal}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2}Ethical}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.3}Social}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Future Work}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Bibliography}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Appendix}{57}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}SUS Form}{57}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}UML Diagram}{58}
