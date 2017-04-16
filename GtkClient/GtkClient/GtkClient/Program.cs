@@ -24,9 +24,10 @@ public class GtkHelloWorld {
 	static Button hireOkayButton;
 	static Entry hireTextEntry;
 	static Window hireWindow;
-	//static PlayerOperationsClassLib playerOps;
+    static Window siegeWindow;
+    //static PlayerOperationsClassLib playerOps;
 
-	public static void Main() {
+    public static void Main() {
 		Application.Init();
 		LogInWindow login = new LogInWindow ();
 		Application.Run();
@@ -131,11 +132,23 @@ public class GtkHelloWorld {
 	}
 
 	public static void SiegeClickEvent(object obj, EventArgs args){
-		ProtoSiegeDisplay siege = playerOps.SiegeCurrentFief (client);
-		SiegeResultWindow siegeResultWindow = new SiegeResultWindow(siege.besiegingPlayer, siege.defendingPlayer);
-		Window siegeWindow = new Window("Siege Result Window");
-		siegeWindow.Add(siegeResultWindow.getSiegeLayout());
-		siegeWindow.Show();
+		var siege = playerOps.SiegeCurrentFief (client);
+	    if (siege.GetType() == typeof(ProtoSiegeDisplay))
+	    {
+	        var siegeDisplay = (ProtoSiegeDisplay) siege;
+	        var winner = siegeDisplay.besiegerWon ? siegeDisplay.besiegingPlayer : siegeDisplay.defendingPlayer;
+            SiegeResultWindow siegeResultWindow = new SiegeResultWindow(siegeDisplay.besiegingPlayer, siegeDisplay.defendingPlayer, winner);
+	        siegeWindow = new Window("Siege Result Window");
+	        siegeWindow.Add(siegeResultWindow.getSiegeLayout());
+	        siegeWindow.ShowAll();
+	    }
+	    else
+	    {
+	        Window errorWindow = new Window("Error Window");
+            errorWindow.Add(new Label(siege.Message));
+            errorWindow.ShowAll();
+	    }
+
 	}
 
 	public static void HireClickEvent(object obj, EventArgs args){

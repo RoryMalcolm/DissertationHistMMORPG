@@ -74,7 +74,7 @@ public class PlayerOperations
 			return reply.Result;
 		}
 
-		public ProtoSiegeDisplay SiegeCurrentFief(TextTestClient client)
+		public ProtoMessage SiegeCurrentFief(TextTestClient client)
 		{
 			ProtoPlayerCharacter protoMessage = new ProtoPlayerCharacter();
 			protoMessage.Message = "Char_158";
@@ -87,8 +87,15 @@ public class PlayerOperations
 			protoSiegeStart.Message = locResult.armyID;
 			client.net.Send(protoSiegeStart);
 			var reply = GetActionReply(Actions.BesiegeFief, client);
-			return (ProtoSiegeDisplay) reply.Result;
-		}
+		    if (reply.GetType() == typeof(ProtoSiegeDisplay))
+		    {
+		        return reply.Result as ProtoSiegeDisplay;
+		    }
+		    else
+		    {
+		        return reply.Result;
+		    }
+    }
 
 		public ProtoFief FiefDetails(TextTestClient client)
 		{
