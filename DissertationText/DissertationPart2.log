@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.20)  19 APR 2017 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.1)  20 APR 2017 14:06
 entering extended mode
-**./DissertationPart2.tex
-(DissertationPart2.tex
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**DissertationPart2.tex
+(./DissertationPart2.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,10 +23,10 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count87
@@ -46,25 +48,23 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count103
 \c@blind@pangrammax=\count104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -129,94 +129,50 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00FD (decimal 253)
    defining Unicode char U+00FE (decimal 254)
    defining Unicode char U+00FF (decimal 255)
-   defining Unicode char U+0100 (decimal 256)
-   defining Unicode char U+0101 (decimal 257)
    defining Unicode char U+0102 (decimal 258)
    defining Unicode char U+0103 (decimal 259)
    defining Unicode char U+0104 (decimal 260)
    defining Unicode char U+0105 (decimal 261)
    defining Unicode char U+0106 (decimal 262)
    defining Unicode char U+0107 (decimal 263)
-   defining Unicode char U+0108 (decimal 264)
-   defining Unicode char U+0109 (decimal 265)
-   defining Unicode char U+010A (decimal 266)
-   defining Unicode char U+010B (decimal 267)
    defining Unicode char U+010C (decimal 268)
    defining Unicode char U+010D (decimal 269)
    defining Unicode char U+010E (decimal 270)
    defining Unicode char U+010F (decimal 271)
    defining Unicode char U+0110 (decimal 272)
    defining Unicode char U+0111 (decimal 273)
-   defining Unicode char U+0112 (decimal 274)
-   defining Unicode char U+0113 (decimal 275)
-   defining Unicode char U+0114 (decimal 276)
-   defining Unicode char U+0115 (decimal 277)
-   defining Unicode char U+0116 (decimal 278)
-   defining Unicode char U+0117 (decimal 279)
    defining Unicode char U+0118 (decimal 280)
    defining Unicode char U+0119 (decimal 281)
    defining Unicode char U+011A (decimal 282)
    defining Unicode char U+011B (decimal 283)
-   defining Unicode char U+011C (decimal 284)
-   defining Unicode char U+011D (decimal 285)
    defining Unicode char U+011E (decimal 286)
    defining Unicode char U+011F (decimal 287)
-   defining Unicode char U+0120 (decimal 288)
-   defining Unicode char U+0121 (decimal 289)
-   defining Unicode char U+0122 (decimal 290)
-   defining Unicode char U+0123 (decimal 291)
-   defining Unicode char U+0124 (decimal 292)
-   defining Unicode char U+0125 (decimal 293)
-   defining Unicode char U+0128 (decimal 296)
-   defining Unicode char U+0129 (decimal 297)
-   defining Unicode char U+012A (decimal 298)
-   defining Unicode char U+012B (decimal 299)
-   defining Unicode char U+012C (decimal 300)
-   defining Unicode char U+012D (decimal 301)
-   defining Unicode char U+012E (decimal 302)
-   defining Unicode char U+012F (decimal 303)
    defining Unicode char U+0130 (decimal 304)
    defining Unicode char U+0131 (decimal 305)
    defining Unicode char U+0132 (decimal 306)
    defining Unicode char U+0133 (decimal 307)
-   defining Unicode char U+0134 (decimal 308)
-   defining Unicode char U+0135 (decimal 309)
-   defining Unicode char U+0136 (decimal 310)
-   defining Unicode char U+0137 (decimal 311)
    defining Unicode char U+0139 (decimal 313)
    defining Unicode char U+013A (decimal 314)
-   defining Unicode char U+013B (decimal 315)
-   defining Unicode char U+013C (decimal 316)
    defining Unicode char U+013D (decimal 317)
    defining Unicode char U+013E (decimal 318)
    defining Unicode char U+0141 (decimal 321)
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0143 (decimal 323)
    defining Unicode char U+0144 (decimal 324)
-   defining Unicode char U+0145 (decimal 325)
-   defining Unicode char U+0146 (decimal 326)
    defining Unicode char U+0147 (decimal 327)
    defining Unicode char U+0148 (decimal 328)
    defining Unicode char U+014A (decimal 330)
    defining Unicode char U+014B (decimal 331)
-   defining Unicode char U+014C (decimal 332)
-   defining Unicode char U+014D (decimal 333)
-   defining Unicode char U+014E (decimal 334)
-   defining Unicode char U+014F (decimal 335)
    defining Unicode char U+0150 (decimal 336)
    defining Unicode char U+0151 (decimal 337)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
    defining Unicode char U+0154 (decimal 340)
    defining Unicode char U+0155 (decimal 341)
-   defining Unicode char U+0156 (decimal 342)
-   defining Unicode char U+0157 (decimal 343)
    defining Unicode char U+0158 (decimal 344)
    defining Unicode char U+0159 (decimal 345)
    defining Unicode char U+015A (decimal 346)
    defining Unicode char U+015B (decimal 347)
-   defining Unicode char U+015C (decimal 348)
-   defining Unicode char U+015D (decimal 349)
    defining Unicode char U+015E (decimal 350)
    defining Unicode char U+015F (decimal 351)
    defining Unicode char U+0160 (decimal 352)
@@ -225,22 +181,10 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0163 (decimal 355)
    defining Unicode char U+0164 (decimal 356)
    defining Unicode char U+0165 (decimal 357)
-   defining Unicode char U+0168 (decimal 360)
-   defining Unicode char U+0169 (decimal 361)
-   defining Unicode char U+016A (decimal 362)
-   defining Unicode char U+016B (decimal 363)
-   defining Unicode char U+016C (decimal 364)
-   defining Unicode char U+016D (decimal 365)
    defining Unicode char U+016E (decimal 366)
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
-   defining Unicode char U+0172 (decimal 370)
-   defining Unicode char U+0173 (decimal 371)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -248,38 +192,9 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
-   defining Unicode char U+01CD (decimal 461)
-   defining Unicode char U+01CE (decimal 462)
-   defining Unicode char U+01CF (decimal 463)
-   defining Unicode char U+01D0 (decimal 464)
-   defining Unicode char U+01D1 (decimal 465)
-   defining Unicode char U+01D2 (decimal 466)
-   defining Unicode char U+01D3 (decimal 467)
-   defining Unicode char U+01D4 (decimal 468)
-   defining Unicode char U+01E2 (decimal 482)
-   defining Unicode char U+01E3 (decimal 483)
-   defining Unicode char U+01E6 (decimal 486)
-   defining Unicode char U+01E7 (decimal 487)
-   defining Unicode char U+01E8 (decimal 488)
-   defining Unicode char U+01E9 (decimal 489)
-   defining Unicode char U+01EA (decimal 490)
-   defining Unicode char U+01EB (decimal 491)
-   defining Unicode char U+01F0 (decimal 496)
-   defining Unicode char U+01F4 (decimal 500)
-   defining Unicode char U+01F5 (decimal 501)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
-   defining Unicode char U+1E02 (decimal 7682)
-   defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
-   defining Unicode char U+2010 (decimal 8208)
-   defining Unicode char U+2011 (decimal 8209)
-   defining Unicode char U+2012 (decimal 8210)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2015 (decimal 8213)
    defining Unicode char U+2018 (decimal 8216)
    defining Unicode char U+2019 (decimal 8217)
    defining Unicode char U+201A (decimal 8218)
@@ -295,12 +210,10 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -318,14 +231,6 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -336,8 +241,8 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -360,21 +265,22 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
@@ -389,37 +295,36 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count108
 ))
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip43
 \LTright=\skip44
@@ -437,10 +342,10 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count113
 \LT@p@ftn=\toks18
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
-Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen114
 \extrarowheight=\dimen115
@@ -456,7 +361,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@cols=\count114
 \TX@ftn=\toks20
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count115
 \float@exts=\toks21
@@ -464,239 +369,183 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
-Package: biblatex 2016/09/17 v3.6 programmable bibliographies (PK/JW/AB)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex1.sty
+Package: biblatex1 2015/04/19 v3.0 programmable bibliographies (bibtex) (PK/JW/
+AB)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count116
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count117
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
-\@xs@message=\write3
-\integerpart=\count118
-\decimalpart=\count119
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-\c@tabx@nest=\count120
-\c@listtotal=\count121
-\c@listcount=\count122
-\c@liststart=\count123
-\c@liststop=\count124
-\c@citecount=\count125
-\c@citetotal=\count126
-\c@multicitecount=\count127
-\c@multicitetotal=\count128
-\c@instcount=\count129
-\c@maxnames=\count130
-\c@minnames=\count131
-\c@maxitems=\count132
-\c@minitems=\count133
-\c@citecounter=\count134
-\c@savedcitecounter=\count135
-\c@uniquelist=\count136
-\c@uniquename=\count137
-\c@refsection=\count138
-\c@refsegment=\count139
-\c@maxextratitle=\count140
-\c@maxextratitleyear=\count141
-\c@maxextrayear=\count142
-\c@maxextraalpha=\count143
-\c@abbrvpenalty=\count144
-\c@highnamepenalty=\count145
-\c@lownamepenalty=\count146
-\c@maxparens=\count147
-\c@parenlevel=\count148
-\blx@tempcnta=\count149
-\blx@tempcntb=\count150
-\blx@tempcntc=\count151
-\blx@maxsection=\count152
-\blx@maxsegment@0=\count153
-\blx@notetype=\count154
-\blx@parenlevel@text=\count155
-\blx@parenlevel@foot=\count156
-\blx@sectionciteorder@0=\count157
+\c@tabx@nest=\count118
+\c@listtotal=\count119
+\c@listcount=\count120
+\c@liststart=\count121
+\c@liststop=\count122
+\c@citecount=\count123
+\c@citetotal=\count124
+\c@multicitecount=\count125
+\c@multicitetotal=\count126
+\c@instcount=\count127
+\c@maxnames=\count128
+\c@minnames=\count129
+\c@maxitems=\count130
+\c@minitems=\count131
+\c@citecounter=\count132
+\c@savedcitecounter=\count133
+\c@uniquelist=\count134
+\c@uniquename=\count135
+\c@refsection=\count136
+\c@refsegment=\count137
+\c@maxextrayear=\count138
+\c@maxextraalpha=\count139
+\c@abbrvpenalty=\count140
+\c@highnamepenalty=\count141
+\c@lownamepenalty=\count142
+\c@maxparens=\count143
+\c@parenlevel=\count144
+\blx@tempcnta=\count145
+\blx@tempcntb=\count146
+\blx@tempcntc=\count147
+\blx@maxsection=\count148
+\blx@maxsegment=\count149
+\blx@notetype=\count150
+\blx@parenlevel@text=\count151
+\blx@parenlevel@foot=\count152
 \labelnumberwidth=\skip49
 \labelalphawidth=\skip50
-\biblabelsep=\skip51
-\bibitemsep=\skip52
-\bibnamesep=\skip53
-\bibinitsep=\skip54
-\bibparsep=\skip55
-\bibhang=\skip56
-\blx@bcfin=\read1
-\blx@bcfout=\write4
-\c@mincomprange=\count158
-\c@maxcomprange=\count159
-\c@mincompwidth=\count160
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def")
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'numeric.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count161
-\c@savedafterword=\count162
-\c@annotator=\count163
-\c@savedannotator=\count164
-\c@author=\count165
-\c@savedauthor=\count166
-\c@bookauthor=\count167
-\c@savedbookauthor=\count168
-\c@commentator=\count169
-\c@savedcommentator=\count170
-\c@editor=\count171
-\c@savededitor=\count172
-\c@editora=\count173
-\c@savededitora=\count174
-\c@editorb=\count175
-\c@savededitorb=\count176
-\c@editorc=\count177
-\c@savededitorc=\count178
-\c@foreword=\count179
-\c@savedforeword=\count180
-\c@holder=\count181
-\c@savedholder=\count182
-\c@introduction=\count183
-\c@savedintroduction=\count184
-\c@namea=\count185
-\c@savednamea=\count186
-\c@nameb=\count187
-\c@savednameb=\count188
-\c@namec=\count189
-\c@savednamec=\count190
-\c@translator=\count191
-\c@savedtranslator=\count192
-\c@shortauthor=\count193
-\c@savedshortauthor=\count194
-\c@shorteditor=\count195
-\c@savedshorteditor=\count196
-\c@labelname=\count197
-\c@savedlabelname=\count198
-\c@institution=\count199
-\c@savedinstitution=\count266
-\c@lista=\count267
-\c@savedlista=\count268
-\c@listb=\count269
-\c@savedlistb=\count270
-\c@listc=\count271
-\c@savedlistc=\count272
-\c@listd=\count273
-\c@savedlistd=\count274
-\c@liste=\count275
-\c@savedliste=\count276
-\c@listf=\count277
-\c@savedlistf=\count278
-\c@location=\count279
-\c@savedlocation=\count280
-\c@organization=\count281
-\c@savedorganization=\count282
-\c@origlocation=\count283
-\c@savedoriglocation=\count284
-\c@origpublisher=\count285
-\c@savedorigpublisher=\count286
-\c@publisher=\count287
-\c@savedpublisher=\count288
-\c@language=\count289
-\c@savedlanguage=\count290
-\c@pageref=\count291
-\c@savedpageref=\count292
-\shorthandwidth=\skip57
-\shortjournalwidth=\skip58
-\shortserieswidth=\skip59
-\shorttitlewidth=\skip60
-\shortauthorwidth=\skip61
-\shorteditorwidth=\skip62
+\shorthandwidth=\skip51
+\biblabelsep=\skip52
+\bibitemsep=\skip53
+\bibnamesep=\skip54
+\bibinitsep=\skip55
+\bibparsep=\skip56
+\bibhang=\skip57
+\blx@auxin=\read1
+\blx@auxout=\write3
+\c@mincomprange=\count153
+\c@maxcomprange=\count154
+\c@mincompwidth=\count155
+\c@labelname=\count156
+\c@savedlabelname=\count157
+\c@author=\count158
+\c@savedauthor=\count159
+\c@shortauthor=\count160
+\c@savedshortauthor=\count161
+\c@editor=\count162
+\c@savededitor=\count163
+\c@editora=\count164
+\c@savededitora=\count165
+\c@editorb=\count166
+\c@savededitorb=\count167
+\c@editorc=\count168
+\c@savededitorc=\count169
+\c@shorteditor=\count170
+\c@savedshorteditor=\count171
+\c@bookauthor=\count172
+\c@savedbookauthor=\count173
+\c@translator=\count174
+\c@savedtranslator=\count175
+\c@annotator=\count176
+\c@savedannotator=\count177
+\c@commentator=\count178
+\c@savedcommentator=\count179
+\c@introduction=\count180
+\c@savedintroduction=\count181
+\c@foreword=\count182
+\c@savedforeword=\count183
+\c@afterword=\count184
+\c@savedafterword=\count185
+\c@holder=\count186
+\c@savedholder=\count187
+\c@namea=\count188
+\c@savednamea=\count189
+\c@nameb=\count190
+\c@savednameb=\count191
+\c@namec=\count192
+\c@savednamec=\count193
+\c@institution=\count194
+\c@savedinstitution=\count195
+\c@language=\count196
+\c@savedlanguage=\count197
+\c@location=\count198
+\c@savedlocation=\count199
+\c@organization=\count200
+\c@savedorganization=\count201
+\c@origlocation=\count202
+\c@savedoriglocation=\count203
+\c@origpublisher=\count204
+\c@savedorigpublisher=\count205
+\c@pageref=\count206
+\c@savedpageref=\count207
+\c@publisher=\count208
+\c@savedpublisher=\count209
+\c@lista=\count210
+\c@savedlista=\count211
+\c@listb=\count212
+\c@savedlistb=\count213
+\c@listc=\count214
+\c@savedlistc=\count215
+\c@listd=\count216
+\c@savedlistd=\count217
+\c@liste=\count218
+\c@savedliste=\count219
+\c@listf=\count220
+\c@savedlistf=\count221
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def"
-File: blx-compat.def 2016/09/17 v3.6 biblatex compatibility (PK/JW/AB)
-)
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-bibtex.def"
-File: blx-bibtex.def 2016/09/17 v3.6 biblatex compatibility (PK/JW/AB)
-
-
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
-
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2015/04/19 v3.0 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
-File: biblatex.def 2016/09/17 v3.6 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count293
-\c@textcitetotal=\count294
-\c@textcitemaxnames=\count295
-\c@biburlnumpenalty=\count296
-\c@biburlucpenalty=\count297
-\c@biburllcpenalty=\count298
-\c@smartand=\count299
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 
+\c@textcitecount=\count222
+\c@textcitetotal=\count223
+\c@textcitemaxnames=\count224
+\c@biburlnumpenalty=\count225
+\c@biburlucpenalty=\count226
+\c@biburllcpenalty=\count227
+\c@smartand=\count228
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\numeric.bbx"
-File: numeric.bbx 2016/09/17 v3.6 biblatex bibliography style (PK/JW/AB)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
-File: standard.bbx 2016/09/17 v3.6 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count300
-\c@bbx:relatedtotal=\count301
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count229
+\c@bbx:relatedtotal=\count230
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric.cbx"
-File: numeric.cbx 2016/09/17 v3.6 biblatex citation style (PK/JW/AB)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -712,19 +561,19 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-))
+)))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
-File: english.lbx 2016/09/17 v3.6 biblatex localization (PK/JW/AB)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count302
-\@quotereset=\count303
+\@quotelevel=\count231
+\@quotereset=\count232
 
-(DissertationPart2.aux
+(./DissertationPart2.aux
 
 LaTeX Warning: Label `my-label' multiply defined.
 
@@ -781,64 +630,93 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
+\scratchcounter=\count233
 \scratchdimen=\dimen121
 \scratchbox=\box32
-\nofMPsegments=\count305
-\nofMParguments=\count306
+\nofMPsegments=\count266
+\nofMParguments=\count267
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count307
+\MPscratchCnt=\count268
 \MPscratchDim=\dimen122
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
+\MPnumerator=\count269
+\makeMPintoPDFobject=\count270
 \everyMPtoPDFconversion=\toks24
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `DissertationPart2-blx.bib'.
+
+
+Package biblatex Warning: Data encoding is 'utf8'.
+(biblatex)                Use backend=biber.
+
+\openout3 = `DissertationPart2-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'DissertationPart2.bbl' found.
+(./DissertationPart2.bbl
 
-(DissertationPart2.bbl
-
-Package biblatex Warning: Biber reported the following issues
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with '6098224':
 (biblatex)                - Invalid format of field 'month'.
 
 
-Package biblatex Warning: Biber reported the following issues
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'Christou:2012:EPP:2367616.2367630':
 (biblatex)                - Can't use 'location' + 'address'.
 
 
-Package biblatex Warning: Biber reported the following issues
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'Fritsch:2005:ELN:1103599.1103623':
 (biblatex)                - Can't use 'location' + 'address'.
 
 
-Package biblatex Warning: Biber reported the following issues
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with '1354485':
 (biblatex)                - Invalid format of field 'month'.
 
@@ -853,15 +731,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 18.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(DissertationPart2.toc
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./DissertationPart2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
  [2] [3])
-\tf@toc=\write5
-\openout5 = `DissertationPart2.toc'.
+\tf@toc=\write4
+\openout4 = `DissertationPart2.toc'.
 
  [4]
 Underfull \hbox (badness 10000) in paragraph at lines 25--26
@@ -870,7 +748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
 [5]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -886,46 +764,46 @@ Overfull \hbox (46.99904pt too wide) detected at line 69
 []
  []
 
-[17] [18] [19] <images/classdiagram.png, id=68, 610.28pt x 503.8825pt>
+[17] [18] [19] <images/classdiagram.png, id=69, 610.28pt x 503.8825pt>
 File: images/classdiagram.png Graphic file (type png)
 
 <use images/classdiagram.png>
 Package pdftex.def Info: images/classdiagram.png used on input line 92.
 (pdftex.def)             Requested size: 469.75502pt x 387.8677pt.
  [20] [21 <./images/classdiagram.png>] [22]
-<images/textclient.png, id=80, 618.05907pt x 252.945pt>
+<images/textclient.png, id=81, 618.05907pt x 252.945pt>
 File: images/textclient.png Graphic file (type png)
 
 <use images/textclient.png>
 Package pdftex.def Info: images/textclient.png used on input line 101.
 (pdftex.def)             Requested size: 469.75502pt x 192.25563pt.
  [23]
-<images/text1.png, id=84, 1063.975pt x 621.32124pt>
+<images/text1.png, id=85, 1063.975pt x 621.32124pt>
 File: images/text1.png Graphic file (type png)
  <use images/text1.png>
 Package pdftex.def Info: images/text1.png used on input line 104.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
 
 [24 <./images/textclient.png>]
-<images/text2.png, id=89, 1063.975pt x 621.32124pt>
+<images/text2.png, id=90, 1063.975pt x 621.32124pt>
 File: images/text2.png Graphic file (type png)
  <use images/text2.png>
 Package pdftex.def Info: images/text2.png used on input line 107.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
 
-[25 <./images/text1.png>] <images/text3.png, id=95, 1063.975pt x 621.32124pt>
+[25 <./images/text1.png>] <images/text3.png, id=96, 1063.975pt x 621.32124pt>
 File: images/text3.png Graphic file (type png)
 
 <use images/text3.png>
 Package pdftex.def Info: images/text3.png used on input line 111.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
- <images/text4.png, id=96, 1063.975pt x 621.32124pt>
+ <images/text4.png, id=97, 1063.975pt x 621.32124pt>
 File: images/text4.png Graphic file (type png)
 
 <use images/text4.png>
 Package pdftex.def Info: images/text4.png used on input line 113.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
- <images/text5.png, id=97, 1063.975pt x 621.32124pt>
+ <images/text5.png, id=98, 1063.975pt x 621.32124pt>
 File: images/text5.png Graphic file (type png)
 
 <use images/text5.png>
@@ -933,20 +811,20 @@ Package pdftex.def Info: images/text5.png used on input line 115.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
  [26 <./images/text2.png>] [27 <./images/text3.png>]
 [28 <./images/text4.png> <./images/text5.png>] [29] [30]
-<images/gtkclient.png, id=117, 707.64375pt x 134.00063pt>
+<images/gtkclient.png, id=118, 707.64375pt x 134.00063pt>
 File: images/gtkclient.png Graphic file (type png)
 
 <use images/gtkclient.png>
 Package pdftex.def Info: images/gtkclient.png used on input line 134.
 (pdftex.def)             Requested size: 469.75502pt x 88.95387pt.
  [31 <./images/gtkclient.png>] [32]
-<images/gtk1.png, id=126, 335.2525pt x 202.7575pt>
+<images/gtk1.png, id=127, 335.2525pt x 202.7575pt>
 File: images/gtk1.png Graphic file (type png)
  <use images/gtk1.png>
 Package pdftex.def Info: images/gtk1.png used on input line 148.
 (pdftex.def)             Requested size: 335.25168pt x 202.757pt.
 
-<images/gtk2.png, id=127, 546.04pt x 351.3125pt>
+<images/gtk2.png, id=128, 546.04pt x 351.3125pt>
 File: images/gtk2.png Graphic file (type png)
  <use images/gtk2.png>
 Package pdftex.def Info: images/gtk2.png used on input line 152.
@@ -956,21 +834,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
-<images/packetdiff.png, id=140, 441.14813pt x 152.82094pt>
+<images/packetdiff.png, id=141, 441.14813pt x 152.82094pt>
 File: images/packetdiff.png Graphic file (type png)
 
 <use images/packetdiff.png>
 Package pdftex.def Info: images/packetdiff.png used on input line 170.
 (pdftex.def)             Requested size: 441.14705pt x 152.82054pt.
  [36] [37 <./images/packetdiff.png>] [38]
-<images/android.png, id=152, 747.54282pt x 152.82094pt>
+<images/android.png, id=153, 747.54282pt x 152.82094pt>
 File: images/android.png Graphic file (type png)
 
 <use images/android.png>
 Package pdftex.def Info: images/android.png used on input line 178.
 (pdftex.def)             Requested size: 469.75502pt x 96.03284pt.
  [39]
-<images/jominiengine.png, id=156, 374.90062pt x 643.6547pt>
+<images/jominiengine.png, id=157, 374.90062pt x 643.6547pt>
 File: images/jominiengine.png Graphic file (type png)
 
 <use images/jominiengine.png>
@@ -1006,7 +884,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--202
 []|\OT1/cmr/m/n/10 Results Dis-
  []
 
-[42] <images/textgraph.PNG, id=168, 825.83531pt x 279.29344pt>
+[42] <images/textgraph.PNG, id=169, 825.83531pt x 279.29344pt>
 File: images/textgraph.PNG Graphic file (type png)
 
 <use images/textgraph.PNG>
@@ -1028,7 +906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--219
  []
 
 [44 <./images/textgraph.PNG>]
-<images/gtkclientgraph.PNG, id=177, 769.37437pt x 332.74312pt>
+<images/gtkclientgraph.PNG, id=178, 769.37437pt x 332.74312pt>
 File: images/gtkclientgraph.PNG Graphic file (type png)
 
 <use images/gtkclientgraph.PNG>
@@ -1049,69 +927,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--235
 []|\OT1/cmr/bx/n/10 Lines Of
  []
 
-<images/androidgraph.PNG, id=181, 720.44156pt x 429.10312pt>
+<images/androidgraph.PNG, id=182, 720.44156pt x 429.10312pt>
 File: images/androidgraph.PNG Graphic file (type png)
 
 <use images/androidgraph.PNG>
 Package pdftex.def Info: images/androidgraph.PNG used on input line 239.
 (pdftex.def)             Requested size: 469.75502pt x 279.79109pt.
  [46 <./images/gtkclientgraph.PNG>] [47 <./images/androidgraph.PNG>] <images/gr
-aph1.PNG, id=190, 520.94624pt x 251.43938pt>
+aph1.PNG, id=191, 520.94624pt x 251.43938pt>
 File: images/graph1.PNG Graphic file (type png)
 
 <use images/graph1.PNG>
 Package pdftex.def Info: images/graph1.PNG used on input line 245.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph2.PNG, id=191, 520.94624pt x 251.43938pt>
+ <images/graph2.PNG, id=192, 520.94624pt x 251.43938pt>
 File: images/graph2.PNG Graphic file (type png)
 
 <use images/graph2.PNG>
 Package pdftex.def Info: images/graph2.PNG used on input line 247.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph3.PNG, id=192, 520.94624pt x 251.43938pt>
+ <images/graph3.PNG, id=193, 520.94624pt x 251.43938pt>
 File: images/graph3.PNG Graphic file (type png)
 
 <use images/graph3.PNG>
 Package pdftex.def Info: images/graph3.PNG used on input line 249.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph4.PNG, id=193, 520.94624pt x 251.43938pt>
+ <images/graph4.PNG, id=194, 520.94624pt x 251.43938pt>
 File: images/graph4.PNG Graphic file (type png)
 
 <use images/graph4.PNG>
 Package pdftex.def Info: images/graph4.PNG used on input line 252.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph5.PNG, id=194, 520.94624pt x 251.43938pt>
+ <images/graph5.PNG, id=195, 520.94624pt x 251.43938pt>
 File: images/graph5.PNG Graphic file (type png)
 
 <use images/graph5.PNG>
 Package pdftex.def Info: images/graph5.PNG used on input line 255.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph6.PNG, id=195, 520.94624pt x 251.43938pt>
+ <images/graph6.PNG, id=196, 520.94624pt x 251.43938pt>
 File: images/graph6.PNG Graphic file (type png)
 
 <use images/graph6.PNG>
 Package pdftex.def Info: images/graph6.PNG used on input line 258.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph7.PNG, id=196, 520.94624pt x 251.43938pt>
+ <images/graph7.PNG, id=197, 520.94624pt x 251.43938pt>
 File: images/graph7.PNG Graphic file (type png)
 
 <use images/graph7.PNG>
 Package pdftex.def Info: images/graph7.PNG used on input line 261.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph8.PNG, id=197, 520.94624pt x 251.43938pt>
+ <images/graph8.PNG, id=198, 520.94624pt x 251.43938pt>
 File: images/graph8.PNG Graphic file (type png)
 
 <use images/graph8.PNG>
 Package pdftex.def Info: images/graph8.PNG used on input line 264.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph9.PNG, id=198, 520.94624pt x 251.43938pt>
+ <images/graph9.PNG, id=199, 520.94624pt x 251.43938pt>
 File: images/graph9.PNG Graphic file (type png)
 
 <use images/graph9.PNG>
 Package pdftex.def Info: images/graph9.PNG used on input line 267.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
 
-<images/graph10.PNG, id=199, 520.94624pt x 251.43938pt>
+<images/graph10.PNG, id=200, 520.94624pt x 251.43938pt>
 File: images/graph10.PNG Graphic file (type png)
 
 <use images/graph10.PNG>
@@ -1121,14 +999,14 @@ Package pdftex.def Info: images/graph10.PNG used on input line 270.
 >] [51 <./images/graph4.PNG>] [52 <./images/graph5.PNG> <./images/graph6.PNG>] 
 [53 <./images/graph7.PNG>] [54 <./images/graph8.PNG> <./images/graph9.PNG>] [55
  <./images/graph10.PNG>] [56] [57] [58] [59] [60]
-[61] [62] [63] <images/sus.pdf, id=254, page=6, 597.432pt x 844.95674pt>
+[61] [62] [63] <images/sus.pdf, id=256, page=6, 597.432pt x 844.95674pt>
 File: images/sus.pdf Graphic file (type pdf)
 
 <use images/sus.pdf, page 6>
-Package pdftex.def Info: images/sus.pdf, page6 used on input line 309.
+Package pdftex.def Info: images/sus.pdf, page6 used on input line 311.
 (pdftex.def)             Requested size: 597.43054pt x 844.95468pt.
 
-Overfull \hbox (127.67552pt too wide) in paragraph at lines 309--310
+Overfull \hbox (127.67552pt too wide) in paragraph at lines 311--312
  [] 
  []
 
@@ -1136,13 +1014,13 @@ Overfull \hbox (127.67552pt too wide) in paragraph at lines 309--310
 Overfull \vbox (249.88574pt too high) has occurred while \output is active []
 
 
-[64 <./images/sus.pdf>] <images/gameUML.png, id=351, 552.0625pt x 599.23875pt>
+[64 <./images/sus.pdf>] <images/gameUML.png, id=353, 552.0625pt x 599.23875pt>
 File: images/gameUML.png Graphic file (type png)
 
 <use images/gameUML.png>
-Package pdftex.def Info: images/gameUML.png used on input line 312.
+Package pdftex.def Info: images/gameUML.png used on input line 314.
 (pdftex.def)             Requested size: 469.75502pt x 509.92226pt.
- [65 <./images/gameUML.png>] (DissertationPart2.aux)
+ [65 <./images/gameUML.png>] (./DissertationPart2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1151,25 +1029,27 @@ Package logreq Info: Writing requests to 'DissertationPart2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9330 strings out of 493334
- 159187 string characters out of 3139254
- 416611 words of memory out of 3000000
- 12719 multiletter control sequences out of 15000+200000
- 8710 words of font info for 31 fonts, out of 3000000 for 9000
+ 7702 strings out of 493089
+ 125472 string characters out of 6134843
+ 298227 words of memory out of 5000000
+ 11058 multiletter control sequences out of 15000+600000
+ 8710 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,10n,45p,4964b,1163s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on DissertationPart2.pdf (65 pages, 1855016 bytes).
+ 38i,10n,49p,4958b,956s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on DissertationPart2.pdf (65 pages, 1799764 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
