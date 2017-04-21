@@ -27,50 +27,55 @@ Repeated entry---line 120 of file DissertationPart2.bib
  : @inproceedings{6098224
  :                       ,
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 264 of file DissertationPart2.bib
+ :  
+ :  url = {https://www.gtk.org/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "python" isn't style-file defined
---line 323 of file DissertationPart2.bib
+--line 330 of file DissertationPart2.bib
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 26 entries,
+You've used 27 entries,
             6047 wiz_defined-function locations,
-            1285 strings with 12893 characters,
-and the built_in function-call counts, 91838 in all, are:
-= -- 2875
-> -- 5832
-< -- 915
-+ -- 3763
-- -- 3849
-* -- 5392
-:= -- 7817
+            1288 strings with 12910 characters,
+and the built_in function-call counts, 94397 in all, are:
+= -- 2966
+> -- 5921
+< -- 939
++ -- 3782
+- -- 3875
+* -- 5536
+:= -- 7970
 add.period$ -- 0
-call.type$ -- 26
-change.case$ -- 315
+call.type$ -- 27
+change.case$ -- 324
 chr.to.int$ -- 360
-cite$ -- 50
-duplicate$ -- 9347
-empty$ -- 8661
-format.name$ -- 1397
-if$ -- 17943
+cite$ -- 52
+duplicate$ -- 9650
+empty$ -- 8953
+format.name$ -- 1451
+if$ -- 18541
 int.to.chr$ -- 0
-int.to.str$ -- 63
+int.to.str$ -- 67
 missing$ -- 0
-newline$ -- 629
-num.names$ -- 1109
-pop$ -- 8022
+newline$ -- 644
+num.names$ -- 1156
+pop$ -- 8348
 preamble$ -- 1
-purify$ -- 358
+purify$ -- 368
 quote$ -- 0
-skip$ -- 4636
+skip$ -- 4800
 stack$ -- 0
-substring$ -- 2217
-swap$ -- 3136
-text.length$ -- 788
-text.prefix$ -- 25
+substring$ -- 2230
+swap$ -- 3216
+text.length$ -- 812
+text.prefix$ -- 26
 top$ -- 1
-type$ -- 975
+type$ -- 1013
 warning$ -- 0
-while$ -- 734
+while$ -- 752
 width$ -- 0
-write$ -- 602
-(There were 3 error messages)
+write$ -- 616
+(There were 4 error messages)

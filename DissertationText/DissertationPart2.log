@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.1)  20 APR 2017 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.1)  21 APR 2017 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -764,46 +764,46 @@ Overfull \hbox (46.99904pt too wide) detected at line 69
 []
  []
 
-[17] [18] [19] <images/classdiagram.png, id=69, 610.28pt x 503.8825pt>
+[17] [18] [19] <images/classdiagram.png, id=70, 610.28pt x 503.8825pt>
 File: images/classdiagram.png Graphic file (type png)
 
 <use images/classdiagram.png>
 Package pdftex.def Info: images/classdiagram.png used on input line 92.
 (pdftex.def)             Requested size: 469.75502pt x 387.8677pt.
  [20] [21 <./images/classdiagram.png>] [22]
-<images/textclient.png, id=81, 618.05907pt x 252.945pt>
+<images/textclient.png, id=82, 618.05907pt x 252.945pt>
 File: images/textclient.png Graphic file (type png)
 
 <use images/textclient.png>
 Package pdftex.def Info: images/textclient.png used on input line 101.
 (pdftex.def)             Requested size: 469.75502pt x 192.25563pt.
  [23]
-<images/text1.png, id=85, 1063.975pt x 621.32124pt>
+<images/text1.png, id=86, 1063.975pt x 621.32124pt>
 File: images/text1.png Graphic file (type png)
  <use images/text1.png>
 Package pdftex.def Info: images/text1.png used on input line 104.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
 
 [24 <./images/textclient.png>]
-<images/text2.png, id=90, 1063.975pt x 621.32124pt>
+<images/text2.png, id=91, 1063.975pt x 621.32124pt>
 File: images/text2.png Graphic file (type png)
  <use images/text2.png>
 Package pdftex.def Info: images/text2.png used on input line 107.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
 
-[25 <./images/text1.png>] <images/text3.png, id=96, 1063.975pt x 621.32124pt>
+[25 <./images/text1.png>] <images/text3.png, id=97, 1063.975pt x 621.32124pt>
 File: images/text3.png Graphic file (type png)
 
 <use images/text3.png>
 Package pdftex.def Info: images/text3.png used on input line 111.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
- <images/text4.png, id=97, 1063.975pt x 621.32124pt>
+ <images/text4.png, id=98, 1063.975pt x 621.32124pt>
 File: images/text4.png Graphic file (type png)
 
 <use images/text4.png>
 Package pdftex.def Info: images/text4.png used on input line 113.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
- <images/text5.png, id=98, 1063.975pt x 621.32124pt>
+ <images/text5.png, id=99, 1063.975pt x 621.32124pt>
 File: images/text5.png Graphic file (type png)
 
 <use images/text5.png>
@@ -811,20 +811,20 @@ Package pdftex.def Info: images/text5.png used on input line 115.
 (pdftex.def)             Requested size: 469.75502pt x 274.3113pt.
  [26 <./images/text2.png>] [27 <./images/text3.png>]
 [28 <./images/text4.png> <./images/text5.png>] [29] [30]
-<images/gtkclient.png, id=118, 707.64375pt x 134.00063pt>
+<images/gtkclient.png, id=119, 707.64375pt x 134.00063pt>
 File: images/gtkclient.png Graphic file (type png)
 
 <use images/gtkclient.png>
 Package pdftex.def Info: images/gtkclient.png used on input line 134.
 (pdftex.def)             Requested size: 469.75502pt x 88.95387pt.
  [31 <./images/gtkclient.png>] [32]
-<images/gtk1.png, id=127, 335.2525pt x 202.7575pt>
+<images/gtk1.png, id=128, 335.2525pt x 202.7575pt>
 File: images/gtk1.png Graphic file (type png)
  <use images/gtk1.png>
 Package pdftex.def Info: images/gtk1.png used on input line 148.
 (pdftex.def)             Requested size: 335.25168pt x 202.757pt.
 
-<images/gtk2.png, id=128, 546.04pt x 351.3125pt>
+<images/gtk2.png, id=129, 546.04pt x 351.3125pt>
 File: images/gtk2.png Graphic file (type png)
  <use images/gtk2.png>
 Package pdftex.def Info: images/gtk2.png used on input line 152.
@@ -834,21 +834,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
-<images/packetdiff.png, id=141, 441.14813pt x 152.82094pt>
+<images/packetdiff.png, id=142, 441.14813pt x 152.82094pt>
 File: images/packetdiff.png Graphic file (type png)
 
 <use images/packetdiff.png>
 Package pdftex.def Info: images/packetdiff.png used on input line 170.
 (pdftex.def)             Requested size: 441.14705pt x 152.82054pt.
  [36] [37 <./images/packetdiff.png>] [38]
-<images/android.png, id=153, 747.54282pt x 152.82094pt>
+<images/android.png, id=154, 747.54282pt x 152.82094pt>
 File: images/android.png Graphic file (type png)
 
 <use images/android.png>
 Package pdftex.def Info: images/android.png used on input line 178.
 (pdftex.def)             Requested size: 469.75502pt x 96.03284pt.
  [39]
-<images/jominiengine.png, id=157, 374.90062pt x 643.6547pt>
+<images/jominiengine.png, id=158, 374.90062pt x 643.6547pt>
 File: images/jominiengine.png Graphic file (type png)
 
 <use images/jominiengine.png>
@@ -884,7 +884,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--202
 []|\OT1/cmr/m/n/10 Results Dis-
  []
 
-[42] <images/textgraph.PNG, id=169, 825.83531pt x 279.29344pt>
+[42] <images/textgraph.PNG, id=170, 825.83531pt x 279.29344pt>
 File: images/textgraph.PNG Graphic file (type png)
 
 <use images/textgraph.PNG>
@@ -906,7 +906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--219
  []
 
 [44 <./images/textgraph.PNG>]
-<images/gtkclientgraph.PNG, id=178, 769.37437pt x 332.74312pt>
+<images/gtkclientgraph.PNG, id=179, 769.37437pt x 332.74312pt>
 File: images/gtkclientgraph.PNG Graphic file (type png)
 
 <use images/gtkclientgraph.PNG>
@@ -927,69 +927,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--235
 []|\OT1/cmr/bx/n/10 Lines Of
  []
 
-<images/androidgraph.PNG, id=182, 720.44156pt x 429.10312pt>
+<images/androidgraph.PNG, id=183, 720.44156pt x 429.10312pt>
 File: images/androidgraph.PNG Graphic file (type png)
 
 <use images/androidgraph.PNG>
 Package pdftex.def Info: images/androidgraph.PNG used on input line 239.
 (pdftex.def)             Requested size: 469.75502pt x 279.79109pt.
  [46 <./images/gtkclientgraph.PNG>] [47 <./images/androidgraph.PNG>] <images/gr
-aph1.PNG, id=191, 520.94624pt x 251.43938pt>
+aph1.PNG, id=192, 520.94624pt x 251.43938pt>
 File: images/graph1.PNG Graphic file (type png)
 
 <use images/graph1.PNG>
 Package pdftex.def Info: images/graph1.PNG used on input line 245.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph2.PNG, id=192, 520.94624pt x 251.43938pt>
+ <images/graph2.PNG, id=193, 520.94624pt x 251.43938pt>
 File: images/graph2.PNG Graphic file (type png)
 
 <use images/graph2.PNG>
 Package pdftex.def Info: images/graph2.PNG used on input line 247.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph3.PNG, id=193, 520.94624pt x 251.43938pt>
+ <images/graph3.PNG, id=194, 520.94624pt x 251.43938pt>
 File: images/graph3.PNG Graphic file (type png)
 
 <use images/graph3.PNG>
 Package pdftex.def Info: images/graph3.PNG used on input line 249.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph4.PNG, id=194, 520.94624pt x 251.43938pt>
+ <images/graph4.PNG, id=195, 520.94624pt x 251.43938pt>
 File: images/graph4.PNG Graphic file (type png)
 
 <use images/graph4.PNG>
 Package pdftex.def Info: images/graph4.PNG used on input line 252.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph5.PNG, id=195, 520.94624pt x 251.43938pt>
+ <images/graph5.PNG, id=196, 520.94624pt x 251.43938pt>
 File: images/graph5.PNG Graphic file (type png)
 
 <use images/graph5.PNG>
 Package pdftex.def Info: images/graph5.PNG used on input line 255.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph6.PNG, id=196, 520.94624pt x 251.43938pt>
+ <images/graph6.PNG, id=197, 520.94624pt x 251.43938pt>
 File: images/graph6.PNG Graphic file (type png)
 
 <use images/graph6.PNG>
 Package pdftex.def Info: images/graph6.PNG used on input line 258.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph7.PNG, id=197, 520.94624pt x 251.43938pt>
+ <images/graph7.PNG, id=198, 520.94624pt x 251.43938pt>
 File: images/graph7.PNG Graphic file (type png)
 
 <use images/graph7.PNG>
 Package pdftex.def Info: images/graph7.PNG used on input line 261.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph8.PNG, id=198, 520.94624pt x 251.43938pt>
+ <images/graph8.PNG, id=199, 520.94624pt x 251.43938pt>
 File: images/graph8.PNG Graphic file (type png)
 
 <use images/graph8.PNG>
 Package pdftex.def Info: images/graph8.PNG used on input line 264.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
- <images/graph9.PNG, id=199, 520.94624pt x 251.43938pt>
+ <images/graph9.PNG, id=200, 520.94624pt x 251.43938pt>
 File: images/graph9.PNG Graphic file (type png)
 
 <use images/graph9.PNG>
 Package pdftex.def Info: images/graph9.PNG used on input line 267.
 (pdftex.def)             Requested size: 469.75502pt x 226.73454pt.
 
-<images/graph10.PNG, id=200, 520.94624pt x 251.43938pt>
+<images/graph10.PNG, id=201, 520.94624pt x 251.43938pt>
 File: images/graph10.PNG Graphic file (type png)
 
 <use images/graph10.PNG>
@@ -1029,13 +1029,13 @@ Package logreq Info: Writing requests to 'DissertationPart2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 7702 strings out of 493089
- 125472 string characters out of 6134843
+ 7703 strings out of 493089
+ 125486 string characters out of 6134843
  298227 words of memory out of 5000000
- 11058 multiletter control sequences out of 15000+600000
+ 11059 multiletter control sequences out of 15000+600000
  8710 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,49p,4958b,956s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,49p,5097b,954s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1046,7 +1046,7 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on DissertationPart2.pdf (65 pages, 1799764 bytes).
+Output written on DissertationPart2.pdf (65 pages, 1800603 bytes).
 PDF statistics:
  394 PDF objects out of 1000 (max. 8388607)
  232 compressed objects within 3 object streams

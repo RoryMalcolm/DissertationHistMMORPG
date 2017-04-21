@@ -308,6 +308,21 @@
   \field{urlyear}{2016}
 \endentry
 
+\entry{GTK}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GTK}{G.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{G2}
+  \strng{fullhash}{G2}
+  \field{sortinit}{G}
+  \field{title}{Gtk Project}
+  \field{year}{2016}
+\endentry
+
 \entry{Hainey:2011:DMO:2304793.2305216}{article}{}
   \name{author}{4}{}{%
     {{}%
