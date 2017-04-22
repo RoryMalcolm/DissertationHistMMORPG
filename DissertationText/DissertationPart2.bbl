@@ -141,6 +141,27 @@
   \warn{\item Can't use 'location' + 'address'}
 \endentry
 
+\entry{CSShim}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {CoreOs}{C.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{C2}
+  \strng{fullhash}{C2}
+  \field{sortinit}{C}
+  \field{title}{CShim}
+  \verb{url}
+  \verb https://github.com/cureos/shim
+  \endverb
+  \field{year}{2016}
+  \field{urlday}{21}
+  \field{urlmonth}{04}
+  \field{urlyear}{2017}
+\endentry
+
 \entry{DoThoseWhoPlay}{article}{}
   \name{author}{1}{}{%
     {{}%

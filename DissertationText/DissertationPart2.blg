@@ -33,49 +33,49 @@ I was expecting a `,' or a `}'---line 264 of file DissertationPart2.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "python" isn't style-file defined
---line 330 of file DissertationPart2.bib
+--line 337 of file DissertationPart2.bib
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 27 entries,
+You've used 28 entries,
             6047 wiz_defined-function locations,
-            1288 strings with 12910 characters,
-and the built_in function-call counts, 94397 in all, are:
-= -- 2966
-> -- 5921
-< -- 939
-+ -- 3782
-- -- 3875
-* -- 5536
-:= -- 7970
+            1294 strings with 12972 characters,
+and the built_in function-call counts, 98489 in all, are:
+= -- 3077
+> -- 6274
+< -- 977
++ -- 4040
+- -- 4135
+* -- 5725
+:= -- 8397
 add.period$ -- 0
-call.type$ -- 27
-change.case$ -- 324
-chr.to.int$ -- 360
-cite$ -- 52
-duplicate$ -- 9650
-empty$ -- 8953
-format.name$ -- 1451
-if$ -- 18541
+call.type$ -- 28
+change.case$ -- 333
+chr.to.int$ -- 381
+cite$ -- 54
+duplicate$ -- 10033
+empty$ -- 9300
+format.name$ -- 1505
+if$ -- 19251
 int.to.chr$ -- 0
-int.to.str$ -- 67
+int.to.str$ -- 71
 missing$ -- 0
-newline$ -- 644
-num.names$ -- 1156
-pop$ -- 8348
+newline$ -- 665
+num.names$ -- 1203
+pop$ -- 8669
 preamble$ -- 1
-purify$ -- 368
+purify$ -- 378
 quote$ -- 0
-skip$ -- 4800
+skip$ -- 4983
 stack$ -- 0
-substring$ -- 2230
-swap$ -- 3216
-text.length$ -- 812
-text.prefix$ -- 26
+substring$ -- 2322
+swap$ -- 3338
+text.length$ -- 846
+text.prefix$ -- 27
 top$ -- 1
-type$ -- 1013
+type$ -- 1051
 warning$ -- 0
-while$ -- 752
+while$ -- 788
 width$ -- 0
-write$ -- 616
+write$ -- 636
 (There were 4 error messages)
