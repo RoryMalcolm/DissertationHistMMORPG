@@ -44,3 +44,4 @@ C:\Users\User\Desktop\RepairHist_mmo\TestClientROry\bin\Debug\Shim.xml
 C:\Users\User\Desktop\RepairHist_mmo\TestClientROry\obj\Debug\TestClientRory.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.exe
 C:\Users\User\Desktop\RepairHist_mmo\TestClientROry\obj\Debug\TestClientROry.pdb
+C:\Users\User\Desktop\RepairHist_mmo\TestClientROry\obj\Debug\TestClientRory.csproj.TestClientROry.exe.config

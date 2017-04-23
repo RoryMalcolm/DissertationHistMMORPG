@@ -79,6 +79,11 @@ namespace TestClientROry
             }
         }
 
+        public void Help()
+        {
+            Console.WriteLine("Command List: \n siege\n army \n check \n profile \n fief \n move [direction parameter ne,nw,e,w,se,sw] \n hire [amount] \n fiefs");
+        }
+
         public void DisplaySiege(ProtoSiegeDisplay siegeDisplayProtoBuf)
         {
             Console.WriteLine("-----------------------------");

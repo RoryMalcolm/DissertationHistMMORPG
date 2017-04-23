@@ -1,81 +1,25 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: DissertationPart2.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: DissertationPart2.aux
 The style file: biblatex.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: DissertationPart2-blx.bib
 Database file #2: DissertationPart2.bib
 I was expecting a `,' or a `}'---line 12 of file DissertationPart2.bib
  : @article{DoThoseWhoPlay, author = {Ioana Cărătărescu-Petrică}, title = {Do those who play together stay together? The World of Warcraft community between play, practice and game design}, journal ={Journal of Comparitive Research in Anthropology and Sociology}, volume = {6} 
  :                                                                                                                                                                                                                                                                                       number = {1}, issn = {ISSN 2068 – 0317I2068 – 0317}}
 I'm skipping whatever remains of this entry
-Repeated entry---line 48 of file DissertationPart2.bib
+Repeated entry---line 86 of file DissertationPart2.bib
  : @article{Hainey:2011:DMO:2304793.2305216
  :                                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 120 of file DissertationPart2.bib
+Repeated entry---line 158 of file DissertationPart2.bib
  : @inproceedings{6098224
  :                       ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 264 of file DissertationPart2.bib
+I was expecting a `,' or a `}'---line 302 of file DissertationPart2.bib
  :  
  :  url = {https://www.gtk.org/},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "python" isn't style-file defined
---line 337 of file DissertationPart2.bib
-Biblatex version: 3.0
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 28 entries,
-            6047 wiz_defined-function locations,
-            1294 strings with 12972 characters,
-and the built_in function-call counts, 98489 in all, are:
-= -- 3077
-> -- 6274
-< -- 977
-+ -- 4040
-- -- 4135
-* -- 5725
-:= -- 8397
-add.period$ -- 0
-call.type$ -- 28
-change.case$ -- 333
-chr.to.int$ -- 381
-cite$ -- 54
-duplicate$ -- 10033
-empty$ -- 9300
-format.name$ -- 1505
-if$ -- 19251
-int.to.chr$ -- 0
-int.to.str$ -- 71
-missing$ -- 0
-newline$ -- 665
-num.names$ -- 1203
-pop$ -- 8669
-preamble$ -- 1
-purify$ -- 378
-quote$ -- 0
-skip$ -- 4983
-stack$ -- 0
-substring$ -- 2322
-swap$ -- 3338
-text.length$ -- 846
-text.prefix$ -- 27
-top$ -- 1
-type$ -- 1051
-warning$ -- 0
-while$ -- 788
-width$ -- 0
-write$ -- 636
+--line 375 of file DissertationPart2.bib
+Biblatex version: 3.3
 (There were 4 error messages)
