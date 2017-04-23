@@ -1,0 +1,159 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Aims}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.1.1}Abstract}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.1.2}Aims}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Objectives}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Evaluation}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Background}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Literature Review}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1}Jomini Engine Introduction}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2}Game Design Decisions}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.3}Game Interface Decisions}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.4}Mobile Game Development}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.5}Mobile Networking and its Effect on the Gaming Experience}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.6}C\# or Java}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.7}Modularity}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.8}Usability Surveying}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.9}Dynamic and Static Analysis}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Implementation}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Tools Used}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}Visual Studio 2015 \& Visual Studio Code}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.2}ReSharper}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.3}Unity}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.4}Android Studio}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.5}WireShark \& RawCap}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.6}Xamarin Studio}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Baseline Implementation}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Text Client}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.1}Build Pipeline}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.2}Modifications to Server Code}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.3}Structure of Program}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.4}User Input Processing}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.5}Operation Execution}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.6}Displaying Data}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.7}Modularity}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Graphical Client}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.1}.NET Version Incompatibility}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.2}Inexperience with Unity}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.3}Gtk Implementation}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.4}Structure of Program}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.5}Display Grid}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.6}Profile and Fief Display Classes}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.7}User Interface}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}Android Client }{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.1}Android Networking}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2}Communication Protocol}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3}Networking Interface}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.4}Development Environment}{43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.5}Portable Class Library}{44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.6}Structure of Program}{45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.7}User Interface}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.8}Completion With Regards To JominiEngine Functions}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Technical Evaluation}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Methodology}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Text Client}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.1}Static Analysis}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.2}Dynamic Analysis}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Gtk Client}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.1}Static Analysis}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.2}Dynamic Analysis}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Android Client}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.1}Static Analysis}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.2}Dynamic Analysis}{53}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}User Evaluation}{55}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Methodology}{55}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Results}{55}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Conclusion}{63}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Project Summary}{63}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Project Management}{65}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Concerns}{66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.1}Legal}{66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2}Ethical}{66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.3}Social}{67}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Future Work}{67}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Bibliography}{69}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Appendix}{72}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Consent Form}{72}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Test Plan}{73}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}SUS Form}{74}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}UML Diagram}{75}

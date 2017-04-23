@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DissertationPart2.aux
+The style file: biblatex.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: DissertationPart2-blx.bib
+Database file #2: DissertationPart2.bib
+I was expecting a `,' or a `}'---line 12 of file DissertationPart2.bib
+ : @article{DoThoseWhoPlay, author = {Ioana Cărătărescu-Petrică}, title = {Do those who play together stay together? The World of Warcraft community between play, practice and game design}, journal ={Journal of Comparitive Research in Anthropology and Sociology}, volume = {6} 
+ :                                                                                                                                                                                                                                                                                       number = {1}, issn = {ISSN 2068 – 0317I2068 – 0317}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 86 of file DissertationPart2.bib
+ : @article{Hainey:2011:DMO:2304793.2305216
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 158 of file DissertationPart2.bib
+ : @inproceedings{6098224
+ :                       ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 302 of file DissertationPart2.bib
+ :  
+ :  url = {https://www.gtk.org/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "python" isn't style-file defined
+--line 375 of file DissertationPart2.bib
+Biblatex version: 3.0
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 31 entries,
+            6047 wiz_defined-function locations,
+            1324 strings with 14339 characters,
+and the built_in function-call counts, 109342 in all, are:
+= -- 3606
+> -- 6619
+< -- 1118
++ -- 4165
+- -- 4234
+* -- 6421
+:= -- 8961
+add.period$ -- 0
+call.type$ -- 31
+change.case$ -- 428
+chr.to.int$ -- 388
+cite$ -- 60
+duplicate$ -- 11245
+empty$ -- 10418
+format.name$ -- 1674
+if$ -- 21770
+int.to.chr$ -- 0
+int.to.str$ -- 81
+missing$ -- 0
+newline$ -- 751
+num.names$ -- 1400
+pop$ -- 9599
+preamble$ -- 1
+purify$ -- 478
+quote$ -- 0
+skip$ -- 5673
+stack$ -- 0
+substring$ -- 2749
+swap$ -- 3781
+text.length$ -- 923
+text.prefix$ -- 30
+top$ -- 1
+type$ -- 1165
+warning$ -- 0
+while$ -- 853
+width$ -- 0
+write$ -- 719
+(There were 4 error messages)
