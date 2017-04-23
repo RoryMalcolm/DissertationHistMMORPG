@@ -6,7 +6,7 @@
         {
             Move, Siege, Hire, Fief, Check, ArmyStatus, SyntaxError,
             Exit, Players, Sieges, Profile, SeasonUpdate,
-            JournalEntries, Journal, FiefExpenditure
+            JournalEntries, Journal, FiefExpenditure, Help
         }
 
         public Tasks CheckWord(string InputWord)
@@ -14,6 +14,8 @@
             InputWord = InputWord.ToUpper();
             switch (InputWord)
             {
+                case "HELP":
+                    return Tasks.Help;
                 case "MOVE":
                     return Tasks.Move;
                 case "CHECK":

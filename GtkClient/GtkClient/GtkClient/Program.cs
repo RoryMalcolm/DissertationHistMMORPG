@@ -170,7 +170,8 @@ public class GtkHelloWorld {
 		}
 		if (parsed != -1) {
 			playerOps.HireTroops (Convert.ToInt32 (hireTextEntry.Text), client);
-			ProfileClickEvent (obj, args);
+		    var armies = playerOps.ArmyStatus(client);
+            ProfileClickEvent (obj, args);
 		}
 		hireWindow.Destroy ();
 	}
@@ -189,7 +190,28 @@ public class GtkHelloWorld {
 		myWin.ShowAll ();
 	}
 
-	public static void SetUpDirectionalButtonClicks(){
+    public static void FiefClickEvent(object obj, EventArgs args, uint ArmySize)
+    {
+        ProtoFief fief = playerOps.FiefDetails(client);
+        if (fiefTable == null)
+        {
+            fiefTable = new FiefTable(fief.fiefID, fief.owner, Convert.ToString(fief.industry),
+                fief.charactersInFief, fief.armies, Convert.ToString(fief.militia));
+        }
+        else
+        {
+            fiefTable.destroyTable();
+
+            fiefTable = new FiefTable(fief.fiefID, fief.owner, Convert.ToString(fief.industry),
+                fief.charactersInFief, fief.armies, Convert.ToString(fief.militia));
+        }
+        tableLayout.Attach(fiefTable.getProfileTable(), 0, 1, 4, 5);
+        myWin.ShowAll();
+    }
+
+
+
+    public static void SetUpDirectionalButtonClicks(){
 		northEast.Clicked += NorthEastClickEvent;
 		northWest.Clicked += NorthWestClickEvent;
 		east.Clicked += EastClickEvent;

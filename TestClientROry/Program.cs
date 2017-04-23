@@ -106,6 +106,9 @@ namespace TestClientRory
                     var fiefResult = player.FiefDetails(_testClient);
                     _displayResults.DisplayFief(fiefResult);
                     break;
+                case WordRecogniser.Tasks.Help:
+                    _displayResults.Help();
+                    break;
                 case WordRecogniser.Tasks.Move:
                     if (ValidateArgs(arguments))
                     {
@@ -123,11 +126,36 @@ namespace TestClientRory
                     {
                         var hireResult = player.HireTroops(Convert.ToInt32(arguments[1]), _testClient);
                         _displayResults.DisplayHire(hireResult);
+                        var armyUpdate = player.ArmyStatus(_testClient);
+                        _displayResults.DisplayArmyStatus(armyUpdate);
                     }
                     break;
                 case WordRecogniser.Tasks.Siege:
                     var siegeResult = player.SiegeCurrentFief(_testClient);
-                    _displayResults.DisplaySiege(siegeResult);
+                    if (siegeResult.GetType() == typeof(ProtoSiegeDisplay))
+                    {
+                        var siegeDisplay = (ProtoSiegeDisplay) siegeResult;
+                        _displayResults.DisplaySiege(siegeDisplay);
+
+                    }
+                    else
+                    {
+                        switch (siegeResult.ResponseType)
+                        {
+                            case DisplayMessages.PillageSiegeAlready:
+                                Console.WriteLine("Already sieged this turn!");
+                                break;
+                            case DisplayMessages.PillageUnderSiege:
+                                Console.WriteLine("Already under siege!");
+                                break;
+                            case DisplayMessages.ArmyNoLeader:
+                                Console.WriteLine("Army has no leader!");
+                                break;
+                            default:
+                                Console.WriteLine(siegeResult.ResponseType);
+                                break;
+                        }
+                    }
                     break;
                 case WordRecogniser.Tasks.Players:
                     var playersResult = player.Players(_testClient);
